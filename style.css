@@ -16,8 +16,13 @@ header {
     font-family: Poppins;
 }
 
-header nav .nav-div .nav-link a{
-    color: var(--txt-color);
+.navbar{
+    width: 100%;
+    z-index: 1;
+}
+
+.nav-link{
+    cursor: pointer;
 }
 
 .bg-main-color {
