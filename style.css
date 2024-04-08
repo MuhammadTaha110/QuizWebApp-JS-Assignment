@@ -30,6 +30,10 @@ header {
     font-family: Poppins;
 }
 
+main{
+    margin-top: 50px;
+}
+
 .navbar{
     width: 100%;
     z-index: 1;
