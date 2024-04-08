@@ -135,9 +135,8 @@ main{
     color: var(--main-color);
     background-color: var(--txt-color);
     border-radius: 12px;
-    margin: 80px 24px auto;
+    margin: 80px 24px auto auto;
     padding: 12px;
-    
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -188,3 +187,42 @@ main{
     text-decoration: none;
     color: var(--main-color);
   }
+
+
+  /*BreakPoints*/
+
+  @media(max-width:635px){
+    .quiz-cards .cards{
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .quiz-cards .cards .quiz-icon{
+       
+       
+        left: 82%;  
+    }
+
+    .custom-quiz {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: .8em;
+    }
+
+    .custom-quiz h1 {
+        font-size: 2em;
+    }
+
+    .custom-quiz .create-quiz {
+        width: 90%;
+        height: 50px;
+        border-radius: 12px;
+        border: 2px solid var(--main-color);
+        color: var(--main-color);
+        background-color: var(--txt-color);
+        font-size: 1.2em;
+        
+    }
+}
