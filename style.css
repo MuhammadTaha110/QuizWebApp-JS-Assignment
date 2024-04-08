@@ -31,7 +31,7 @@ header {
 }
 
 main{
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .navbar{
@@ -49,7 +49,7 @@ main{
 
 .play-quiz{
 
-    margin: 15px auto;
+    margin: 15px -20px auto;
     width: 100%;
     padding: 12px 35px;
     color: var(--txt-color);
@@ -58,12 +58,12 @@ main{
 
 .play-quiz p{
     font-size: 1em;
-    color: var(--main-color);
+    color: #373737;
 }
 
 .quiz-cards {
     display: flex;
-    margin-top: 10px;
+    margin-bottom: 10px;
     justify-content: space-around;
     flex-wrap: wrap;
 
@@ -154,6 +154,7 @@ main{
 /*Footer Secrtion*/
 .footer {
     background-color: var(--main-color);
+    background-color: #F8F9FA;
     color: var(--txt-color);
     padding: 20px 0;
     bottom: 0;
