@@ -166,6 +166,7 @@ main{
 /*Quiz Section*/
 
 .quiz-section{
+    transition: .5s ease;
     display: none;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -308,4 +309,56 @@ main{
         font-size: 1.2em;
         
     }
+
+    /*Quiz Section*/
+
+.quiz-section .question{
+    font-size: 1.5em;
+}
+
+.quiz-section .options .option-card{
+    width: 35% ;
+}
+
+.quiz-section .prv-nxt-btn button{
+    font-size: 1em;
+}
+
+.quiz-section .timer{
+    width: 100%;
+    margin-left: 0%;
+}
+}
+
+@media(max-width:465px){
+    
+/*Quiz Section*/
+
+.quiz-section .options .option-card{
+    width: 45% ;
+    height: 70px;
+}
+
+
+.quiz-section .prv-nxt-btn {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 140px 10px auto auto;
+}
+
+
+.quiz-section .prv-nxt-btn button{
+    width: 100%;
+    height: 60px;
+    margin-top: 5px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.quiz-section .prv-nxt-btn i{
+    display: none;
+}
+
 }
