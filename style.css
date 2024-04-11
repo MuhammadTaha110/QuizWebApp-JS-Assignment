@@ -166,6 +166,7 @@ main{
 /*Quiz Section*/
 
 .quiz-section{
+    top: 10%;
     transition: .5s ease;
     display: none;
     padding-top: 60px;
@@ -247,6 +248,8 @@ main{
     margin-top: 30px;
     padding-bottom: 5px;
 }
+
+
 /*Footer Secrtion*/
 .footer {
     margin-top: 25px;
@@ -333,6 +336,7 @@ main{
 @media(max-width:465px){
     
 /*Quiz Section*/
+
 
 .quiz-section .options .option-card{
     width: 45% ;

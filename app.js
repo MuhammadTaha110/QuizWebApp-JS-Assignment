@@ -21,23 +21,25 @@ function htmlQuizStart(){
   document.querySelector('.play-quiz').style.display= 'none';
   document.querySelector('.custom-quiz').style.display= 'none';
 
+  
+
 }
 
+function displayDetails() {
+  var section = document.querySelector('.quiz-section');
 
-function displayDetails(){
+  // Display the quiz section
+  section.style.display = 'block';
 
-  var section =document.querySelector('.shoe-details');
-  document.querySelector('.shoe-details').style.display= 'flex';
+  // Calculate the vertical middle of the screen
+  var middleOfScreen = window.innerHeight / 2 - section.clientHeight / 2;
 
-  // Calculate the scroll position
-  var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-  
-  // Set the top position of the section relative to the scroll position
-  section.style.top = (scrollPosition+30) + 'px';
+  // Set the top position of the section to the calculated middle
+  section.style.top = middleOfScreen + 'px';
 
-
-  //document.querySelector('.shoe-cards-section').style.display='none';
-  //document.querySelector('.footer').style.display='none';
-
+  // Hide other sections if needed
+  document.querySelector('.quiz-cards').style.display = 'none';
+  document.querySelector('.play-quiz').style.display = 'none';
+  document.querySelector('.custom-quiz').style.display = 'none';
 }
 
