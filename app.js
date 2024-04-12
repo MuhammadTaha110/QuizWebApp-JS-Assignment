@@ -25,6 +25,7 @@ function htmlQuizStart(){
 
 }
 
+
 function displayDetails() {
   var section = document.querySelector('.quiz-section');
 

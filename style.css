@@ -278,7 +278,12 @@ main{
 
   /*BreakPoints*/
 
+  @media(min-width:992px){
+    
+  }
+
   @media(max-width:635px){
+
     .quiz-cards .cards{
         margin-left: auto;
         margin-right: auto;
@@ -286,8 +291,6 @@ main{
     }
 
     .quiz-cards .cards .quiz-icon{
-       
-       
         left: 82%;  
     }
 
@@ -336,6 +339,8 @@ main{
 @media(max-width:465px){
     
 /*Quiz Section*/
+
+
 
 
 .quiz-section .options .option-card{
