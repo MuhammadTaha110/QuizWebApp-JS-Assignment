@@ -173,12 +173,12 @@ main{
     padding-bottom: 60px;
     width: 100%;
     border-radius: 12px;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    /*box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;*/
 }
 
 .quiz-section .question{
     margin-left: 5%;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .quiz-section .question-no{
