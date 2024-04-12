@@ -321,6 +321,7 @@ main{
 }
 
 .quiz-section .options .option-card{
+    font-size: 0.8em;
     width: 35% ;
 }
 
