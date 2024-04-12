@@ -70,6 +70,9 @@ var A = document.querySelector('.A');
 var B = document.querySelector('.B');
 var C = document.querySelector('.C');
 var D = document.querySelector('.D');
+var timerMins = document.querySelector('.timer-mins');
+var timerSec = document.querySelector('.timer-sec');
+
 
 QuizQuestionNum.innerHTML = index+1;
 QuizQuestion.innerHTML = questions[index];
@@ -77,6 +80,10 @@ A.innerText = options[index].optionA;
 B.innerText = options[index].optionB;
 C.innerText = options[index].optionC;
 D.innerText = options[index].optionD;
+
+timerSec = 59;
+timerMins = 14;
+
 }
 
 htmlQuizStart();
