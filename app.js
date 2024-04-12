@@ -13,16 +13,17 @@ $(window).scroll(function () {
   lastScrollTop = scrollTop;
 });
 
+var index = 0 ;
 
 function htmlQuizStart(){
-  const questions = {
-          question1 : 'HTML Stands for?' ,
-          question1 : 'Who is making the Web standards?' ,
-          question1 : 'Choose the correct HTML element for the largest heading:' ,
-          question1 : 'What is the correct HTML element for inserting a line break?' ,
-          question1 : 'Choose the correct HTML element to define important text?' ,
+  const questions = [
+          'HTML Stands for?' ,
+          'Who is making the Web standards?' ,
+          'Choose the correct HTML element for the largest heading:' ,
+          'What is the correct HTML element for inserting a line break?' ,
+          'Choose the correct HTML element to define important text?' 
 
-  }
+  ]
 
   const options = [{
     optionA:'HyperText MakeUp Language',
@@ -62,7 +63,29 @@ const correctOptions = [
   '<h1>' , '</br>', '<strong>' 
 ]
 
+var Quizsection = document.querySelector('.quiz-section');
+var QuizQuestionNum = document.querySelector('.question-num');
+var QuizQuestion = document.querySelector('.question');
+var A = document.querySelector('.A');
+var B = document.querySelector('.B');
+var C = document.querySelector('.C');
+var D = document.querySelector('.D');
+
+QuizQuestionNum.innerHTML = index+1;
+QuizQuestion.innerHTML = questions[index];
+A.innerText = options[index].optionA;
+B.innerText = options[index].optionB;
+C.innerText = options[index].optionC;
+D.innerText = options[index].optionD;
 }
+
+htmlQuizStart();
+
+function nextButton(){
+  index++;
+  htmlQuizStart();
+}
+
 
 
 function displayDetails() {
@@ -81,5 +104,7 @@ function displayDetails() {
   document.querySelector('.quiz-cards').style.display = 'none';
   document.querySelector('.play-quiz').style.display = 'none';
   document.querySelector('.custom-quiz').style.display = 'none';
+
+
 }
 
