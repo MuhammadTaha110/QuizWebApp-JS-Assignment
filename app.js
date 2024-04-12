@@ -15,13 +15,52 @@ $(window).scroll(function () {
 
 
 function htmlQuizStart(){
+  const questions = {
+          question1 : 'HTML Stands for?' ,
+          question1 : 'Who is making the Web standards?' ,
+          question1 : 'Choose the correct HTML element for the largest heading:' ,
+          question1 : 'What is the correct HTML element for inserting a line break?' ,
+          question1 : 'Choose the correct HTML element to define important text?' ,
 
-  document.querySelector('.quiz-section').style.display = 'block';
-  document.querySelector('.quiz-cards').style.display= 'none';
-  document.querySelector('.play-quiz').style.display= 'none';
-  document.querySelector('.custom-quiz').style.display= 'none';
+  }
 
-  
+  const options = [{
+    optionA:'HyperText MakeUp Language',
+    optionB:'HyperText MarkUp Language',
+    optionC:'HyperTextLink MakeUp Language',
+    optionD:'HyperText Website MakeUp Language',
+  },
+  {
+    optionA:'Google',
+    optionB:'Mozilla',
+    optionC:'Safari',
+    optionD:'World Wide Web Consortium',
+  },
+  {
+    optionA:'<h1>',
+    optionB:'<head>',
+    optionC:'<header>',
+    optionD:'<h6>',
+  },
+  {
+    optionA:'<lineBreak>',
+    optionB:'</br>',
+    optionC:'<break>',
+    optionD:'<lb>',
+  },
+  {
+    optionA:'<b>',
+    optionB:'<strong>',
+    optionC:'<important>',
+    optionD:'!important',
+  },
+
+]
+
+const correctOptions = [
+  'HyperText Markup Language', 'World Wide Web Consortium' , 
+  '<h1>' , '</br>', '<strong>' 
+]
 
 }
 

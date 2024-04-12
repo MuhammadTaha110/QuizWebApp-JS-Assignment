@@ -278,10 +278,6 @@ main{
 
   /*BreakPoints*/
 
-  @media(min-width:992px){
-    
-  }
-
   @media(max-width:635px){
 
     .quiz-cards .cards{
