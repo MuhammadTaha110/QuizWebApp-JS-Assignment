@@ -14,54 +14,54 @@ $(window).scroll(function () {
 });
 
 var index = 0 ;
+const questions = [
+  'HTML Stands for?' ,
+  'Who is making the Web standards?' ,
+  'Choose the correct HTML element for the largest heading:' ,
+  'What is the correct HTML element for inserting a line break?' ,
+  'Choose the correct HTML element to define important text?' 
 
-function htmlQuizStart(){
-  const questions = [
-          'HTML Stands for?' ,
-          'Who is making the Web standards?' ,
-          'Choose the correct HTML element for the largest heading:' ,
-          'What is the correct HTML element for inserting a line break?' ,
-          'Choose the correct HTML element to define important text?' 
+]
 
-  ]
-
-  const options = [{
-    optionA:'HyperText MakeUp Language',
-    optionB:'HyperText MarkUp Language',
-    optionC:'HyperTextLink MakeUp Language',
-    optionD:'HyperText Website MakeUp Language',
-  },
-  {
-    optionA:'Google',
-    optionB:'Mozilla',
-    optionC:'Safari',
-    optionD:'World Wide Web Consortium',
-  },
-  {
-    optionA:'<h1>',
-    optionB:'<head>',
-    optionC:'<header>',
-    optionD:'<h6>',
-  },
-  {
-    optionA:'<lineBreak>',
-    optionB:'</br>',
-    optionC:'<break>',
-    optionD:'<lb>',
-  },
-  {
-    optionA:'<b>',
-    optionB:'<strong>',
-    optionC:'<important>',
-    optionD:'!important',
-  },
+const options = [{
+optionA:'HyperText MakeUp Language',
+optionB:'HyperText MarkUp Language',
+optionC:'HyperTextLink MakeUp Language',
+optionD:'HyperText Website MakeUp Language',
+},
+{
+optionA:'Google',
+optionB:'Mozilla',
+optionC:'Safari',
+optionD:'World Wide Web Consortium',
+},
+{
+optionA:'<h1>',
+optionB:'<head>',
+optionC:'<header>',
+optionD:'<h6>',
+},
+{
+optionA:'<lineBreak>',
+optionB:'</br>',
+optionC:'<break>',
+optionD:'<lb>',
+},
+{
+optionA:'<b>',
+optionB:'<strong>',
+optionC:'<important>',
+optionD:'!important',
+},
 
 ]
 
 const correctOptions = [
-  'HyperText Markup Language', 'World Wide Web Consortium' , 
-  '<h1>' , '</br>', '<strong>' 
+'HyperText Markup Language', 'World Wide Web Consortium' , 
+'<h1>' , '</br>', '<strong>' 
 ]
+
+function htmlQuizStart(){
 
 var Quizsection = document.querySelector('.quiz-section');
 var QuizQuestionNum = document.querySelector('.question-num');
@@ -82,9 +82,21 @@ D.innerText = options[index].optionD;
 htmlQuizStart();
 
 function nextButton(){
-  index++;
-  htmlQuizStart();
+  if(index < questions.length-1){
+    index++;
+    htmlQuizStart();
+  }
+
 }
+
+function previousButton(){
+  if(index > 0){
+    index--;
+    htmlQuizStart();
+  }
+  
+}
+
 
 
 
