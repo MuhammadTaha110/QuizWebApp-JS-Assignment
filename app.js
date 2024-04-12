@@ -70,8 +70,8 @@ var A = document.querySelector('.A');
 var B = document.querySelector('.B');
 var C = document.querySelector('.C');
 var D = document.querySelector('.D');
-var timerMins = document.querySelector('.timer-mins');
-var timerSec = document.querySelector('.timer-sec');
+//var timerMins = document.querySelector('.timer-mins');
+//var timerSec = document.querySelector('.timer-sec');
 
 
 QuizQuestionNum.innerHTML = index+1;
@@ -81,8 +81,33 @@ B.innerText = options[index].optionB;
 C.innerText = options[index].optionC;
 D.innerText = options[index].optionD;
 
-timerSec = 59;
-timerMins = 14;
+setInterval(timerSec,1000);
+setInterval(timerMins,60000);
+
+
+}
+
+var timerSeconds = 59;
+var timerMinutes = 14;
+
+
+function timerSec(){
+  if(timerSeconds > 0 ){
+    timerSeconds--;
+  }
+
+  else{
+    timerSeconds = 59;
+  }
+
+  document.querySelector('.timer-sec').innerHTML = timerSeconds;
+
+}
+
+
+function timerMins(){
+  timerMinutes--;
+  document.querySelector('.timer-mins').innerHTML = timerMinutes;
 
 }
 
