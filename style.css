@@ -201,7 +201,10 @@ main{
     cursor: pointer;
     width: 40% ;
     height: 60px;
+    display: flex;
+    justify-content: center;
     text-align: center;
+    align-items: center;
     font-size: 1.2em;
 }
 
@@ -343,8 +346,9 @@ main{
 
 
 .quiz-section .options .option-card{
-    width: 45% ;
+    width: 48% ;
     height: 70px;
+    font-size: 0.9em
 }
 
 
