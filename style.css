@@ -166,7 +166,7 @@ main{
 /*Quiz Section*/
 
 .quiz-section .question-section{
-    height: 120px;
+    height: 80px;
     width: 100%;
 }
 
@@ -348,7 +348,9 @@ main{
 /*Quiz Section*/
 
 
-
+.quiz-section .question{
+    font-size: 1.2em;
+}
 
 .quiz-section .options .option-card{
     width: 48% ;
