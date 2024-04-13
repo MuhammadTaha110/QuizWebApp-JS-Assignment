@@ -174,5 +174,28 @@ function userChoice(){
   alert(userChose);
 }
 
+//document.querySelector('.option-card').addEventListener('clicked',userChoice());
+
+// Get all option cards
+const optionCards = document.querySelectorAll('.option-card');
+
+// Define a variable to store the choice
+let choice = '';
+
+// Add event listener to each option card
+optionCards.forEach(option => {
+    option.addEventListener('click', function() {
+        // Retrieve the value of the clicked option
+        choice = this.classList[0]; // Assuming the class names are A, B, C, D
+        //console.log('Choice:', choice);
+        // You can perform further actions here based on the choice
+
+        let text = '.'+choice;
+
+        let test = document.querySelector(text).innerText;
+
+        console.log(test);
+    });
+});
 
 
