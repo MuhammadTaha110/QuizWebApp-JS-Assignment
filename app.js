@@ -169,13 +169,14 @@ function hideDetails() {
 }
 
 //function to hold user-choice
-function userChoice(){
+function userChoice() {
   var userChose = document.querySelector('.option-card').innerText;
   alert(userChose);
 }
 
 //document.querySelector('.option-card').addEventListener('clicked',userChoice());
 
+/*
 // Get all option cards
 const optionCards = document.querySelectorAll('.option-card');
 
@@ -191,11 +192,69 @@ optionCards.forEach(option => {
         // You can perform further actions here based on the choice
 
         let text = '.'+choice;
+        let test = '';
+        test = document.querySelector(text).innerText;
 
-        let test = document.querySelector(text).innerText;
-
+        document.querySelector(text).style.backgroundColor = ' #22a247';
+        document.querySelector(text).style.borderColor = ' #000000';
+        document.querySelector(text).style.color = ' #000000';
         console.log(test);
     });
+});
+*/
+
+// Get all option cards
+const optionCards = document.querySelectorAll('.option-card');
+
+// Store the state of each option
+const optionStates = {
+  A: false,
+  B: false,
+  C: false,
+  D: false
+};
+
+
+// Add event listener to each option card
+optionCards.forEach(option => {
+  option.addEventListener('click', function () {
+    const optionClass = this.classList[0]; // Get the class name of the clicked option
+    const isSelected = optionStates[optionClass]; // Get the current state of the option
+
+    let text = '.' + optionClass;
+    let userChoose = '';
+    userChoose = document.querySelector(text).innerText;
+
+    //console.log(test);
+
+    // Toggle the state of the option
+    optionStates[optionClass] = !isSelected;
+
+    // Change the color based on the state
+    if (isSelected) {
+      // Revert color if clicked twice
+      this.style.backgroundColor = ''; // Set background color to default (or remove inline style)
+      document.querySelector(text).style.borderColor = ' #22a247';
+      document.querySelector(text).style.color = '#000000';
+    } else {
+      // Change color if clicked once
+      this.style.backgroundColor = '#22a247'; // Set background color to desired color
+      document.querySelector(text).style.borderColor = ' #000000';
+      document.querySelector(text).style.color = ' #000000';
+    }
+
+    // Change the color of other options if needed
+    for (const key in optionStates) {
+      if (key !== optionClass && optionStates[key]) {
+        document.querySelector(`.${key}`).style.backgroundColor = ''; // Revert color of other selected options
+        document.querySelector(`.${key}`).style.borderColor = ' #22a247';
+        document.querySelector(`.${key}`).style.color = '#00000';
+        optionStates[key] = false; // Reset state of other selected options
+      }
+    }
+
+    //console.log(optionClass + ' selected:', optionStates[optionClass]);
+  });
 });
 
 
