@@ -165,6 +165,11 @@ main{
 
 /*Quiz Section*/
 
+.quiz-section .question-section{
+    height: 120px;
+    width: 100%;
+}
+
 .quiz-section{
     top: 10%;
     transition: .5s ease;
