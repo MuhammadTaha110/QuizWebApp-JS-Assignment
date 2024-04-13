@@ -152,7 +152,7 @@ function previousButton() {
 
 }
 
-
+//
 let intervalID;
 
 //function to show quiz-section
