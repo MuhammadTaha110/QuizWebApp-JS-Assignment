@@ -13,7 +13,10 @@ $(window).scroll(function () {
   lastScrollTop = scrollTop;
 });
 
+//var to hold temporary value for elements
 var index = 0;
+
+//Array of Questions
 const questions = [
   'HTML Stands for?',
   'Who is making the Web standards?',
@@ -23,6 +26,7 @@ const questions = [
 
 ]
 
+//Array of Objects for Options
 const options = [{
   optionA: 'HyperText MakeUp Language',
   optionB: 'HyperText MarkUp Language',
@@ -56,11 +60,14 @@ const options = [{
 
 ]
 
+//Array for Correct options
 const correctOptions = [
   'HyperText Markup Language', 'World Wide Web Consortium',
   '<h1>', '</br>', '<strong>'
 ]
 
+
+//function for html questions
 function htmlQuizStart() {
 
   var Quizsection = document.querySelector('.quiz-section');
@@ -84,10 +91,13 @@ function htmlQuizStart() {
 
 }
 
-var timerSeconds = 59;
+
+//variables for timer
+var timerSeconds = 60;
 var timerMinutes = 14;
 
 
+//function for timer
 function timerSec() {
   if (timerSeconds > 0) {
     timerSeconds--;
@@ -126,6 +136,7 @@ function previousButton() {
 
 let intervalID;
 
+//function to show quiz-section
 function displayDetails() {
   var section = document.querySelector('.quiz-section');
 
@@ -145,6 +156,7 @@ function displayDetails() {
   intervalID = setInterval(timerSec, 1000);
 }
 
+//function to hide quiz-section
 function hideDetails() {
 
   // Display the quiz section
@@ -153,7 +165,13 @@ function hideDetails() {
   document.querySelector('.quiz-cards').style.display = 'flex';
   document.querySelector('.custom-quiz').style.display = 'block';
 
-  clearInterval(intervalID);
+  stopInterval(intervalID);
+}
+
+//function to hold user-choice
+function userChoice(){
+  var userChose = document.querySelector('.option-card').innerText;
+  alert(userChose);
 }
 
 
