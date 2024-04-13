@@ -165,15 +165,18 @@ main{
 
 /*Quiz Section*/
 
+
+
 .quiz-section .question-section{
     height: 80px;
     width: 100%;
     position: relative;
+    transition: .5s ease;
 }
 
 .quiz-section .question-section .quit-btn{
-    width: 100px;
-    height: 50px;
+    width: 80px;
+    height: 30px;
     color: var(--txt-color);
     background-color: var(--main-color);
     position: absolute;
