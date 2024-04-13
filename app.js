@@ -119,8 +119,27 @@ htmlQuizStart();
 
 function nextButton() {
   if (index < questions.length - 1) {
+
+  document.querySelector('.A').style.backgroundColor = '#ffffff';
+  document.querySelector('.A').style.borderColor = ' #22a247';
+  document.querySelector('.A').style.color = '#000000';
+
+  document.querySelector('.B').style.backgroundColor = '#ffffff';
+  document.querySelector('.B').style.borderColor = ' #22a247';
+  document.querySelector('.B').style.color = '#000000';
+
+  document.querySelector('.C').style.backgroundColor = '#ffffff';
+  document.querySelector('.C').style.borderColor = ' #22a247';
+  document.querySelector('.C').style.color = '#000000';
+
+  document.querySelector('.D').style.backgroundColor = '#ffffff';
+  document.querySelector('.D').style.borderColor = ' #22a247';
+  document.querySelector('.D').style.color = '#000000';
+
     index++;
-    htmlQuizStart();
+
+  htmlQuizStart();
+
   }
 
 }
@@ -203,6 +222,8 @@ optionCards.forEach(option => {
 });
 */
 
+let userChosenOption = [];
+
 // Get all option cards
 const optionCards = document.querySelectorAll('.option-card');
 
@@ -241,6 +262,10 @@ optionCards.forEach(option => {
       this.style.backgroundColor = '#22a247'; // Set background color to desired color
       document.querySelector(text).style.borderColor = ' #000000';
       document.querySelector(text).style.color = ' #000000';
+
+      userChosenOption.push(userChoose);
+
+      
     }
 
     // Change the color of other options if needed
