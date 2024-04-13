@@ -81,8 +81,6 @@ B.innerText = options[index].optionB;
 C.innerText = options[index].optionC;
 D.innerText = options[index].optionD;
 
-setInterval(timerSec,1000);
-
 
 }
 
@@ -144,6 +142,8 @@ function displayDetails() {
   document.querySelector('.quiz-cards').style.display = 'none';
   document.querySelector('.play-quiz').style.display = 'none';
   document.querySelector('.custom-quiz').style.display = 'none';
+
+setInterval(timerSec,1000);
 
 
 }

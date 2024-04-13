@@ -228,7 +228,18 @@ main{
     display: flex;
     justify-content: space-around;
     width: 100%;
+    text-align: center;
 }
+
+.quiz-section .prv-nxt-btn .next-icon {
+    margin-left: 12px;
+}
+
+.quiz-section .prv-nxt-btn .prev-icon {
+    margin-right: 12px;
+}
+
+
 
 .quiz-section .prv-nxt-btn button{
     width: 25%;
@@ -362,8 +373,14 @@ main{
 .quiz-section .prv-nxt-btn {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column-reverse;
+    text-align: center;
     width: 95%;
     margin: 140px 10px auto auto;
+}
+
+.quiz-section .prv-nxt-btn .nxt-btn{
+    content: "";
 }
 
 
