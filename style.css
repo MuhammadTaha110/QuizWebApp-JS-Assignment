@@ -168,6 +168,23 @@ main{
 .quiz-section .question-section{
     height: 80px;
     width: 100%;
+    position: relative;
+}
+
+.quiz-section .question-section .quit-btn{
+    width: 100px;
+    height: 50px;
+    color: var(--txt-color);
+    background-color: var(--main-color);
+    position: absolute;
+    right: 20%;
+    left: 80%;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.quiz-section .question-section .quit-btn i{
+    margin-left: 5px;
 }
 
 .quiz-section{
@@ -301,6 +318,12 @@ main{
 
   @media(max-width:635px){
 
+    .quiz-section .question-section .quit-btn{
+        right: 25%;
+        left: 75%;
+       
+    }
+
     .quiz-cards .cards{
         margin-left: auto;
         margin-right: auto;
@@ -358,6 +381,11 @@ main{
     
 /*Quiz Section*/
 
+.quiz-section .question-section .quit-btn{
+    right: 30%;
+    left: 70%;
+   
+}
 
 .quiz-section .question{
     font-size: 1.2em;
