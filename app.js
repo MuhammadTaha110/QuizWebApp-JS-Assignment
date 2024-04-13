@@ -257,13 +257,21 @@ optionCards.forEach(option => {
       this.style.backgroundColor = ''; // Set background color to default (or remove inline style)
       document.querySelector(text).style.borderColor = ' #22a247';
       document.querySelector(text).style.color = '#000000';
+
+      //pop useroption in an array
+      userChosenOption.pop();
+      console.log(userChosenOption);
+
     } else {
       // Change color if clicked once
       this.style.backgroundColor = '#22a247'; // Set background color to desired color
       document.querySelector(text).style.borderColor = ' #000000';
       document.querySelector(text).style.color = ' #000000';
 
+      //push useroption in an array
       userChosenOption.push(userChoose);
+      console.log(userChosenOption);
+      
 
       
     }
@@ -277,6 +285,7 @@ optionCards.forEach(option => {
         optionStates[key] = false; // Reset state of other selected options
       }
     }
+    
 
     //console.log(optionClass + ' selected:', optionStates[optionClass]);
   });
