@@ -82,7 +82,6 @@ C.innerText = options[index].optionC;
 D.innerText = options[index].optionD;
 
 setInterval(timerSec,1000);
-setInterval(timerMins,60000);
 
 
 }
@@ -97,19 +96,16 @@ function timerSec(){
   }
 
   else{
+    timerMinutes--;
     timerSeconds = 59;
   }
 
   document.querySelector('.timer-sec').innerHTML = timerSeconds;
-
-}
-
-
-function timerMins(){
-  timerMinutes--;
   document.querySelector('.timer-mins').innerHTML = timerMinutes;
 
 }
+
+
 
 htmlQuizStart();
 
