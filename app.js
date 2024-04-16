@@ -1,6 +1,7 @@
 // Add your custom JavaScript here
 let lastScrollTop = 0;
 
+
 $(window).scroll(function () {
   let scrollTop = $(this).scrollTop();
   if (scrollTop > lastScrollTop) {
@@ -69,6 +70,7 @@ const correctOptions = [
 
 //function for html questions
 function htmlQuizStart() {
+  flag = 0;
 
   var Quizsection = document.querySelector('.quiz-section');
   var QuizQuestionNum = document.querySelector('.question-num');
@@ -120,27 +122,28 @@ htmlQuizStart();
 function nextButton() {
   if (index < questions.length - 1) {
 
-  document.querySelector('.A').style.backgroundColor = '#ffffff';
-  document.querySelector('.A').style.borderColor = ' #22a247';
-  document.querySelector('.A').style.color = '#000000';
+    document.querySelector('.A').style.backgroundColor = '#ffffff';
+    document.querySelector('.A').style.borderColor = ' #22a247';
+    document.querySelector('.A').style.color = '#000000';
 
-  document.querySelector('.B').style.backgroundColor = '#ffffff';
-  document.querySelector('.B').style.borderColor = ' #22a247';
-  document.querySelector('.B').style.color = '#000000';
+    document.querySelector('.B').style.backgroundColor = '#ffffff';
+    document.querySelector('.B').style.borderColor = ' #22a247';
+    document.querySelector('.B').style.color = '#000000';
 
-  document.querySelector('.C').style.backgroundColor = '#ffffff';
-  document.querySelector('.C').style.borderColor = ' #22a247';
-  document.querySelector('.C').style.color = '#000000';
+    document.querySelector('.C').style.backgroundColor = '#ffffff';
+    document.querySelector('.C').style.borderColor = ' #22a247';
+    document.querySelector('.C').style.color = '#000000';
 
-  document.querySelector('.D').style.backgroundColor = '#ffffff';
-  document.querySelector('.D').style.borderColor = ' #22a247';
-  document.querySelector('.D').style.color = '#000000';
+    document.querySelector('.D').style.backgroundColor = '#ffffff';
+    document.querySelector('.D').style.borderColor = ' #22a247';
+    document.querySelector('.D').style.color = '#000000';
 
     index++;
 
-  htmlQuizStart();
+    htmlQuizStart();
 
   }
+
 
 }
 
@@ -223,7 +226,7 @@ optionCards.forEach(option => {
 */
 
 let userChosenOption = [];
-
+/*
 // Get all option cards
 const optionCards = document.querySelectorAll('.option-card');
 
@@ -258,9 +261,10 @@ optionCards.forEach(option => {
       document.querySelector(text).style.borderColor = ' #22a247';
       document.querySelector(text).style.color = '#000000';
 
-      //pop useroption in an array
+      //pop insertion in an array
       userChosenOption.pop();
       console.log(userChosenOption);
+      test = 1;
 
     } else {
       // Change color if clicked once
@@ -271,10 +275,15 @@ optionCards.forEach(option => {
       //push useroption in an array
       userChosenOption.push(userChoose);
       console.log(userChosenOption);
-      
+      test = 2;
 
-      
+
+
     }
+
+    
+
+    
 
     // Change the color of other options if needed
     for (const key in optionStates) {
@@ -284,6 +293,7 @@ optionCards.forEach(option => {
         document.querySelector(`.${key}`).style.color = '#00000';
         optionStates[key] = false; // Reset state of other selected options
       }
+
     }
     
 
@@ -291,4 +301,306 @@ optionCards.forEach(option => {
   });
 });
 
+*/
 
+
+let test = 0;
+let a = 0;
+let b = 0;
+let c = 0;
+let d = 0;
+
+
+let A = document.querySelector('.A');
+let B = document.querySelector('.B');
+let C = document.querySelector('.C');
+let D = document.querySelector('.D');
+
+A.addEventListener('click', function () {
+  //alert(a)
+  let userChoose = A.innerText;
+  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0)  && (d % 2 == 0)) {
+    A.style.borderColor = ' #000000';
+    A.style.color = '#000000';
+    A.style.backgroundColor = '#22a247';
+    a++;
+    userChosenOption.push(userChoose);
+    console.log(userChosenOption);
+  }
+
+  else if(a % 2 != 0){
+    A.style.borderColor = ' #22a247';
+    A.style.color = '#000000';
+    A.style.backgroundColor = '#ffffff';
+    a--;
+    userChosenOption.pop();
+  }
+
+  else{ if (b % 2 != 0) {
+    B.style.borderColor = ' #22a247';
+    B.style.color = '#000000';
+    B.style.backgroundColor = '#ffffff';
+    b--;
+    userChosenOption.pop();
+
+    A.style.borderColor = ' #000000';
+    A.style.color = '#000000';
+    A.style.backgroundColor = '#22a247';
+    a++;
+
+    userChosenOption.push(userChoose);
+    console.log(userChosenOption);
+    }
+
+    if (c % 2 != 0) {
+    C.style.borderColor = ' #22a247';
+    C.style.color = '#000000';
+    C.style.backgroundColor = '#ffffff';
+    c--;
+    userChosenOption.pop();
+
+    A.style.borderColor = ' #000000';
+    A.style.color = '#000000';
+    A.style.backgroundColor = '#22a247';
+    a++;
+
+    userChosenOption.push(userChoose);
+    console.log(userChosenOption);
+    }
+
+    if (d % 2 != 0) {
+      D.style.borderColor = ' #22a247';
+      D.style.color = '#000000';
+      D.style.backgroundColor = '#ffffff';
+      d--;
+      userChosenOption.pop();
+
+      A.style.borderColor = ' #000000';
+      A.style.color = '#000000';
+      A.style.backgroundColor = '#22a247';
+      a++;
+
+      userChosenOption.push(userChoose);
+    console.log(userChosenOption);
+      }
+  }
+})
+
+B.addEventListener('click', function () {
+  //alert(a)
+  let userChoose = B.innerText;
+  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0)  && (d % 2 == 0)) {
+    B.style.borderColor = ' #000000';
+    B.style.color = '#000000';
+    B.style.backgroundColor = '#22a247';
+    b++;
+    userChosenOption.push(userChoose);
+    console.log(userChosenOption);
+  }
+
+  else if(b % 2 != 0){
+    B.style.borderColor = ' #22a247';
+    B.style.color = '#000000';
+    B.style.backgroundColor = '#ffffff';
+    b--;
+    userChosenOption.pop();
+  }
+
+  else{ if (a % 2 != 0) {
+    A.style.borderColor = ' #22a247';
+    A.style.color = '#000000';
+    A.style.backgroundColor = '#ffffff';
+    a--;
+    userChosenOption.pop();
+
+    B.style.borderColor = ' #000000';
+    B.style.color = '#000000';
+    B.style.backgroundColor = '#22a247';
+    b++;
+
+    userChosenOption.push(userChoose);
+    console.log(userChosenOption);
+    }
+
+    if (c % 2 != 0) {
+    C.style.borderColor = ' #22a247';
+    C.style.color = '#000000';
+    C.style.backgroundColor = '#ffffff';
+    c--;
+    userChosenOption.pop();
+
+    B.style.borderColor = ' #000000';
+    B.style.color = '#000000';
+    B.style.backgroundColor = '#22a247';
+    b++;
+
+    userChosenOption.push(userChoose);
+    console.log(userChosenOption);
+    }
+
+    if (d % 2 != 0) {
+      D.style.borderColor = ' #22a247';
+      D.style.color = '#000000';
+      D.style.backgroundColor = '#ffffff';
+      d--;
+      userChosenOption.pop();
+
+      B.style.borderColor = ' #000000';
+      B.style.color = '#000000';
+      B.style.backgroundColor = '#22a247';
+      b++;
+
+      userChosenOption.push(userChoose);
+    console.log(userChosenOption);
+      }
+  }
+})
+
+C.addEventListener('click', function () {
+  let userChoose = C.innerText;
+  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0)  && (d % 2 == 0)) {
+    C.style.borderColor = ' #000000';
+    C.style.color = '#000000';
+    C.style.backgroundColor = '#22a247';
+    c++;
+    userChosenOption.push(userChoose);
+    console.log(userChosenOption)
+
+
+  }
+
+  else if(c % 2 != 0) {
+    C.style.borderColor = ' #22a247';
+    C.style.color = '#000000';
+    C.style.backgroundColor = '#ffffff';
+    c--;
+    userChosenOption.pop();
+    console.log(userChosenOption)
+
+  }
+
+  else{ if (a % 2 != 0) {
+    A.style.borderColor = ' #22a247';
+    A.style.color = '#000000';
+    A.style.backgroundColor = '#ffffff';
+    a--;
+    userChosenOption.pop();
+
+    C.style.borderColor = ' #000000';
+    C.style.color = '#000000';
+    C.style.backgroundColor = '#22a247';
+    c++;
+
+    userChosenOption.push(userChoose);
+
+    }
+
+    if (b % 2 != 0) {
+    B.style.borderColor = ' #22a247';
+    B.style.color = '#000000';
+    B.style.backgroundColor = '#ffffff';
+    b--;
+    userChosenOption.pop();
+
+    C.style.borderColor = ' #000000';
+    C.style.color = '#000000';
+    C.style.backgroundColor = '#22a247';
+    c++;
+
+    userChosenOption.push(userChoose);
+
+    }
+
+    if (d % 2 != 0) {
+      D.style.borderColor = ' #22a247';
+      D.style.color = '#000000';
+      D.style.backgroundColor = '#ffffff';
+      d--;
+      userChosenOption.pop();
+
+      C.style.borderColor = ' #000000';
+      C.style.color = '#000000';
+      C.style.backgroundColor = '#22a247';
+      c++;
+
+      userChosenOption.push(userChoose);
+      }
+  }
+})
+
+D.addEventListener('click', function () {
+  let userChoose = C.innerText;
+  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0)  && (d % 2 == 0)) {
+    D.style.borderColor = ' #000000';
+    D.style.color = '#000000';
+    D.style.backgroundColor = '#22a247';
+    d++;
+    userChosenOption.push(userChoose);
+    console.log(userChosenOption)
+
+
+  }
+
+  else if(d % 2 != 0) {
+    D.style.borderColor = ' #22a247';
+    D.style.color = '#000000';
+    D.style.backgroundColor = '#ffffff';
+    d--;
+    userChosenOption.pop();
+    console.log(userChosenOption)
+
+  }
+
+  else{ if (a % 2 != 0) {
+    A.style.borderColor = ' #22a247';
+    A.style.color = '#000000';
+    A.style.backgroundColor = '#ffffff';
+    a--;
+    userChosenOption.pop();
+
+    D.style.borderColor = ' #000000';
+    D.style.color = '#000000';
+    D.style.backgroundColor = '#22a247';
+    d++;
+
+    userChosenOption.push(userChoose);
+
+    }
+
+    if (b % 2 != 0) {
+    B.style.borderColor = ' #22a247';
+    B.style.color = '#000000';
+    B.style.backgroundColor = '#ffffff';
+    b--;
+    userChosenOption.pop();
+
+    D.style.borderColor = ' #000000';
+    D.style.color = '#000000';
+    D.style.backgroundColor = '#22a247';
+    d++;
+
+    userChosenOption.push(userChoose);
+
+    }
+
+    if (c % 2 != 0) {
+      C.style.borderColor = ' #22a247';
+      C.style.color = '#000000';
+      C.style.backgroundColor = '#ffffff';
+      c--;
+      userChosenOption.pop();
+
+      D.style.borderColor = ' #000000';
+      D.style.color = '#000000';
+      D.style.backgroundColor = '#22a247';
+      d++;
+
+      userChosenOption.push(userChoose);
+      }
+  }
+})
+
+
+document.querySelector('.submit-btn').addEventListener('click',function(){
+  console.warn(userChosenOption);
+})
