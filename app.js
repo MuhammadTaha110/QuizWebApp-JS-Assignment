@@ -533,7 +533,7 @@ C.addEventListener('click', function () {
 })
 
 D.addEventListener('click', function () {
-  let userChoose = C.innerText;
+  let userChoose = D.innerText;
   if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0)  && (d % 2 == 0)) {
     D.style.borderColor = ' #000000';
     D.style.color = '#000000';
