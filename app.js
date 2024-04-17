@@ -369,6 +369,7 @@ A.addEventListener('click', function () {
       B.style.backgroundColor = '#ffffff';
       b--;
       userChosenOption.pop();
+      userSelected.pop();
 
 
       A.style.borderColor = ' #000000';
@@ -377,7 +378,8 @@ A.addEventListener('click', function () {
       a++;
 
       userChosenOption.push(userChoose);
-      console.log(userChosenOption);
+      userSelected.push('.A');
+      //console.log(userChosenOption);
     }
 
     if (c % 2 != 0) {
@@ -386,6 +388,7 @@ A.addEventListener('click', function () {
       C.style.backgroundColor = '#ffffff';
       c--;
       userChosenOption.pop();
+      userSelected.pop()
 
       A.style.borderColor = ' #000000';
       A.style.color = '#000000';
@@ -393,6 +396,7 @@ A.addEventListener('click', function () {
       a++;
 
       userChosenOption.push(userChoose);
+      userSelected.push('.A')
       console.log(userChosenOption);
     }
 
@@ -402,6 +406,7 @@ A.addEventListener('click', function () {
       D.style.backgroundColor = '#ffffff';
       d--;
       userChosenOption.pop();
+      userSelected.pop()
 
       A.style.borderColor = ' #000000';
       A.style.color = '#000000';
@@ -409,6 +414,7 @@ A.addEventListener('click', function () {
       a++;
 
       userChosenOption.push(userChoose);
+      userSelected.push('.A')
       console.log(userChosenOption);
     }
   }
@@ -445,6 +451,7 @@ B.addEventListener('click', function () {
       A.style.backgroundColor = '#ffffff';
       a--;
       userChosenOption.pop();
+      userSelected.pop()
 
       B.style.borderColor = ' #000000';
       B.style.color = '#000000';
@@ -452,6 +459,8 @@ B.addEventListener('click', function () {
       b++;
 
       userChosenOption.push(userChoose);
+      userSelected.push('.B');
+
       console.log(userChosenOption);
     }
 
@@ -461,6 +470,7 @@ B.addEventListener('click', function () {
       C.style.backgroundColor = '#ffffff';
       c--;
       userChosenOption.pop();
+      userSelected.pop()
 
       B.style.borderColor = ' #000000';
       B.style.color = '#000000';
@@ -468,6 +478,8 @@ B.addEventListener('click', function () {
       b++;
 
       userChosenOption.push(userChoose);
+      userSelected.push('.B');
+
       console.log(userChosenOption);
     }
 
@@ -477,6 +489,7 @@ B.addEventListener('click', function () {
       D.style.backgroundColor = '#ffffff';
       d--;
       userChosenOption.pop();
+      userSelected.pop()
 
       B.style.borderColor = ' #000000';
       B.style.color = '#000000';
@@ -484,6 +497,8 @@ B.addEventListener('click', function () {
       b++;
 
       userChosenOption.push(userChoose);
+      userSelected.push('.B');
+
       console.log(userChosenOption);
     }
   }
@@ -531,6 +546,8 @@ C.addEventListener('click', function () {
       c++;
 
       userChosenOption.push(userChoose);
+      userSelected.push('.C');
+
 
     }
 
@@ -540,6 +557,7 @@ C.addEventListener('click', function () {
       B.style.backgroundColor = '#ffffff';
       b--;
       userChosenOption.pop();
+      userSelected.pop()
 
       C.style.borderColor = ' #000000';
       C.style.color = '#000000';
@@ -547,6 +565,8 @@ C.addEventListener('click', function () {
       c++;
 
       userChosenOption.push(userChoose);
+      userSelected.push('.C');
+
 
     }
 
@@ -556,6 +576,7 @@ C.addEventListener('click', function () {
       D.style.backgroundColor = '#ffffff';
       d--;
       userChosenOption.pop();
+      userSelected.pop()
 
       C.style.borderColor = ' #000000';
       C.style.color = '#000000';
@@ -563,6 +584,8 @@ C.addEventListener('click', function () {
       c++;
 
       userChosenOption.push(userChoose);
+      userSelected.push('.C');
+
     }
   }
 })
@@ -601,6 +624,7 @@ D.addEventListener('click', function () {
       A.style.backgroundColor = '#ffffff';
       a--;
       userChosenOption.pop();
+      userSelected.pop()
 
       D.style.borderColor = ' #000000';
       D.style.color = '#000000';
@@ -608,6 +632,8 @@ D.addEventListener('click', function () {
       d++;
 
       userChosenOption.push(userChoose);
+      userSelected.push('.D');
+
 
     }
 
@@ -617,6 +643,7 @@ D.addEventListener('click', function () {
       B.style.backgroundColor = '#ffffff';
       b--;
       userChosenOption.pop();
+      userSelected.pop()
 
       D.style.borderColor = ' #000000';
       D.style.color = '#000000';
@@ -624,6 +651,8 @@ D.addEventListener('click', function () {
       d++;
 
       userChosenOption.push(userChoose);
+      userSelected.push('.D');
+
 
     }
 
@@ -633,6 +662,7 @@ D.addEventListener('click', function () {
       C.style.backgroundColor = '#ffffff';
       c--;
       userChosenOption.pop();
+      userSelected.pop()
 
       D.style.borderColor = ' #000000';
       D.style.color = '#000000';
@@ -640,6 +670,8 @@ D.addEventListener('click', function () {
       d++;
 
       userChosenOption.push(userChoose);
+      userSelected.push('.D');
+
     }
   }
 })
