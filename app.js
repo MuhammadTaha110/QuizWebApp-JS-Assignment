@@ -118,7 +118,7 @@ function timerSec() {
 
 
 htmlQuizStart();
-
+let p;
 function nextButton() {
   if (index < questions.length - 1) {
 
@@ -138,6 +138,13 @@ function nextButton() {
     document.querySelector('.D').style.borderColor = ' #22a247';
     document.querySelector('.D').style.color = '#000000';
 
+    if(p==1){
+      let selectedOption = userSelected[index+1];
+      document.querySelector(selectedOption).style.backgroundColor = '#22a247';
+      document.querySelector(selectedOption).style.borderColor = ' #000000';
+      document.querySelector(selectedOption).style.color = '#000000';
+      p=0;
+    }
     index++;
     a = 0;
     b = 0;
@@ -169,12 +176,17 @@ function previousButton() {
     document.querySelector('.D').style.backgroundColor = '#ffffff';
     document.querySelector('.D').style.borderColor = ' #22a247';
     document.querySelector('.D').style.color = '#000000';
-    console.warn(userSelected[index+1]);
-    console.log(index);
+   
+    let selectedOption = userSelected[index];
+
+    document.querySelector(selectedOption).style.backgroundColor = '#22a247';
+    document.querySelector(selectedOption).style.borderColor = ' #000000';
+    document.querySelector(selectedOption).style.color = '#000000';
+    
  
     //alert((userSelected[index+1]));
     //document.querySelector(userSelected[index+1])
-        
+    p=1;  
     htmlQuizStart();
 
 
