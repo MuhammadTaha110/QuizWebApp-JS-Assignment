@@ -139,10 +139,10 @@ function nextButton() {
     document.querySelector('.D').style.color = '#000000';
 
     index++;
-    a=0;
-    b=0;
-    c=0;
-    d=0;
+    a = 0;
+    b = 0;
+    c = 0;
+    d = 0;
 
     htmlQuizStart();
 
@@ -154,8 +154,25 @@ function nextButton() {
 function previousButton() {
   if (index > 0) {
     index--;
+    document.querySelector('.A').style.backgroundColor = '#ffffff';
+    document.querySelector('.A').style.borderColor = ' #22a247';
+    document.querySelector('.A').style.color = '#000000';
+
+    document.querySelector('.B').style.backgroundColor = '#ffffff';
+    document.querySelector('.B').style.borderColor = ' #22a247';
+    document.querySelector('.B').style.color = '#000000';
+
+    document.querySelector('.C').style.backgroundColor = '#ffffff';
+    document.querySelector('.C').style.borderColor = ' #22a247';
+    document.querySelector('.C').style.color = '#000000';
+
+    document.querySelector('.D').style.backgroundColor = '#ffffff';
+    document.querySelector('.D').style.borderColor = ' #22a247';
+    document.querySelector('.D').style.color = '#000000';
     htmlQuizStart();
   }
+
+
 
 }
 
@@ -320,56 +337,63 @@ let B = document.querySelector('.B');
 let C = document.querySelector('.C');
 let D = document.querySelector('.D');
 
+let userSelected = [];
+
 A.addEventListener('click', function () {
   //alert(a)
   let userChoose = A.innerText;
-  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0)  && (d % 2 == 0)) {
+  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
     A.style.borderColor = ' #000000';
     A.style.color = '#000000';
     A.style.backgroundColor = '#22a247';
     a++;
     userChosenOption.push(userChoose);
-    console.log(userChosenOption);
+    userSelected.push('.A');
+    //console.log(userChosenOption);
   }
 
-  else if(a % 2 != 0){
+
+  else if (a % 2 != 0) {
     A.style.borderColor = ' #22a247';
     A.style.color = '#000000';
     A.style.backgroundColor = '#ffffff';
     a--;
     userChosenOption.pop();
+    userSelected.pop();
   }
 
-  else{ if (b % 2 != 0) {
-    B.style.borderColor = ' #22a247';
-    B.style.color = '#000000';
-    B.style.backgroundColor = '#ffffff';
-    b--;
-    userChosenOption.pop();
+  else {
+    if (b % 2 != 0) {
+      B.style.borderColor = ' #22a247';
+      B.style.color = '#000000';
+      B.style.backgroundColor = '#ffffff';
+      b--;
+      userChosenOption.pop();
 
-    A.style.borderColor = ' #000000';
-    A.style.color = '#000000';
-    A.style.backgroundColor = '#22a247';
-    a++;
 
-    userChosenOption.push(userChoose);
-    console.log(userChosenOption);
+      A.style.borderColor = ' #000000';
+      A.style.color = '#000000';
+      A.style.backgroundColor = '#22a247';
+      a++;
+
+      userChosenOption.push(userChoose);
+      console.log(userChosenOption);
     }
 
     if (c % 2 != 0) {
-    C.style.borderColor = ' #22a247';
-    C.style.color = '#000000';
-    C.style.backgroundColor = '#ffffff';
-    c--;
-    userChosenOption.pop();
+      C.style.borderColor = ' #22a247';
+      C.style.color = '#000000';
+      C.style.backgroundColor = '#ffffff';
+      c--;
+      userChosenOption.pop();
 
-    A.style.borderColor = ' #000000';
-    A.style.color = '#000000';
-    A.style.backgroundColor = '#22a247';
-    a++;
+      A.style.borderColor = ' #000000';
+      A.style.color = '#000000';
+      A.style.backgroundColor = '#22a247';
+      a++;
 
-    userChosenOption.push(userChoose);
-    console.log(userChosenOption);
+      userChosenOption.push(userChoose);
+      console.log(userChosenOption);
     }
 
     if (d % 2 != 0) {
@@ -385,61 +409,66 @@ A.addEventListener('click', function () {
       a++;
 
       userChosenOption.push(userChoose);
-    console.log(userChosenOption);
-      }
+      console.log(userChosenOption);
+    }
   }
 })
 
 B.addEventListener('click', function () {
   //alert(a)
   let userChoose = B.innerText;
-  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0)  && (d % 2 == 0)) {
+
+  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
     B.style.borderColor = ' #000000';
     B.style.color = '#000000';
     B.style.backgroundColor = '#22a247';
     b++;
     userChosenOption.push(userChoose);
-    console.log(userChosenOption);
+    userSelected.push('.B');
+
+    //console.log(userChosenOption);
   }
 
-  else if(b % 2 != 0){
+  else if (b % 2 != 0) {
     B.style.borderColor = ' #22a247';
     B.style.color = '#000000';
     B.style.backgroundColor = '#ffffff';
     b--;
     userChosenOption.pop();
+    userSelected.pop();
   }
 
-  else{ if (a % 2 != 0) {
-    A.style.borderColor = ' #22a247';
-    A.style.color = '#000000';
-    A.style.backgroundColor = '#ffffff';
-    a--;
-    userChosenOption.pop();
+  else {
+    if (a % 2 != 0) {
+      A.style.borderColor = ' #22a247';
+      A.style.color = '#000000';
+      A.style.backgroundColor = '#ffffff';
+      a--;
+      userChosenOption.pop();
 
-    B.style.borderColor = ' #000000';
-    B.style.color = '#000000';
-    B.style.backgroundColor = '#22a247';
-    b++;
+      B.style.borderColor = ' #000000';
+      B.style.color = '#000000';
+      B.style.backgroundColor = '#22a247';
+      b++;
 
-    userChosenOption.push(userChoose);
-    console.log(userChosenOption);
+      userChosenOption.push(userChoose);
+      console.log(userChosenOption);
     }
 
     if (c % 2 != 0) {
-    C.style.borderColor = ' #22a247';
-    C.style.color = '#000000';
-    C.style.backgroundColor = '#ffffff';
-    c--;
-    userChosenOption.pop();
+      C.style.borderColor = ' #22a247';
+      C.style.color = '#000000';
+      C.style.backgroundColor = '#ffffff';
+      c--;
+      userChosenOption.pop();
 
-    B.style.borderColor = ' #000000';
-    B.style.color = '#000000';
-    B.style.backgroundColor = '#22a247';
-    b++;
+      B.style.borderColor = ' #000000';
+      B.style.color = '#000000';
+      B.style.backgroundColor = '#22a247';
+      b++;
 
-    userChosenOption.push(userChoose);
-    console.log(userChosenOption);
+      userChosenOption.push(userChoose);
+      console.log(userChosenOption);
     }
 
     if (d % 2 != 0) {
@@ -455,63 +484,69 @@ B.addEventListener('click', function () {
       b++;
 
       userChosenOption.push(userChoose);
-    console.log(userChosenOption);
-      }
+      console.log(userChosenOption);
+    }
   }
 })
 
 C.addEventListener('click', function () {
   let userChoose = C.innerText;
-  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0)  && (d % 2 == 0)) {
+
+
+  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
     C.style.borderColor = ' #000000';
     C.style.color = '#000000';
     C.style.backgroundColor = '#22a247';
     c++;
     userChosenOption.push(userChoose);
-    console.log(userChosenOption)
+    userSelected.push('.C');
+
+    //console.log(userChosenOption)
 
 
   }
 
-  else if(c % 2 != 0) {
+  else if (c % 2 != 0) {
     C.style.borderColor = ' #22a247';
     C.style.color = '#000000';
     C.style.backgroundColor = '#ffffff';
     c--;
     userChosenOption.pop();
-    console.log(userChosenOption)
+    //console.log(userChosenOption);
+    userSelected.pop();
 
   }
 
-  else{ if (a % 2 != 0) {
-    A.style.borderColor = ' #22a247';
-    A.style.color = '#000000';
-    A.style.backgroundColor = '#ffffff';
-    a--;
-    userChosenOption.pop();
+  else {
+    if (a % 2 != 0) {
+      A.style.borderColor = ' #22a247';
+      A.style.color = '#000000';
+      A.style.backgroundColor = '#ffffff';
+      a--;
+      userChosenOption.pop();
 
-    C.style.borderColor = ' #000000';
-    C.style.color = '#000000';
-    C.style.backgroundColor = '#22a247';
-    c++;
+      C.style.borderColor = ' #000000';
+      C.style.color = '#000000';
+      C.style.backgroundColor = '#22a247';
+      c++;
 
-    userChosenOption.push(userChoose);
+      userChosenOption.push(userChoose);
 
     }
 
     if (b % 2 != 0) {
-    B.style.borderColor = ' #22a247';
-    B.style.color = '#000000';
-    B.style.backgroundColor = '#ffffff';
-    b--;
-    userChosenOption.pop();
+      B.style.borderColor = ' #22a247';
+      B.style.color = '#000000';
+      B.style.backgroundColor = '#ffffff';
+      b--;
+      userChosenOption.pop();
 
-    C.style.borderColor = ' #000000';
-    C.style.color = '#000000';
-    C.style.backgroundColor = '#22a247';
-    c++;
+      C.style.borderColor = ' #000000';
+      C.style.color = '#000000';
+      C.style.backgroundColor = '#22a247';
+      c++;
 
-    userChosenOption.push(userChoose);
+      userChosenOption.push(userChoose);
 
     }
 
@@ -528,62 +563,67 @@ C.addEventListener('click', function () {
       c++;
 
       userChosenOption.push(userChoose);
-      }
+    }
   }
 })
 
 D.addEventListener('click', function () {
+
   let userChoose = D.innerText;
-  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0)  && (d % 2 == 0)) {
+  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
     D.style.borderColor = ' #000000';
     D.style.color = '#000000';
     D.style.backgroundColor = '#22a247';
     d++;
     userChosenOption.push(userChoose);
-    console.log(userChosenOption)
+    //console.log(userChosenOption);
+    userSelected.push('.D');
+
 
 
   }
 
-  else if(d % 2 != 0) {
+  else if (d % 2 != 0) {
     D.style.borderColor = ' #22a247';
     D.style.color = '#000000';
     D.style.backgroundColor = '#ffffff';
     d--;
     userChosenOption.pop();
-    console.log(userChosenOption)
+    userSelected.pop();
+    //console.log(userChosenOption)
 
   }
 
-  else{ if (a % 2 != 0) {
-    A.style.borderColor = ' #22a247';
-    A.style.color = '#000000';
-    A.style.backgroundColor = '#ffffff';
-    a--;
-    userChosenOption.pop();
+  else {
+    if (a % 2 != 0) {
+      A.style.borderColor = ' #22a247';
+      A.style.color = '#000000';
+      A.style.backgroundColor = '#ffffff';
+      a--;
+      userChosenOption.pop();
 
-    D.style.borderColor = ' #000000';
-    D.style.color = '#000000';
-    D.style.backgroundColor = '#22a247';
-    d++;
+      D.style.borderColor = ' #000000';
+      D.style.color = '#000000';
+      D.style.backgroundColor = '#22a247';
+      d++;
 
-    userChosenOption.push(userChoose);
+      userChosenOption.push(userChoose);
 
     }
 
     if (b % 2 != 0) {
-    B.style.borderColor = ' #22a247';
-    B.style.color = '#000000';
-    B.style.backgroundColor = '#ffffff';
-    b--;
-    userChosenOption.pop();
+      B.style.borderColor = ' #22a247';
+      B.style.color = '#000000';
+      B.style.backgroundColor = '#ffffff';
+      b--;
+      userChosenOption.pop();
 
-    D.style.borderColor = ' #000000';
-    D.style.color = '#000000';
-    D.style.backgroundColor = '#22a247';
-    d++;
+      D.style.borderColor = ' #000000';
+      D.style.color = '#000000';
+      D.style.backgroundColor = '#22a247';
+      d++;
 
-    userChosenOption.push(userChoose);
+      userChosenOption.push(userChoose);
 
     }
 
@@ -600,11 +640,12 @@ D.addEventListener('click', function () {
       d++;
 
       userChosenOption.push(userChoose);
-      }
+    }
   }
 })
 
 
-document.querySelector('.submit-btn').addEventListener('click',function(){
+document.querySelector('.submit-btn').addEventListener('click', function () {
   console.warn(userChosenOption);
+  console.warn(userSelected)
 })
