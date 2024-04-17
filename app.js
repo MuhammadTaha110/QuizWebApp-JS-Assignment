@@ -169,7 +169,15 @@ function previousButton() {
     document.querySelector('.D').style.backgroundColor = '#ffffff';
     document.querySelector('.D').style.borderColor = ' #22a247';
     document.querySelector('.D').style.color = '#000000';
+    console.warn(userSelected[index+1]);
+    console.log(index);
+ 
+    //alert((userSelected[index+1]));
+    //document.querySelector(userSelected[index+1])
+        
     htmlQuizStart();
+
+
   }
 
 
@@ -247,6 +255,8 @@ optionCards.forEach(option => {
 */
 
 let userChosenOption = [];
+let userSelected = [];
+
 /*
 // Get all option cards
 const optionCards = document.querySelectorAll('.option-card');
@@ -337,7 +347,6 @@ let B = document.querySelector('.B');
 let C = document.querySelector('.C');
 let D = document.querySelector('.D');
 
-let userSelected = [];
 
 A.addEventListener('click', function () {
   //alert(a)
@@ -396,8 +405,8 @@ A.addEventListener('click', function () {
       a++;
 
       userChosenOption.push(userChoose);
-      userSelected.push('.A')
-      console.log(userChosenOption);
+      userSelected.push('.A');
+      //console.log(userChosenOption);
     }
 
     if (d % 2 != 0) {
@@ -538,6 +547,7 @@ C.addEventListener('click', function () {
       A.style.color = '#000000';
       A.style.backgroundColor = '#ffffff';
       a--;
+      userSelected.pop();
       userChosenOption.pop();
 
       C.style.borderColor = ' #000000';
