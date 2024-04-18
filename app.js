@@ -362,6 +362,337 @@ let D = document.querySelector('.D');
 var idx = index+1;
 
 
+A.addEventListener('click', function () {
+  let userChoose = A.innerText;
+  alert(idx); // Assuming you want to use the variable 'idx' instead of 'index'
+  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
+    A.style.borderColor = ' #000000';
+    A.style.color = '#000000';
+    A.style.backgroundColor = '#22a247';
+    a++;
+    //userChosenOption.push(userChoose);
+
+    userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
+    userSelected.splice(idx, 0, '.A'); // Replaced 'index' with 'idx'
+    //userSelected.push('.A');
+    //console.log(userChosenOption);
+  }
+
+
+  else if (a % 2 != 0) {
+    A.style.borderColor = ' #22a247';
+    A.style.color = '#000000';
+    A.style.backgroundColor = '#ffffff';
+    a--;
+    userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
+    userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
+  }
+
+  else {
+    if (b % 2 != 0) {
+      B.style.borderColor = ' #22a247';
+      B.style.color = '#000000';
+      B.style.backgroundColor = '#ffffff';
+      b--;
+      userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
+
+
+      A.style.borderColor = ' #000000';
+      A.style.color = '#000000';
+      A.style.backgroundColor = '#22a247';
+      a++;
+
+      userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 0, '.A'); // Replaced 'index' with 'idx'
+      //console.log(userChosenOption);
+    }
+
+    if (c % 2 != 0) {
+      C.style.borderColor = ' #22a247';
+      C.style.color = '#000000';
+      C.style.backgroundColor = '#ffffff';
+      c--;
+      userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
+
+      A.style.borderColor = ' #000000';
+      A.style.color = '#000000';
+      A.style.backgroundColor = '#22a247';
+      a++;
+
+      userChosenOption.push(userChoose);
+      userSelected.push('.A');
+      //console.log(userChosenOption);
+    }
+
+    if (d % 2 != 0) {
+      D.style.borderColor = ' #22a247';
+      D.style.color = '#000000';
+      D.style.backgroundColor = '#ffffff';
+      d--;
+      userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
+
+      A.style.borderColor = ' #000000';
+      A.style.color = '#000000';
+      A.style.backgroundColor = '#22a247';
+      a++;
+
+      userChosenOption.push(userChoose);
+      userSelected.push('.A')
+      console.log(userChosenOption);
+    }
+  }
+})
+
+
+B.addEventListener('click', function () {
+  let userChoose = B.innerText;
+  idx++; // Incrementing idx
+  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
+    B.style.borderColor = ' #000000';
+    B.style.color = '#000000';
+    B.style.backgroundColor = '#22a247';
+    b++;
+    userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
+    userSelected.splice(idx, 0, '.B'); // Replaced 'index' with 'idx'
+
+    //console.log(userChosenOption);
+  }
+
+  else if (b % 2 != 0) {
+    B.style.borderColor = ' #22a247';
+    B.style.color = '#000000';
+    B.style.backgroundColor = '#ffffff';
+    b--;
+    userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
+    userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
+  }
+
+  else {
+    if (a % 2 != 0) {
+      A.style.borderColor = ' #22a247';
+      A.style.color = '#000000';
+      A.style.backgroundColor = '#ffffff';
+      a--;
+      userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
+
+      B.style.borderColor = ' #000000';
+      B.style.color = '#000000';
+      B.style.backgroundColor = '#22a247';
+      b++;
+
+      userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 0, '.B'); // Replaced 'index' with 'idx'
+
+      console.log(userChosenOption);
+    }
+
+    if (c % 2 != 0) {
+      C.style.borderColor = ' #22a247';
+      C.style.color = '#000000';
+      C.style.backgroundColor = '#ffffff';
+      c--;
+      userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
+
+      B.style.borderColor = ' #000000';
+      B.style.color = '#000000';
+      B.style.backgroundColor = '#22a247';
+      b++;
+
+      userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 0, '.B'); // Replaced 'index' with 'idx'
+
+      console.log(userChosenOption);
+    }
+
+    if (d % 2 != 0) {
+      D.style.borderColor = ' #22a247';
+      D.style.color = '#000000';
+      D.style.backgroundColor = '#ffffff';
+      d--;
+      userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
+
+      B.style.borderColor = ' #000000';
+      B.style.color = '#000000';
+      B.style.backgroundColor = '#22a247';
+      b++;
+
+      userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 0, '.B'); // Replaced 'index' with 'idx'
+
+      console.log(userChosenOption);
+    }
+  }
+})
+
+C.addEventListener('click', function () {
+  let userChoose = C.innerText;
+
+  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
+    C.style.borderColor = ' #000000';
+    C.style.color = '#000000';
+    C.style.backgroundColor = '#22a247';
+    c++;
+    userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
+    userSelected.splice(idx, 0, '.C'); // Replaced 'index' with 'idx'
+
+    //console.log(userChosenOption)
+
+
+  }
+
+  else if (c % 2 != 0) {
+    C.style.borderColor = ' #22a247';
+    C.style.color = '#000000';
+    C.style.backgroundColor = '#ffffff';
+    c--;
+    userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
+    //console.log(userChosenOption);
+    userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
+
+  }
+
+  else {
+    if (a % 2 != 0) {
+      A.style.borderColor = ' #22a247';
+      A.style.color = '#000000';
+      A.style.backgroundColor = '#ffffff';
+      a--;
+      userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
+      userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
+
+      C.style.borderColor = ' #000000';
+      C.style.color = '#000000';
+      C.style.backgroundColor = '#22a247';
+      c++;
+
+      userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 0, '.C'); // Replaced 'index' with 'idx'
+
+
+    }
+
+    if (b % 2 != 0) {
+      B.style.borderColor = ' #22a247';
+      B.style.color = '#000000';
+      B.style.backgroundColor = '#ffffff';
+      b--;
+      userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
+
+      C.style.borderColor = ' #000000';
+      C.style.color = '#000000';
+      C.style.backgroundColor = '#22a247';
+      c++;
+
+      userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 0, '.C'); // Replaced 'index' with 'idx'
+
+
+    }
+
+    if (d % 2 != 0) {
+      D.style.borderColor = ' #22a247';
+      D.style.color = '#000000';
+      D.style.backgroundColor = '#ffffff';
+      d--;
+      userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
+
+      C.style.borderColor = ' #000000';
+      C.style.color = '#000000';
+      C.style.backgroundColor = '#22a247';
+      c++;
+
+      userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 0, '.C'); // Replaced 'index' with 'idx'
+
+    }
+  }
+})
+
+
+D.addEventListener('click', function () {
+  let userChoose = D.innerText;
+  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
+    D.style.borderColor = ' #000000';
+    D.style.color = '#000000';
+    D.style.backgroundColor = '#22a247';
+    d++;
+    userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
+    //console.log(userChosenOption);
+    userSelected.splice(idx, 0, '.D'); // Replaced 'index' with 'idx'
+
+  }
+
+  else if (d % 2 != 0) {
+    D.style.borderColor = ' #22a247';
+    D.style.color = '#000000';
+    D.style.backgroundColor = '#ffffff';
+    d--;
+    userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
+    userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
+    //console.log(userChosenOption)
+  }
+
+  else {
+    if (a % 2 != 0) {
+      A.style.borderColor = ' #22a247';
+      A.style.color = '#000000';
+      A.style.backgroundColor = '#ffffff';
+      a--;
+      userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
+
+      D.style.borderColor = ' #000000';
+      D.style.color = '#000000';
+      D.style.backgroundColor = '#22a247';
+      d++;
+
+      userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 0, '.D'); // Replaced 'index' with 'idx'
+    }
+
+    if (b % 2 != 0) {
+      B.style.borderColor = ' #22a247';
+      B.style.color = '#000000';
+      B.style.backgroundColor = '#ffffff';
+      b--;
+      userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
+
+      D.style.borderColor = ' #000000';
+      D.style.color = '#000000';
+      D.style.backgroundColor = '#22a247';
+      d++;
+
+      userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 0, '.D'); // Replaced 'index' with 'idx'
+    }
+
+    if (c % 2 != 0) {
+      C.style.borderColor = ' #22a247';
+      C.style.color = '#000000';
+      C.style.backgroundColor = '#ffffff';
+      c--;
+      userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
+
+      D.style.borderColor = ' #000000';
+      D.style.color = '#000000';
+      D.style.backgroundColor = '#22a247';
+      d++;
+
+      userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
+      userSelected.splice(idx, 0, '.D'); // Replaced 'index' with 'idx'
+    }
+  }
+})
 
 
 
