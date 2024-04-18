@@ -366,7 +366,6 @@ var idx = index;
 
 A.addEventListener('click', function () {
   let userChoose = A.innerText;
-  alert(idx); // Assuming you want to use the variable 'idx' instead of 'index'
   if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
     A.style.borderColor = ' #000000';
     A.style.color = '#000000';
@@ -374,6 +373,7 @@ A.addEventListener('click', function () {
     a++;
     //userChosenOption.push(userChoose);
 
+    
     userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
     userSelected.splice(idx, 0, '.A'); // Replaced 'index' with 'idx'
     //userSelected.push('.A');
