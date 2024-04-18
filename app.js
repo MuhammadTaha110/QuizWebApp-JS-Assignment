@@ -372,11 +372,9 @@ A.addEventListener('click', function () {
     A.style.backgroundColor = '#22a247';
     a++;
 
-    let options = [A,B,C,D];
+ 
 
-    C.style.borderColor = ' #22a247';
-    C.style.color = '#000000';
-    C.style.backgroundColor = '#ffffff';
+    
     //userChosenOption.push(userChoose);
 
     console .warn(c,a)
