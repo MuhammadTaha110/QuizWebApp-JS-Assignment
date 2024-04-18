@@ -359,7 +359,7 @@ let B = document.querySelector('.B');
 let C = document.querySelector('.C');
 let D = document.querySelector('.D');
 
-
+/*
 A.addEventListener('click', function () {
   //alert(a)
   let userChoose = A.innerText;
@@ -702,7 +702,7 @@ D.addEventListener('click', function () {
   }
 })
 
-
+*/
 document.querySelector('.submit-btn').addEventListener('click', function () {
   console.warn(userChosenOption);
   console.warn(userSelected)
