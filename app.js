@@ -371,9 +371,6 @@ A.addEventListener('click', function () {
     A.style.color = '#000000';
     A.style.backgroundColor = '#22a247';
     a++;
-
- 
-
     
     //userChosenOption.push(userChoose);
 
