@@ -372,10 +372,11 @@ A.addEventListener('click', function () {
     A.style.backgroundColor = '#22a247';
     a++;
 
-    let selectedOption = userSelected[index + 1];
-    document.querySelector(selectedOption).style.backgroundColor = '#22a247';
-    document.querySelector(selectedOption).style.borderColor = ' #000000';
-    document.querySelector(selectedOption).style.color = '#000000';
+    let options = [A,B,C,D];
+
+    C.style.borderColor = ' #22a247';
+    C.style.color = '#000000';
+    C.style.backgroundColor = '#ffffff';
     //userChosenOption.push(userChoose);
 
     console .warn(c,a)
