@@ -359,6 +359,8 @@ let B = document.querySelector('.B');
 let C = document.querySelector('.C');
 let D = document.querySelector('.D');
 
+
+
 B.addEventListener('click', function () {
   
   let userChoose = B.innerText;
@@ -531,6 +533,82 @@ C.addEventListener('click', function () {
 })
 
 
+D.addEventListener('click', function () {
+  let userChoose = D.innerText;
+  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
+    D.style.borderColor = ' #000000';
+    D.style.color = '#000000';
+    D.style.backgroundColor = '#22a247';
+    d++;
+    userChosenOption.splice(index, 0, userChoose);
+    //console.log(userChosenOption);
+    userSelected.splice(index, 0, '.D');
+
+  }
+
+  else if (d % 2 != 0) {
+    D.style.borderColor = ' #22a247';
+    D.style.color = '#000000';
+    D.style.backgroundColor = '#ffffff';
+    d--;
+    userChosenOption.splice(index, 1);
+    userSelected.splice(index, 1);
+    //console.log(userChosenOption)
+  }
+
+  else {
+    if (a % 2 != 0) {
+      A.style.borderColor = ' #22a247';
+      A.style.color = '#000000';
+      A.style.backgroundColor = '#ffffff';
+      a--;
+      userChosenOption.splice(index, 1);
+      userSelected.splice(index, 1);
+
+      D.style.borderColor = ' #000000';
+      D.style.color = '#000000';
+      D.style.backgroundColor = '#22a247';
+      d++;
+
+      userChosenOption.splice(index, 0, userChoose);
+      userSelected.splice(index, 0, '.D');
+    }
+
+    if (b % 2 != 0) {
+      B.style.borderColor = ' #22a247';
+      B.style.color = '#000000';
+      B.style.backgroundColor = '#ffffff';
+      b--;
+      userChosenOption.splice(index, 1);
+      userSelected.splice(index, 1);
+
+      D.style.borderColor = ' #000000';
+      D.style.color = '#000000';
+      D.style.backgroundColor = '#22a247';
+      d++;
+
+      userChosenOption.splice(index, 0, userChoose);
+      userSelected.splice(index, 0, '.D');
+    }
+
+    if (c % 2 != 0) {
+      C.style.borderColor = ' #22a247';
+      C.style.color = '#000000';
+      C.style.backgroundColor = '#ffffff';
+      c--;
+      userChosenOption.splice(index, 1);
+      userSelected.splice(index, 1);
+
+      D.style.borderColor = ' #000000';
+      D.style.color = '#000000';
+      D.style.backgroundColor = '#22a247';
+      d++;
+
+      userChosenOption.splice(index, 0, userChoose);
+      userSelected.splice(index, 0, '.D');
+    }
+  }
+})
 
 
 
