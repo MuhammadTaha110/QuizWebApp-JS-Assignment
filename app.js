@@ -146,6 +146,7 @@ function nextButton() {
       p = 0;
     }
     index++;
+    idx++;
     a = 0;
     b = 0;
     c = 0;
@@ -161,6 +162,7 @@ function nextButton() {
 function previousButton() {
   if (index > 0) {
     index--;
+    idx--;
     document.querySelector('.A').style.backgroundColor = '#ffffff';
     document.querySelector('.A').style.borderColor = ' #22a247';
     document.querySelector('.A').style.color = '#000000';
@@ -359,7 +361,7 @@ let B = document.querySelector('.B');
 let C = document.querySelector('.C');
 let D = document.querySelector('.D');
 
-var idx = index+1;
+var idx = index;
 
 
 A.addEventListener('click', function () {
@@ -449,7 +451,7 @@ A.addEventListener('click', function () {
 
 B.addEventListener('click', function () {
   let userChoose = B.innerText;
-  idx++; // Incrementing idx
+
   if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
     B.style.borderColor = ' #000000';
     B.style.color = '#000000';
