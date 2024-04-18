@@ -371,9 +371,14 @@ A.addEventListener('click', function () {
     A.style.color = '#000000';
     A.style.backgroundColor = '#22a247';
     a++;
+
+    let selectedOption = userSelected[index + 1];
+    document.querySelector(selectedOption).style.backgroundColor = '#22a247';
+    document.querySelector(selectedOption).style.borderColor = ' #000000';
+    document.querySelector(selectedOption).style.color = '#000000';
     //userChosenOption.push(userChoose);
 
-    
+    console .warn(c,a)
     userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
     userSelected.splice(idx, 0, '.A'); // Replaced 'index' with 'idx'
     //userSelected.push('.A');
@@ -388,6 +393,9 @@ A.addEventListener('click', function () {
     a--;
     userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
     userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
+
+    
+
   }
 
   else {
