@@ -359,6 +359,181 @@ let B = document.querySelector('.B');
 let C = document.querySelector('.C');
 let D = document.querySelector('.D');
 
+B.addEventListener('click', function () {
+  
+  let userChoose = B.innerText;
+  index++;
+
+  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
+    B.style.borderColor = ' #000000';
+    B.style.color = '#000000';
+    B.style.backgroundColor = '#22a247';
+    b++;
+    userChosenOption.splice(index, 0, userChoose);
+    userSelected.splice(index, 0, '.B');
+
+    //console.log(userChosenOption);
+  }
+
+  else if (b % 2 != 0) {
+    B.style.borderColor = ' #22a247';
+    B.style.color = '#000000';
+    B.style.backgroundColor = '#ffffff';
+    b--;
+    userChosenOption.splice(index, 1);
+    userSelected.splice(index, 1);
+  }
+
+  else {
+    if (a % 2 != 0) {
+      A.style.borderColor = ' #22a247';
+      A.style.color = '#000000';
+      A.style.backgroundColor = '#ffffff';
+      a--;
+      userChosenOption.splice(index, 1);
+      userSelected.splice(index, 1);
+
+      B.style.borderColor = ' #000000';
+      B.style.color = '#000000';
+      B.style.backgroundColor = '#22a247';
+      b++;
+
+      userChosenOption.splice(index, 0, userChoose);
+      userSelected.splice(index, 0, '.B');
+
+      console.log(userChosenOption);
+    }
+
+    if (c % 2 != 0) {
+      C.style.borderColor = ' #22a247';
+      C.style.color = '#000000';
+      C.style.backgroundColor = '#ffffff';
+      c--;
+      userChosenOption.splice(index, 1);
+      userSelected.splice(index, 1);
+
+      B.style.borderColor = ' #000000';
+      B.style.color = '#000000';
+      B.style.backgroundColor = '#22a247';
+      b++;
+
+      userChosenOption.splice(index, 0, userChoose);
+      userSelected.splice(index, 0, '.B');
+
+      console.log(userChosenOption);
+    }
+
+    if (d % 2 != 0) {
+      D.style.borderColor = ' #22a247';
+      D.style.color = '#000000';
+      D.style.backgroundColor = '#ffffff';
+      d--;
+      userChosenOption.splice(index, 1);
+      userSelected.splice(index, 1);
+
+      B.style.borderColor = ' #000000';
+      B.style.color = '#000000';
+      B.style.backgroundColor = '#22a247';
+      b++;
+
+      userChosenOption.splice(index, 0, userChoose);
+      userSelected.splice(index, 0, '.B');
+
+      console.log(userChosenOption);
+    }
+  }
+})
+
+C.addEventListener('click', function () {
+  let userChoose = C.innerText;
+
+  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
+    C.style.borderColor = ' #000000';
+    C.style.color = '#000000';
+    C.style.backgroundColor = '#22a247';
+    c++;
+    userChosenOption.splice(index, 0, userChoose);
+    userSelected.splice(index, 0, '.C');
+
+    //console.log(userChosenOption)
+
+
+  }
+
+  else if (c % 2 != 0) {
+    C.style.borderColor = ' #22a247';
+    C.style.color = '#000000';
+    C.style.backgroundColor = '#ffffff';
+    c--;
+    userChosenOption.splice(index, 1);
+    //console.log(userChosenOption);
+    userSelected.splice(index, 1);
+
+  }
+
+  else {
+    if (a % 2 != 0) {
+      A.style.borderColor = ' #22a247';
+      A.style.color = '#000000';
+      A.style.backgroundColor = '#ffffff';
+      a--;
+      userSelected.splice(index, 1);
+      userChosenOption.splice(index, 1);
+
+      C.style.borderColor = ' #000000';
+      C.style.color = '#000000';
+      C.style.backgroundColor = '#22a247';
+      c++;
+
+      userChosenOption.splice(index, 0, userChoose);
+      userSelected.splice(index, 0, '.C');
+
+
+    }
+
+    if (b % 2 != 0) {
+      B.style.borderColor = ' #22a247';
+      B.style.color = '#000000';
+      B.style.backgroundColor = '#ffffff';
+      b--;
+      userChosenOption.splice(index, 1);
+      userSelected.splice(index, 1);
+
+      C.style.borderColor = ' #000000';
+      C.style.color = '#000000';
+      C.style.backgroundColor = '#22a247';
+      c++;
+
+      userChosenOption.splice(index, 0, userChoose);
+      userSelected.splice(index, 0, '.C');
+
+
+    }
+
+    if (d % 2 != 0) {
+      D.style.borderColor = ' #22a247';
+      D.style.color = '#000000';
+      D.style.backgroundColor = '#ffffff';
+      d--;
+      userChosenOption.splice(index, 1);
+      userSelected.splice(index, 1);
+
+      C.style.borderColor = ' #000000';
+      C.style.color = '#000000';
+      C.style.backgroundColor = '#22a247';
+      c++;
+
+      userChosenOption.splice(index, 0, userChoose);
+      userSelected.splice(index, 0, '.C');
+
+    }
+  }
+})
+
+
+
+
+
 /*
 A.addEventListener('click', function () {
   //alert(a)
