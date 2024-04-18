@@ -393,8 +393,8 @@ A.addEventListener('click', function () {
       B.style.color = '#000000';
       B.style.backgroundColor = '#ffffff';
       b--;
-      userChosenOption.splice(index,1);
-      userSelected.splice(index,1);
+      userChosenOption.splice(index, 1);
+      userSelected.splice(index, 1);
 
 
       A.style.borderColor = ' #000000';
@@ -412,8 +412,8 @@ A.addEventListener('click', function () {
       C.style.color = '#000000';
       C.style.backgroundColor = '#ffffff';
       c--;
-      userChosenOption.splice(index,1);
-    userSelected.splice(index,1);
+      userChosenOption.splice(index, 1);
+      userSelected.splice(index, 1);
 
       A.style.borderColor = ' #000000';
       A.style.color = '#000000';
