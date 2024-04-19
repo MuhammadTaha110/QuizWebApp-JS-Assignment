@@ -188,8 +188,8 @@ function previousButton() {
 
 
 
-    
-    
+
+
     //alert((userSelected[index+1]));
     //document.querySelector(userSelected[index+1])
     p = 1;
@@ -372,19 +372,34 @@ A.addEventListener('click', function () {
   let userChoose = A.innerText;
   let selectedOption = userSelected[index];
 
-  if(p==1){
+  if (p == 1) {
     document.querySelector(selectedOption).style.borderColor = ' #22a247';
     document.querySelector(selectedOption).style.color = '#000000';
     document.querySelector(selectedOption).style.backgroundColor = '#ffffff';
+
+    switch (selectedOption) {
+    
+      case b:
+        b--;
+        break;
+      case c:
+        c--;
+        break;
+      case d:
+        d--;
+        break;
+    }
+
+
   }
 
-  
+
   if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
     A.style.borderColor = ' #000000';
     A.style.color = '#000000';
     A.style.backgroundColor = '#22a247';
     a++;
-    
+
     //userChosenOption.push(userChoose);
 
     userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
@@ -402,7 +417,7 @@ A.addEventListener('click', function () {
     userChosenOption.splice(idx, 1); // Replaced 'index' with 'idx'
     userSelected.splice(idx, 1); // Replaced 'index' with 'idx'
 
-    
+
 
   }
 
