@@ -374,7 +374,6 @@ A.addEventListener('click', function () {
     
     //userChosenOption.push(userChoose);
 
-    console .warn(c,a)
     userChosenOption.splice(idx, 0, userChoose); // Replaced 'index' with 'idx'
     userSelected.splice(idx, 0, '.A'); // Replaced 'index' with 'idx'
     //userSelected.push('.A');
