@@ -159,6 +159,9 @@ function nextButton() {
 
 }
 
+let selectedOption = userSelected[index];
+
+
 function previousButton() {
   if (index > 0) {
     index--;
@@ -179,13 +182,16 @@ function previousButton() {
     document.querySelector('.D').style.borderColor = ' #22a247';
     document.querySelector('.D').style.color = '#000000';
 
-    let selectedOption = userSelected[index];
 
     document.querySelector(selectedOption).style.backgroundColor = '#22a247';
     document.querySelector(selectedOption).style.borderColor = ' #000000';
     document.querySelector(selectedOption).style.color = '#000000';
 
 
+
+
+    
+    
     //alert((userSelected[index+1]));
     //document.querySelector(userSelected[index+1])
     p = 1;
@@ -366,6 +372,10 @@ var idx = index;
 
 A.addEventListener('click', function () {
   let userChoose = A.innerText;
+
+  if(p==1){
+
+  }
   if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
     A.style.borderColor = ' #000000';
     A.style.color = '#000000';
