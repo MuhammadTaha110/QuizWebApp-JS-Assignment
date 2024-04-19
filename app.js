@@ -159,9 +159,6 @@ function nextButton() {
 
 }
 
-let selectedOption = userSelected[index];
-
-
 function previousButton() {
   if (index > 0) {
     index--;
@@ -206,6 +203,8 @@ function previousButton() {
 
 //
 let intervalID;
+let selectedOption = userSelected[index];
+
 
 //function to show quiz-section
 function displayDetails() {
@@ -372,9 +371,10 @@ var idx = index;
 
 A.addEventListener('click', function () {
   let userChoose = A.innerText;
-
   if(p==1){
-
+    selectedOption[index].style.borderColor = ' #22a247';
+    selectedOption[index].style.color = '#000000';
+    selectedOption[index].style.backgroundColor = '#ffffff';
   }
   if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
     A.style.borderColor = ' #000000';
