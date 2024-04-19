@@ -378,7 +378,6 @@ A.addEventListener('click', function () {
     document.querySelector(selectedOption).style.backgroundColor = '#ffffff';
 
     switch (selectedOption) {
-    
       case b:
         b--;
         break;
