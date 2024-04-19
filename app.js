@@ -372,9 +372,11 @@ A.addEventListener('click', function () {
   let userChoose = A.innerText;
   let selectedOption = userSelected[index];
 
-
-  let testtt = '"'+selectedOption+'"';
-  console.warn(testtt);
+  if(p==1){
+    document.querySelector(selectedOption).style.borderColor = ' #22a247';
+    document.querySelector(selectedOption).style.color = '#000000';
+    document.querySelector(selectedOption).style.backgroundColor = '#ffffff';
+  }
 
   
   if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
