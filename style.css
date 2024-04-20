@@ -321,6 +321,18 @@ main {
     color: var(--txt-color);
 }
 
+.result .circle{
+    width: 22%;
+    height: 20%;
+    border-radius: 50%;
+    border: 4px solid var(--txt-color);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*Footer Secrtion*/
 .footer {
     margin-top: 25px;
