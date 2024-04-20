@@ -143,6 +143,7 @@ function nextButton() {
       document.querySelector(selectedOption).style.backgroundColor = '#22a247';
       document.querySelector(selectedOption).style.borderColor = ' #000000';
       document.querySelector(selectedOption).style.color = '#000000';
+
       p = 0;
     }
     index++;
@@ -377,6 +378,9 @@ A.addEventListener('click', function () {
     document.querySelector(selectedOption).style.color = '#000000';
     document.querySelector(selectedOption).style.backgroundColor = '#ffffff';
 
+    //userSelected.splice(index,1);
+
+
     switch (selectedOption) {
       case b:
         b--;
@@ -389,7 +393,6 @@ A.addEventListener('click', function () {
         break;
     }
 
-    //userSelected.splice(index, 1); 
 
   }
 
