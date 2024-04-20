@@ -378,9 +378,6 @@ A.addEventListener('click', function () {
     document.querySelector(selectedOption).style.color = '#000000';
     document.querySelector(selectedOption).style.backgroundColor = '#ffffff';
 
-    //userSelected.splice(index,1);
-
-
     switch (selectedOption) {
       case b:
         b--;
