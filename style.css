@@ -317,7 +317,8 @@ main {
     width: 90%;
     height: 400px;
     background-color: var(--main-color);
-    
+    font-size: 1.2rem;
+    color: var(--txt-color);
 }
 
 /*Footer Secrtion*/
