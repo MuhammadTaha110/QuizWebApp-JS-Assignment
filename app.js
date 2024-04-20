@@ -1076,4 +1076,18 @@ D.addEventListener('click', function () {
 document.querySelector('.submit-btn').addEventListener('click', function () {
   console.warn(userChosenOption);
   console.warn(userSelected)
+
+  let score = 0;
+
+  for(i=0 ; i<userChosenOption.length ; i++){
+    if (userChosenOption[i]==correctOptions[i]){
+      score+=10;
+
+ console.warn("You CHoose",userChosenOption[i]);
+
+      
+    }
+  }
+
+  console.warn("Your Score is:",score);
 })
