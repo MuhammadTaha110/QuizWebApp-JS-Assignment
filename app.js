@@ -389,6 +389,7 @@ A.addEventListener('click', function () {
         break;
     }
 
+    //userSelected.splice(index, 1); 
 
   }
 
