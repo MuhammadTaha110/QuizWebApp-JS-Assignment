@@ -63,7 +63,7 @@ const options = [{
 
 //Array for Correct options
 const correctOptions = [
-  'HyperText Markup Language', 'World Wide Web Consortium',
+  'HyperText MarkUp Language', 'World Wide Web Consortium',
   '<h1>', '</br>', '<strong>'
 ]
 
@@ -1079,15 +1079,17 @@ document.querySelector('.submit-btn').addEventListener('click', function () {
 
   let score = 0;
 
-  for(i=0 ; i<userChosenOption.length ; i++){
-    if (userChosenOption[i]==correctOptions[i]){
-      score+=10;
+  for (i = 0; i < userChosenOption.length; i++) {
+    if (userChosenOption[i] == correctOptions[i]) {
+      score += 10;
 
- console.warn("You CHoose",userChosenOption[i]);
+      console.warn("You Choose", userChosenOption[i]);
+      console.warn("Correct Answer", correctOptions[i]);
 
-      
+
+
     }
   }
 
-  console.warn("Your Score is:",score);
+  console.warn("Your Score is:", score);
 })
