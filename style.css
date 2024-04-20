@@ -306,6 +306,19 @@ main {
     width: 20px;
 }
 
+/*Result Secrtion*/
+
+.result{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid var(--txt-color);
+    border-radius: 12px;
+    width: 90%;
+    height: 400px;
+    background-color: var(--main-color);
+    
+}
 
 /*Footer Secrtion*/
 .footer {
