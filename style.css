@@ -315,17 +315,27 @@ main {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid var(--txt-color);
+    border: 4px solid var(--txt-color);
     border-radius: 12px;
     width: 90%;
     height: 320px;
     background-color: var(--contrats-color);
     font-size: 1.2rem;
     color: var(--txt-color);
+    position: relative;
+}
+
+.result .cross-btn{
+    position: absolute;
+    top: 0%;
+    left: 90%;
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
 }
 
 .result .msg{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 600;
     color: var(--main-color);
 }
