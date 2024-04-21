@@ -244,9 +244,6 @@ function hideDetails() {
 
   clearSelectedOptions();
 
-
-  
-  clearInterval(intervalID);
   index=0;
 
   // Display the quiz section
