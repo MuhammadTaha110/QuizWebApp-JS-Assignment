@@ -241,7 +241,7 @@ function displayDetails() {
 //function to hide quiz-section
 function hideDetails() {
 
-  clearInterval(intervalID);
+  myStopFunction();
 
   index=0;
 
