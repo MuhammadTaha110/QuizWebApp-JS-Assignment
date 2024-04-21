@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 
-    
+
     <title>Quiz Application</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -25,49 +25,49 @@
 
 
 
-    <body>
+<body>
 
-        <header class="fixed-top header">
-            <nav class=" navbar navbar-expand-lg navbar-light bg-light header">
-                <div class="container">
-                    <a class="navbar-brand" href="#">
-                        <img src="imgs/logo.png" width="60" height="40" alt="Logo">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" href="#">Home</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Quiz
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" onclick="displayDetails()">HTML</a>
-                                    <a class="dropdown-item" href="#">CSS</a>
-                                    <a class="dropdown-item" href="#">JavaScript</a>
-                                    <a class="dropdown-item" href="#">Java</a>
-                                    <a class="dropdown-item" href="#">Python</a>
-                                    <a class="dropdown-item" href="#">Database</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" href="#">Profile</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" href="#">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
+    <header class="fixed-top header">
+        <nav class=" navbar navbar-expand-lg navbar-light bg-light header">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="imgs/logo.png" width="60" height="40" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Quiz
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" onclick="displayDetails()">HTML</a>
+                                <a class="dropdown-item" href="#">CSS</a>
+                                <a class="dropdown-item" href="#">JavaScript</a>
+                                <a class="dropdown-item" href="#">Java</a>
+                                <a class="dropdown-item" href="#">Python</a>
+                                <a class="dropdown-item" href="#">Database</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Contact</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
-        <!--
+            </div>
+        </nav>
+    </header>
+    <!--
         <header >
             <nav class="navbar navbar-expand-lg navbar-dark bg-main-color ">
                 <a class="navbar-brand" href="#">Brain Blitz</a>
@@ -96,188 +96,187 @@
 
         -->
 
-        <main class="main">
+    <main class="main">
 
-            <!--Customized Quiz Cards End-->
-            <div class="custom-quiz">
-                <h1>Create your own quiz!</h1>
-                <p>You can craft personalized quizzes tailored to your interests and needs.</p>
-                <button class="create-quiz">
-                    Create Quiz
+        <!--Customized Quiz Cards End-->
+        <div class="custom-quiz">
+            <h1>Create your own quiz!</h1>
+            <p>You can craft personalized quizzes tailored to your interests and needs.</p>
+            <button class="create-quiz">
+                Create Quiz
+            </button>
+        </div>
+        <!--Customized Quiz Cards End-->
+
+        <div class="play-quiz">
+            <h1>Learn with fun</h1>
+            <p>Test and encourage yourself with the help of quiz and competetion among friens this
+                keeps you motivated toward studies. All quiz section has 3 diffultiy levels
+                Easy | Medium | Hard you can choose as per your level
+            </p>
+        </div>
+
+
+        <!--Default Quiz Cards-->
+        <div class="quiz-cards">
+            <div class="cards">
+                <h1>HTML </h1>
+                <i class="fa-brands fa-html5 quiz-icon"></i>
+                <h4>25 Questions</h4>
+                <h4>15 mins</h4>
+                <button class="start-quiz" onclick="displayDetails()">
+                    Start Quiz
                 </button>
             </div>
-            <!--Customized Quiz Cards End-->
 
-            <div class="play-quiz">
-                <h1>Learn with fun</h1>
-                <p>Test and encourage yourself with the help of quiz and competetion among friens this
-                    keeps you motivated toward studies. All quiz section has 3 diffultiy levels
-                    Easy | Medium | Hard you can choose as per your level
-                </p>
+            <div class="cards">
+                <h1>CSS</h1>
+                <i class="fa-brands fa-css3-alt quiz-icon"></i>
+                <h4>25 Questions</h4>
+                <h4>15 mins</h4>
+                <button class="start-quiz">
+                    Start Quiz
+                </button>
             </div>
 
+            <div class="cards">
+                <h1>JavaScript</h1>
+                <i class="fa-brands fa-js quiz-icon"></i>
+                <h4>25 Questions</h4>
+                <h4>15 mins</h4>
+                <button class="start-quiz">
+                    Start Quiz
+                </button>
+            </div>
 
-            <!--Default Quiz Cards-->
-            <div class="quiz-cards">
-                <div class="cards">
-                    <h1>HTML </h1>
-                    <i class="fa-brands fa-html5 quiz-icon"></i>
-                    <h4>25 Questions</h4>
-                    <h4>15 mins</h4>
-                    <button class="start-quiz" onclick="displayDetails()">
-                        Start Quiz
-                    </button>
+            <div class="cards">
+                <h1>Java</h1>
+                <i class="fa-brands fa-java quiz-icon"></i>
+                <h4>25 Questions</h4>
+                <h4>15 mins</h4>
+                <button class="start-quiz">
+                    Start Quiz
+                </button>
+            </div>
+
+            <div class="cards">
+                <h1>Python</h1>
+                <i class="fa-brands fa-python quiz-icon"></i>
+                <h4>25 Questions</h4>
+                <h4>15 mins</h4>
+                <button class="start-quiz">
+                    Start Quiz
+                </button>
+            </div>
+
+            <div class="cards">
+                <h1>DataBase</h1>
+                <i class="fa-solid fa-database quiz-icon"></i>
+                <h4>25 Questions</h4>
+                <h4>15 mins</h4>
+                <button class="start-quiz">
+                    Start Quiz
+                </button>
+            </div>
+        </div>
+        <!--Default Quiz Cards End-->
+
+        <!--Quiz Section-->
+
+        <section class="quiz-section">
+
+            <div class="question-section">
+                <button class="quit-btn" onclick="hideDetails()">Quit <i class="fa-solid fa-circle-xmark"></i></button>
+                <h6 class="question-no"> Question: <span class="question-num">1</span></h6>
+                <h1 class="question">HTML Stands for?</h1>
+            </div>
+
+            <div class="options">
+                <div class="A option-card">
+                    <h6>Hypert Text Markup Language</h6>
                 </div>
-
-                <div class="cards">
-                    <h1>CSS</h1>
-                    <i class="fa-brands fa-css3-alt quiz-icon"></i>
-                    <h4>25 Questions</h4>
-                    <h4>15 mins</h4>
-                    <button class="start-quiz">
-                        Start Quiz
-                    </button>
+                <div class="B option-card">
+                    <h6>Hypert Text Markup Language</h6>
                 </div>
-
-                <div class="cards">
-                    <h1>JavaScript</h1>
-                    <i class="fa-brands fa-js quiz-icon"></i>
-                    <h4>25 Questions</h4>
-                    <h4>15 mins</h4>
-                    <button class="start-quiz">
-                        Start Quiz
-                    </button>
+                <div class="C option-card">
+                    <h6>Hypert Text Markup Language</h6>
                 </div>
-
-                <div class="cards">
-                    <h1>Java</h1>
-                    <i class="fa-brands fa-java quiz-icon"></i>
-                    <h4>25 Questions</h4>
-                    <h4>15 mins</h4>
-                    <button class="start-quiz">
-                        Start Quiz
-                    </button>
-                </div>
-
-                <div class="cards">
-                    <h1>Python</h1>
-                    <i class="fa-brands fa-python quiz-icon"></i>
-                    <h4>25 Questions</h4>
-                    <h4>15 mins</h4>
-                    <button class="start-quiz">
-                        Start Quiz
-                    </button>
-                </div>
-
-                <div class="cards">
-                    <h1>DataBase</h1>
-                    <i class="fa-solid fa-database quiz-icon"></i>
-                    <h4>25 Questions</h4>
-                    <h4>15 mins</h4>
-                    <button class="start-quiz">
-                        Start Quiz
-                    </button>
+                <div class="D option-card">
+                    <h6>Hypert Text Markup Language</h6>
                 </div>
             </div>
-            <!--Default Quiz Cards End-->
 
-            <!--Quiz Section-->
+            <div class="prv-nxt-btn">
+                <button onclick="alert('cannot go back')"><i
+                        class="prev-icon fa-solid fa-backward"></i><span>Previous</span>
+                </button>
+                <button class="submit-btn">Submit</button>
+                <button onclick="nextButton()"><span>Next </span><i class="next-icon fa-solid fa-forward"></i></button>
+            </div>
 
-            <section class="quiz-section">
+            <div class="timer">
+                <h4>Time Left:</h4>
+                <h4 class="timer-mins">15</h4><span>:</span>
+                <h4 class="timer-sec">00</h4>
+            </div>
 
-                <div class="question-section">
-                    <button class="quit-btn" onclick="hideDetails()">Quit <i class="fa-solid fa-circle-xmark"></i></button>
-                    <h6 class="question-no"> Question: <span class="question-num">1</span></h6>
-                    <h1 class="question">HTML Stands for?</h1>
-                </div>
-                
-                <div class="options">
-                    <div class="A option-card">
-                        <h6>Hypert Text Markup Language</h6>
-                    </div>
-                    <div class="B option-card">
-                        <h6>Hypert Text Markup Language</h6>
-                    </div>
-                    <div class="C option-card">
-                        <h6>Hypert Text Markup Language</h6>
-                    </div>
-                    <div class="D option-card">
-                        <h6>Hypert Text Markup Language</h6>
-                    </div>
-                </div>
-
-                <div class="prv-nxt-btn">
-                    <button onclick="alert('cannot go back')"><i class="prev-icon fa-solid fa-backward"></i><span>Previous</span>
-                    </button>
-                    <button class="submit-btn">Submit</button>
-                    <button onclick="nextButton()"><span>Next </span><i class="next-icon fa-solid fa-forward"></i></button>
-                </div>
-
-                <div class="timer">
-                    <h4>Time Left:</h4>
-                    <h4 class="timer-mins">15</h4><span>:</span>
-                    <h4 class="timer-sec">00</h4>
-                </div>
-
-            </section>
+        </section>
 
 
-            <!--Result Section-->
-            <section class="result">
+        <!--Result Section-->
+        <section class="result">
                 <div class="msg">CONGRATULATIONS!</div>
                 <div class="msg-des">You have got</div>
                 <div class="circle">
-                    <div class="result-percentage">100%</div>
+                    <div class="module-border-wrap result-percentage">
+                        <div class="module">100%</div>
+                    </div>
                 </div>
                 <div class="total-questions">Total Questions: 25</div>
                 <div class="correct-questions">Corect Answers: 25</div>
 
-                <div class="module-border-wrap"><div class="module">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero pariatur corporis quaerat voluptatum eos tempora temporibus nisi voluptates sed, exercitationem sequi dolore culpa incidunt accusamus, quasi unde reprehenderit ea molestias.
-                    </div></div>
-
-            </section>
-
-            
+        </section>
 
 
-        </main>
 
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 ">
-                        <h5>Quick Links</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Quiz</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <img src="imgs/logo.png" alt="Quiz App Logo" style="max-width: 200px;">
-                    </div>
-                    <div class="col-md-4 text-right">
-                        <p> Copyright &copy; 2024 | Brain Blitz by Muhammad Taha Talib | All Rights Reserved.</p>
-                    </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Quiz</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="imgs/logo.png" alt="Quiz App Logo" style="max-width: 200px;">
+                </div>
+                <div class="col-md-4 text-right">
+                    <p> Copyright &copy; 2024 | Brain Blitz by Muhammad Taha Talib | All Rights Reserved.</p>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
 
 
-        <!-- Your content goes here -->
+    <!-- Your content goes here -->
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
 
 
-    </body>
+</body>
 
-    </html>
+</html>
 
 </body>
 
