@@ -325,17 +325,16 @@ main {
 }
 
 .result .msg{
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: var(--main-color);
 }
 
 .result .circle{
     margin: 20px 0px;
-    
     font-weight: 600;
     border-radius: 50%;
-    border: 4px solid var(--contrats-color);
+    border: 4px solid var(--txt-color);
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -348,18 +347,19 @@ main {
 
   .module-border-wrap {
     position: relative;
-    background: linear-gradient(to right,  green, green , green);
+    background: black;
     padding: 3px;
-    border-radius: 50%;
+    border-radius: 12px;
 
   }
   
   .module {
-    border-radius: 50%;
-    background: white;
+    border-radius: 12px;
+    background: linear-gradient(to right,  green, white, white,  white );
     color: white;
-    padding: 2rem;
+    padding: 12px;
     color: black;
+    font-size: 2.6rem;
 
   }
 
