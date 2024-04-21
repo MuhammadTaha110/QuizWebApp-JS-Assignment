@@ -1076,15 +1076,20 @@ D.addEventListener('click', function () {
 
 //function to hide result
 function hideResult(){
-  window.location.reload();
- // document.querySelector('.result').style.display='none';
-  //document.querySelector('.quiz-cards').style.display = 'flex';
-  //document.querySelector('.custom-quiz').style.display = 'block';
+ // window.location.reload();
+  document.querySelector('.result').style.display='none';
+  document.querySelector('.quiz-cards').style.display = 'flex';
+  document.querySelector('.custom-quiz').style.display = 'block';
+  userChosenOption= '';
+  userSelected = '';
+
+  console.warn(userChosenOption);
+  console.warn(userSelected)
+
 }
 
 function showResult(){
-  console.warn(userChosenOption);
-  console.warn(userSelected)
+ 
 
   let score = 0;
   let correct=0;
