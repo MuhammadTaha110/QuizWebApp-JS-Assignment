@@ -1101,7 +1101,7 @@ function hideResult(){
     document.querySelector('.D').style.borderColor = ' #22a247';
     document.querySelector('.D').style.color = '#000000';
 
-    index==0;
+    index=0;
 
   
 
