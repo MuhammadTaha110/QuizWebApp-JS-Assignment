@@ -327,12 +327,26 @@ main {
 
 .result .cross-btn{
     position: absolute;
-    top: 0%;
-    left: 90%;
-    border: none;
-    background-color: transparent;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: 2px solid var(--txt-color);
+    background-color: var(--main-color);
     font-size: 2rem;
+    color: var(--txt-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.result .cross-btn:hover{
+    border: 2px solid var(--main-color);
+    background-color: var(--txt-color);
+    color: var(--main-color);
+}
+
 
 .result .msg{
     font-size: 1.8rem;
