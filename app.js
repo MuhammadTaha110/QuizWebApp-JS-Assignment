@@ -138,7 +138,6 @@ function clearSelectedOptions(){
   c=0;
   d=0;
 
-  intervalID = stopInterval();
 }
 
 
@@ -242,8 +241,7 @@ function displayDetails() {
 //function to hide quiz-section
 function hideDetails() {
 
-  clearSelectedOptions();
-
+  clearInterval(intervalID);
 
   index=0;
 
@@ -253,7 +251,7 @@ function hideDetails() {
   document.querySelector('.quiz-cards').style.display = 'flex';
   document.querySelector('.custom-quiz').style.display = 'block';
 
-  stopInterval(intervalID);
+  myStopFunction();
 }
 
 //function to hold user-choice
@@ -262,6 +260,11 @@ function userChoice() {
   alert(userChose);
 }
 
+
+
+function myStopFunction() {
+  clearInterval(intervalID);
+  }
 //document.querySelector('.option-card').addEventListener('clicked',userChoice());
 
 /*
@@ -1102,7 +1105,11 @@ function hideResult(){
   userSelected = '';
 
   clearSelectedOptions();
- 
+   
+  clearInterval(intervalID);
+
+
+
 
 
     index=0;
