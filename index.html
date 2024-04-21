@@ -210,7 +210,7 @@
                 <button onclick="alert('cannot go back')"><i
                         class="prev-icon fa-solid fa-backward"></i><span>Previous</span>
                 </button>
-                <button class="submit-btn">Submit</button>
+                <button class="submit-btn" onclick="showResult()">Submit</button>
                 <button onclick="nextButton()"><span>Next </span><i class="next-icon fa-solid fa-forward"></i></button>
             </div>
 
@@ -225,7 +225,7 @@
 
         <!--Result Section-->
         <section class="result">
-            <button class="cross-btn" onclick="hideResult()"><i class="fa-solid fa-xmark"></i></button>
+            <button class="cross-btn" onclick="hideResult();"><i class="fa-solid fa-xmark"></i></button>
                 <div class="msg">CONGRATULATIONS!</div>
                 <div class="msg-des">You have got</div>
                 <div class="circle">
@@ -233,8 +233,8 @@
                         <div class="module">100%</div>
                     </div>
                 </div>
-                <div class="total-questions">Total Questions: 25</div>
-                <div class="correct-questions">Corect Answers: 25</div>
+                <div>Total Questions: <span class="total-questions">25</span></div>
+                <div>Corect Answers: <span class="correct-answers">25</span></div>
 
         </section>
 

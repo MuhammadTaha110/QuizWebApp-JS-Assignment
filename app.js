@@ -1073,15 +1073,25 @@ D.addEventListener('click', function () {
 })
 
 */
-document.querySelector('.submit-btn').addEventListener('click', function () {
+
+//function to hide result
+function hideResult(){
+  document.querySelector('.result').style.display='none';
+  document.querySelector('.quiz-cards').style.display = 'flex';
+  document.querySelector('.custom-quiz').style.display = 'block';
+}
+
+function showResult(){
   console.warn(userChosenOption);
   console.warn(userSelected)
 
   let score = 0;
+  let correct=0;
 
   for (i = 0; i < userChosenOption.length; i++) {
     if (userChosenOption[i] === correctOptions[i]) {
       score += 10;
+      correct++;
     }
 
     console.warn("You Choose", userChosenOption[i]);
@@ -1089,4 +1099,69 @@ document.querySelector('.submit-btn').addEventListener('click', function () {
   }
 
   console.warn("Your Score is:", score);
-})
+
+
+  //*******
+
+  document.querySelector('.quiz-section').style.display = 'none';
+  document.querySelector('.result').style.display='flex';
+
+  let msg = document.querySelector('.msg');
+  let percentage = document.querySelector('.module');
+  let totalQuestions = document.querySelector('.total-questions');
+  let correctAns = document.querySelector('.correct-answers');
+  percentage.innerText = ((Number(totalQuestions) / Number(correctAns)) * 100).toFixed(2) + '%';
+
+  percentage.innerText = (score*2) + '%';
+
+
+
+  
+  switch(score){
+    case 0:
+      msg.innerText='Revise The Lectures!'
+      totalQuestions.innerText=questions.length;
+      correctAns.innerText=correct;
+      msg.style.color=('red');
+     percentage.style.background=('linear-gradient(to right,  red, red)');
+    break;
+
+    case 10:
+      msg.innerText='Revise The Lectures!'
+      totalQuestions.innerText=questions.length;
+      correctAns.innerText=correct;
+      msg.style.color=('red');
+     percentage.style.background=('linear-gradient(to right,  red, white, white)');
+    break;
+
+    case 20:
+      msg.innerText='Not too Good!'
+      totalQuestions.innerText=questions.length;
+      correctAns.innerText=correct;
+    break;
+
+    case 30:
+      msg.innerText='Nice Efforts!'
+      totalQuestions.innerText=questions.length;
+      correctAns.innerText=correct;
+      msg.style.color=('green');
+      percentage.style.background=('linear-gradient(to right,  green, white, white)');
+    break;
+
+    case 40:
+      msg.innerText='Congratulations!'
+      totalQuestions.innerText=questions.length;
+      correctAns.innerText=correct;
+      msg.style.color=('green');
+      percentage.style.background=('linear-gradient(to right,  green, white)');
+    break;
+
+    case 50:
+      msg.innerText='Well Done, Genuius!'
+      totalQuestions.innerText=questions.length;
+      correctAns.innerText=correct;
+      msg.style.color=('green');
+      percentage.style.background=('linear-gradient(to right,  green, green)');
+    break;
+  }
+}
