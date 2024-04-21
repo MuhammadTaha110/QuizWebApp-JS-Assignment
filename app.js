@@ -117,7 +117,7 @@ function timerSec() {
 
 
 
-htmlQuizStart();
+//htmlQuizStart();
 let p;
 function nextButton() {
   if (index < questions.length - 1) {
@@ -208,6 +208,8 @@ let intervalID;
 
 //function to show quiz-section
 function displayDetails() {
+
+  htmlQuizStart();
   var section = document.querySelector('.quiz-section');
 
   // Display the quiz section
@@ -1099,12 +1101,9 @@ function hideResult(){
     document.querySelector('.D').style.borderColor = ' #22a247';
     document.querySelector('.D').style.color = '#000000';
 
-    index=0;
+    index==0;
 
   
-
-  console.warn(userChosenOption);
-  console.warn(userSelected)
 
 }
 
