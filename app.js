@@ -132,6 +132,13 @@ function clearSelectedOptions(){
   document.querySelector('.D').style.backgroundColor = '#ffffff';
   document.querySelector('.D').style.borderColor = ' #22a247';
   document.querySelector('.D').style.color = '#000000';
+
+  a=0;
+  b=0;
+  c=0;
+  d=0;
+
+  intervalID = stopInterval();
 }
 
 
@@ -1095,6 +1102,7 @@ function hideResult(){
   userSelected = '';
 
   clearSelectedOptions();
+ 
 
 
     index=0;
