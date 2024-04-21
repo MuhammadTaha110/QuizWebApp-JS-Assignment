@@ -1,8 +1,11 @@
-// Add your custom JavaScript here
+
+//Global Variables
 let lastScrollTop = 0;
 let intervalID;
+//var to hold temporary value for elements
+var index = 0;
 
-
+//Function to get and set window position
 
 $(window).scroll(function () {
   let scrollTop = $(this).scrollTop();
@@ -16,8 +19,21 @@ $(window).scroll(function () {
   lastScrollTop = scrollTop;
 });
 
-//var to hold temporary value for elements
-var index = 0;
+//********************************************* */
+
+/*
+const mcqs = {
+  question1 : 'HTML Stands for?',
+  options : {
+    optionA: 'HyperText MakeUp Language',
+    optionB: 'HyperText MarkUp Language',
+    optionC: 'HyperTextLink MakeUp Language',
+    optionD: 'HyperText Website MakeUp Language',
+  }
+}
+
+*/
+//Version 1.0********************************************
 
 //Array of Questions
 const questions = [
@@ -68,6 +84,9 @@ const correctOptions = [
   'HyperText MarkUp Language', 'World Wide Web Consortium',
   '<h1>', '</br>', '<strong>'
 ]
+
+
+//Version 1.0********************************************
 
 
 //function for html questions
