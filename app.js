@@ -1,5 +1,7 @@
 // Add your custom JavaScript here
 let lastScrollTop = 0;
+let intervalID;
+
 
 
 $(window).scroll(function () {
@@ -216,7 +218,6 @@ function previousButton() {
 }
 
 //
-let intervalID;
 
 //function to show quiz-section
 function displayDetails() {
@@ -244,6 +245,7 @@ function hideDetails() {
 
   clearSelectedOptions();
 
+  myStopFunction();
   index=0;
 
   // Display the quiz section
