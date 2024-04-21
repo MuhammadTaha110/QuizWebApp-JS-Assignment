@@ -1083,6 +1083,26 @@ function hideResult(){
   userChosenOption= '';
   userSelected = '';
 
+  document.querySelector('.A').style.backgroundColor = '#ffffff';
+    document.querySelector('.A').style.borderColor = ' #22a247';
+    document.querySelector('.A').style.color = '#000000';
+
+    document.querySelector('.B').style.backgroundColor = '#ffffff';
+    document.querySelector('.B').style.borderColor = ' #22a247';
+    document.querySelector('.B').style.color = '#000000';
+
+    document.querySelector('.C').style.backgroundColor = '#ffffff';
+    document.querySelector('.C').style.borderColor = ' #22a247';
+    document.querySelector('.C').style.color = '#000000';
+
+    document.querySelector('.D').style.backgroundColor = '#ffffff';
+    document.querySelector('.D').style.borderColor = ' #22a247';
+    document.querySelector('.D').style.color = '#000000';
+
+    index=0;
+
+  
+
   console.warn(userChosenOption);
   console.warn(userSelected)
 
