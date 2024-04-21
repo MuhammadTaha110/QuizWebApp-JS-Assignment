@@ -71,6 +71,8 @@ const correctOptions = [
 //function for html questions
 function htmlQuizStart() {
   flag = 0;
+  intervalID = setInterval(timerSec, 1000);
+
 
   var Quizsection = document.querySelector('.quiz-section');
   var QuizQuestionNum = document.querySelector('.question-num');
@@ -235,14 +237,16 @@ function displayDetails() {
   document.querySelector('.quiz-cards').style.display = 'none';
   document.querySelector('.custom-quiz').style.display = 'none';
 
-  intervalID = setInterval(timerSec, 1000);
 }
 
 //function to hide quiz-section
 function hideDetails() {
 
-  myStopFunction();
+  clearSelectedOptions();
 
+
+  
+  clearInterval(intervalID);
   index=0;
 
   // Display the quiz section
@@ -250,8 +254,9 @@ function hideDetails() {
 
   document.querySelector('.quiz-cards').style.display = 'flex';
   document.querySelector('.custom-quiz').style.display = 'block';
+  
 
-  myStopFunction();
+ 
 }
 
 //function to hold user-choice
