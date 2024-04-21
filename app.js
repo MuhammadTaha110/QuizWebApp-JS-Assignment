@@ -1106,7 +1106,7 @@ function hideResult(){
 
   clearSelectedOptions();
    
-  clearInterval(intervalID);
+  myStopFunction();
 
 
 
