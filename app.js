@@ -1076,9 +1076,10 @@ D.addEventListener('click', function () {
 
 //function to hide result
 function hideResult(){
-  document.querySelector('.result').style.display='none';
-  document.querySelector('.quiz-cards').style.display = 'flex';
-  document.querySelector('.custom-quiz').style.display = 'block';
+  window.location.reload();
+ // document.querySelector('.result').style.display='none';
+  //document.querySelector('.quiz-cards').style.display = 'flex';
+  //document.querySelector('.custom-quiz').style.display = 'block';
 }
 
 function showResult(){
@@ -1165,3 +1166,6 @@ function showResult(){
     break;
   }
 }
+
+//temporory hide previous button
+document.querySelector('.prev-btn').style.display='none';
