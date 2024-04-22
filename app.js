@@ -19,19 +19,24 @@ function Alert(){
 
 }
 
+function loginForm(){
+  document.querySelector('.login-form').style.display='block';
+}
 
-let navbar = document.querySelector('.navbar-toggler').style.display='none';
+//making login button to left
+
+let navbar = document.querySelector('.navbar-toggler');
+let displayStyle = window.getComputedStyle(navbar).display;
 
 
-
-/*if(navbar!=='none'){
+if(displayStyle=='none'){
   document.querySelector('.login-btn').style.marginLeft = '480px';
-  navbar.style.display='none'
 }
 
 else{
   document.querySelector('.login-btn').style.marginLeft = '0px';
-} */
+
+}
 
 
 //Global Variables
