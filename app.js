@@ -284,6 +284,7 @@ function displayDetails() {
 function hideDetails() {
 
 
+  
   clearSelectedOptions();
 
   myStopFunction();
@@ -1142,22 +1143,25 @@ D.addEventListener('click', function () {
 
 //function to hide result
 function hideResult(){
- // window.location.reload();
+  window.location.reload();
+
+ /*
   document.querySelector('.result').style.display='none';
   document.querySelector('.quiz-cards').style.display = 'flex';
   document.querySelector('.custom-quiz').style.display = 'block';
-  userChosenOption= '';
-  userSelected = '';
+  userChosenOption,length =0;
+  userSelected.length =0;
 
   clearSelectedOptions();
    
   myStopFunction();
-
-
-
-
-
     index=0;
+
+
+*/
+
+
+
 
   
 
@@ -1182,12 +1186,7 @@ Swal.fire({
     clearInterval(timerInterval);
     showResult();
   }
-}).then((result) => {
-  /* Read more about handling dismissals below */
-  if (result.dismiss === Swal.DismissReason.timer) {
-    console.log("I was closed by the timer");
-  }
-});
+})
 
 }
 
