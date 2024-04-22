@@ -1,4 +1,9 @@
 /*LoginFromSTART*/
+
+.login-form,
+.signup-form{
+    display: none;
+}
     
     .user_card {
         height: 400px;
