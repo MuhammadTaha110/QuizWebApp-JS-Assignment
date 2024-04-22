@@ -12,6 +12,7 @@ function Alert(){
     confirmButtonText: "Yes, Quit it!"
   }).then((result) => {
     if (result.isConfirmed) {
+      clearInterval(intervalID);
       hideDetails();
     }
   });
@@ -110,6 +111,27 @@ const correctOptions = [
 //Version 1.0********************************************
 
 
+//variables for timer
+var timerSeconds = 60;
+var timerMinutes = 14;
+
+
+//function for timer
+function timerSec() {
+  if (timerSeconds > 0) {
+    timerSeconds--;
+  }
+
+  else {
+    timerMinutes--;
+    timerSeconds = 59;
+  }
+
+  document.querySelector('.timer-sec').innerHTML = timerSeconds;
+  document.querySelector('.timer-mins').innerHTML = timerMinutes;
+
+}
+
 //function for html questions
 function htmlQuizStart() {
   flag = 0;
@@ -138,28 +160,6 @@ function htmlQuizStart() {
 }
 
 
-//variables for timer
-var timerSeconds = 60;
-var timerMinutes = 14;
-
-
-//function for timer
-function timerSec() {
-  if (timerSeconds > 0) {
-    timerSeconds--;
-  }
-
-  else {
-    timerMinutes--;
-    timerSeconds = 59;
-  }
-
-  document.querySelector('.timer-sec').innerHTML = timerSeconds;
-  document.querySelector('.timer-mins').innerHTML = timerMinutes;
-
-}
-
-
 function clearSelectedOptions(){
   document.querySelector('.A').style.backgroundColor = '#ffffff';
   document.querySelector('.A').style.borderColor = ' #22a247';
@@ -181,6 +181,7 @@ function clearSelectedOptions(){
   b=0;
   c=0;
   d=0;
+
 
 }
 
@@ -287,7 +288,6 @@ function hideDetails() {
   
   clearSelectedOptions();
 
-  myStopFunction();
   index=0;
 
   // Display the quiz section
@@ -308,9 +308,6 @@ function userChoice() {
 
 
 
-function myStopFunction() {
-  clearInterval(intervalID);
-  }
 //document.querySelector('.option-card').addEventListener('clicked',userChoice());
 
 /*
