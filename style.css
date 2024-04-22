@@ -67,6 +67,12 @@
     .links,
     .custom-control-label{
         color: var(--contrats-color);
+        cursor: pointer;
+
+    }
+
+    .links:hover{
+        color: var(--main-color);
     }
 
     .links a{
@@ -77,7 +83,7 @@
     .links a:hover{
         text-decoration: none;
         color: #D3D3D3;
-        cursor: pointer;
+        
     }
 
 
