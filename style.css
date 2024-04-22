@@ -414,6 +414,18 @@ main {
     color: var(--main-color);
 }
 
+.footer .quick-links,
+.footer .copyright p{
+    text-align: center;
+}
+
+.footer .copyright p{
+    width: 100%;
+    margin-top: 25px;
+}
+
+
+
 
 /*BreakPoints*/
 
