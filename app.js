@@ -21,6 +21,9 @@ function Alert(){
 
 function loginForm(){
   document.querySelector('.login-form').style.display='block';
+  document.querySelector('.quiz-section').style.display = 'none';
+  document.querySelector('.quiz-cards').style.display = 'none';
+  document.querySelector('.custom-quiz').style.display = 'none';
 }
 
 //making login button to left
