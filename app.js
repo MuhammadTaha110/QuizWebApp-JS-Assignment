@@ -1,3 +1,24 @@
+//Alert Function
+
+
+function Alert(){
+  Swal.fire({
+    title: "Are you sure you want to quit?",
+    text: "You won't be able to revert this!",
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonColor: "#22a247",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, Quit it!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      hideDetails();
+    }
+  });
+
+}
+
+
 
 //Global Variables
 let lastScrollTop = 0;
@@ -261,6 +282,7 @@ function displayDetails() {
 
 //function to hide quiz-section
 function hideDetails() {
+
 
   clearSelectedOptions();
 
@@ -1141,8 +1163,38 @@ function hideResult(){
 
 }
 
+
+function resultAlert(){
+  let timerInterval;
+Swal.fire({
+  title: "Submiting!",
+  html: "Calculating the results",
+  timer: 500,
+  timerProgressBar: true,
+  didOpen: () => {
+    Swal.showLoading();
+    const timer = Swal.getPopup().querySelector("b");
+    timerInterval = setInterval(() => {
+      timer.textContent = `${Swal.getTimerLeft()}`;
+    }, 100);
+  },
+  willClose: () => {
+    clearInterval(timerInterval);
+    showResult();
+  }
+}).then((result) => {
+  /* Read more about handling dismissals below */
+  if (result.dismiss === Swal.DismissReason.timer) {
+    console.log("I was closed by the timer");
+  }
+});
+
+}
+
+
 function showResult(){
  
+
 
   let score = 0;
   let correct=0;
