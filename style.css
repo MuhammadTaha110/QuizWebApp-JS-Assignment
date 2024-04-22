@@ -73,6 +73,10 @@
         color: var(--main-color);
     }
 
+    .ml-4{
+        cursor: pointer;
+    }
+
     .links a:hover{
         text-decoration: none;
         color: #D3D3D3;
