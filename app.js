@@ -20,6 +20,19 @@ function Alert(){
 }
 
 
+let navbar = document.querySelector('.navbar-toggler').style.display='none';
+
+
+
+/*if(navbar!=='none'){
+  document.querySelector('.login-btn').style.marginLeft = '480px';
+  navbar.style.display='none'
+}
+
+else{
+  document.querySelector('.login-btn').style.marginLeft = '0px';
+} */
+
 
 //Global Variables
 let lastScrollTop = 0;
