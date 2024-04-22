@@ -15,9 +15,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-
-
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <title>Quiz Application</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -33,8 +31,9 @@
                 <a class="navbar-brand" href="#">
                     <img src="imgs/logo.png" width="60" height="40" alt="Logo">
                 </a>
-                <button class="navbar-toggler toggler-icon" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler toggler-icon" type="button" data-toggle="collapse"
+                    data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -48,7 +47,7 @@
                                 Quiz
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" onclick="displayDetails();" >HTML</a>
+                                <a class="dropdown-item" onclick="displayDetails();">HTML</a>
                                 <a class="dropdown-item" href="#">CSS</a>
                                 <a class="dropdown-item" href="#">JavaScript</a>
                                 <a class="dropdown-item" href="#">Java</a>
@@ -207,8 +206,7 @@
             </div>
 
             <div class="prv-nxt-btn">
-                <button class="prev-btn"><i
-                        class="prev-icon fa-solid fa-backward"></i><span>Previous</span>
+                <button class="prev-btn"><i class="prev-icon fa-solid fa-backward"></i><span>Previous</span>
                 </button>
                 <button class="submit-btn" onclick="resultAlert()">Submit</button>
                 <button onclick="nextButton()"><span>Next </span><i class="next-icon fa-solid fa-forward"></i></button>
@@ -226,19 +224,69 @@
         <!--Result Section-->
         <section class="result">
             <button class="cross-btn" onclick="hideResult();"><i class="fa-solid fa-xmark"></i></button>
-                <div class="msg">CONGRATULATIONS!</div>
-                <div class="msg-des">You have got</div>
-                <div class="circle">
-                    <div class="module-border-wrap result-percentage">
-                        <div class="module">100%</div>
-                    </div>
+            <div class="msg">CONGRATULATIONS!</div>
+            <div class="msg-des">You have got</div>
+            <div class="circle">
+                <div class="module-border-wrap result-percentage">
+                    <div class="module">100%</div>
                 </div>
-                <div>Total Questions: <span class="total-questions">25</span></div>
-                <div>Corect Answers: <span class="correct-answers">25</span></div>
+            </div>
+            <div>Total Questions: <span class="total-questions">25</span></div>
+            <div>Corect Answers: <span class="correct-answers">25</span></div>
 
         </section>
 
+        <!--Login&Signup Form-->
 
+        <section class="container h-100">
+            <div class="d-flex justify-content-center h-100">
+                <div class="user_card">
+                    <div class="d-flex justify-content-center">
+                        <div class="brand_logo_container">
+                            <img src="imgs/logo.png"
+                                class="brand_logo" alt="Logo">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center form_container">
+                        <form>
+                            <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" name="" class="form-control input_user" value=""
+                                    placeholder="username">
+                            </div>
+                            <div class="input-group mb-2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" name="" class="form-control input_pass" value=""
+                                    placeholder="password">
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customControlInline">
+                                    <label class="custom-control-label" for="customControlInline">Remember me</label>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mt-3 login_container">
+                                <button type="button" name="button" class="btn login_btn">Login</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-center links">
+                            Don't have an account? <a href="#" class="ml-2">Sign Up</a>
+                        </div>
+                        <div class="d-flex justify-content-center links">
+                            <a href="#">Forgot your password?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Login&Signup Form End-->
 
 
     </main>
@@ -273,6 +321,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="app.js"></script>
 
 
