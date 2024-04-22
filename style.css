@@ -4,6 +4,13 @@
 .signup-form{
     display: none;
 }
+
+.login-btn{
+    width: 90px;
+    height: 40px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
     
     .user_card {
         height: 400px;
