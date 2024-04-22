@@ -37,6 +37,7 @@ function quizStartAlert(){
 
 function loginForm(){
   document.querySelector('.login-form').style.display='block';
+  document.querySelector('.signup-form').style.display='none';
   document.querySelector('.quiz-section').style.display = 'none';
   document.querySelector('.quiz-cards').style.display = 'none';
   document.querySelector('.custom-quiz').style.display = 'none';
