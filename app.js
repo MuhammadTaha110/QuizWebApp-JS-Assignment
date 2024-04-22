@@ -1,6 +1,11 @@
 //Alert Function
 
 
+const mainColor ='22a247';
+const txtColor ='#000000';
+const contrastColor ='#ffffff';
+
+
 function Alert(){
   Swal.fire({
     title: "Are you sure you want to quit?",
@@ -40,6 +45,8 @@ function loginForm(){
   document.querySelector('.quiz-section').style.display = 'none';
   document.querySelector('.quiz-cards').style.display = 'none';
   document.querySelector('.custom-quiz').style.display = 'none';
+  document.querySelector('.result').style.display = 'none';
+
 }
 
 //making login button to left
@@ -49,11 +56,13 @@ let displayStyle = window.getComputedStyle(navbar).display;
 
 
 if(displayStyle=='none'){
-  document.querySelector('.login-btn').style.marginLeft = '480px';
+  document.querySelector('.login-btn').style.position = 'absolute';
+  document.querySelector('.login-btn').style.left = '85vw';
+
 }
 
 else{
-  document.querySelector('.login-btn').style.marginLeft = '0px';
+  document.querySelector('.login-btn').style.position = 'static';
 
 }
 
@@ -146,6 +155,188 @@ const correctOptions = [
 
 
 //Version 1.0********************************************
+
+//JS Quiz Start
+const jsQuestions = [
+  'What does DOM stand for?',
+  'Which keyword declares variables?',
+  'Output of typeof null?',
+  'Purpose of "use strict"?',
+  'What isNaN() function does?',
+  'Output of 3 + "3"?',
+  'What is a closure?',
+  'Output of typeof NaN?',
+  'Difference between == and ===?',
+  'Method to add to array?',
+  'Purpose of push() method?',
+  'Output of typeof []?',
+  'What is a callback?',
+  'Purpose of setTimeOut()?',
+  'Output of typeof undefined?',
+  'What is a promise?',
+  'Purpose of parseFloat()?',
+  'Output of 5 == "5"?',
+  'Purpose of split()?',
+  'What does pop() method do?',
+  'Output of typeof {}?',
+  'Purpose of map() method?',
+  'Output of 0.1 + 0.2?',
+  'What is higher-order function?',
+  'Purpose of filter() method?'
+];
+
+const jsOptions = [
+  {
+    optionA: 'Document Object Model',
+    optionB: 'Data Object Model',
+    optionC: 'Dynamic Object Model',
+    optionD: 'None'
+  },
+  {
+    optionA: 'var',
+    optionB: 'let',
+    optionC: 'const',
+    optionD: 'variable'
+  },
+  {
+    optionA: 'object',
+    optionB: 'number',
+    optionC: 'undefined',
+    optionD: 'string'
+  },
+  {
+    optionA: 'Enables strict mode',
+    optionB: 'Declares variable',
+    optionC: 'Prevents errors',
+    optionD: 'None'
+  },
+  {
+    optionA: 'Checks if value NaN',
+    optionB: 'Converts to number',
+    optionC: 'Returns true if number',
+    optionD: 'None'
+  },
+  {
+    optionA: '33',
+    optionB: '6',
+    optionC: 'NaN',
+    optionD: 'Error'
+  },
+  {
+    optionA: 'Function inside function',
+    optionB: 'Returns another function',
+    optionC: 'No return statement',
+    optionD: 'None'
+  },
+  {
+    optionA: 'object',
+    optionB: 'number',
+    optionC: 'undefined',
+    optionD: 'string'
+  },
+  {
+    optionA: '== performs type coercion',
+    optionB: '== compares both value',
+    optionC: '== is strict equality',
+    optionD: '== is same as ==='
+  },
+  {
+    optionA: 'push()',
+    optionB: 'insert()',
+    optionC: 'append()',
+    optionD: 'None'
+  },
+  {
+    optionA: 'Adds to end of array',
+    optionB: 'Removes last element',
+    optionC: 'Adds to beginning',
+    optionD: 'None'
+  },
+  {
+    optionA: 'object',
+    optionB: 'array',
+    optionC: 'undefined',
+    optionD: 'string'
+  },
+  {
+    optionA: 'Function as argument',
+    optionB: 'Executes after time',
+    optionC: 'Returns a promise',
+    optionD: 'None'
+  },
+  {
+    optionA: 'Object representing completion',
+    optionB: 'Executes after time',
+    optionC: 'Returns a promise',
+    optionD: 'None'
+  },
+  {
+    optionA: 'Parses string to float',
+    optionB: 'Parses string to integer',
+    optionC: 'Parses string to boolean',
+    optionD: 'None'
+  },
+  {
+    optionA: 'true',
+    optionB: 'false',
+    optionC: 'undefined',
+    optionD: 'Error'
+  },
+  {
+    optionA: 'Splits string into substrings',
+    optionB: 'Joins elements of array',
+    optionC: 'Removes last element',
+    optionD: 'None'
+  },
+  {
+    optionA: 'Removes last element',
+    optionB: 'Adds to end of array',
+    optionC: 'Removes first element',
+    optionD: 'None'
+  },
+  {
+    optionA: 'object',
+    optionB: 'number',
+    optionC: 'undefined',
+    optionD: 'string'
+  },
+  {
+    optionA: 'Creates new array',
+    optionB: 'Filters array elements',
+    optionC: 'Sorts array elements',
+    optionD: 'None'
+  },
+  {
+    optionA: '0.3',
+    optionB: '0.30000000000000004',
+    optionC: '0.31',
+    optionD: '0.2'
+  },
+  {
+    optionA: 'Operates on other functions',
+    optionB: 'Takes or returns function',
+    optionC: 'Executes after time',
+    optionD: 'None'
+  },
+  {
+    optionA: 'Filters array elements',
+    optionB: 'Creates new array',
+    optionC: 'Sorts array elements',
+    optionD: 'None'
+  }
+];
+
+const jsCorrectOptions = [
+  'Document Object Model', 'var', 'object', 'Enables strict mode', 'Checks if value NaN',
+  '33', 'Function inside function', 'number', '== compares both value', 'push()',
+  'Adds to end of array', 'object', 'Function as argument', 'Object representing completion',
+  'undefined', 'Returns a promise', 'Parses string to float', 'true', 'Splits string into substrings',
+  'Removes last element', 'object', 'Filters array elements', '0.30000000000000004',
+  'Takes or returns function', 'Filters array elements'
+];
+
+
+//JS Quiz End
 
 
 //variables for timer
