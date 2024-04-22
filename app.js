@@ -17,6 +17,22 @@ function Alert(){
     }
   });
 
+
+}
+
+function quizStartAlert(){
+  Swal.fire({
+    title: "25 Questions | 15 Minutes",
+    //showDenyButton: true,
+    showCancelButton: true,
+    confirmButtonText: "Start Quiz",
+    confirmButtonColor: "#22a247",
+  }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+      displayDetails();
+    } 
+  });
 }
 
 function loginForm(){
