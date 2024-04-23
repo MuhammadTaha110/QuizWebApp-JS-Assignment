@@ -26,9 +26,9 @@
 <body>
 
     <header class="fixed-top header">
-        <nav class=" navbar navbar-expand-lg navbar-light bg-light header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light header">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" onclick="hideResult()">
                     <img src="imgs/logo.png" width="60" height="40" alt="Logo">
                 </a>
                 <button class="navbar-toggler toggler-icon" type="button" data-toggle="collapse"
@@ -99,7 +99,7 @@
 
         -->
 
-    <main class="main">
+    <main class="main" id="main">
 
         <!--Customized Quiz Cards End-->
         <div class="custom-quiz">
@@ -121,8 +121,8 @@
 
 
         <!--Default Quiz Cards-->
-        <div class="quiz-cards">
-            <div class="cards">
+        <div class="quiz-cards ">
+            <div class="html cards">
                 <h1>HTML </h1>
                 <i class="fa-brands fa-html5 quiz-icon"></i>
                 <h4>25 Questions</h4>
@@ -142,12 +142,12 @@
                 </button>
             </div>
 
-            <div class="cards">
+            <div class="js cards">
                 <h1>JavaScript</h1>
                 <i class="fa-brands fa-js quiz-icon"></i>
                 <h4>25 Questions</h4>
                 <h4>15 mins</h4>
-                <button class="start-quiz" onclick="jsQuizStart()">
+                <button class="start-quiz" onclick="quizStartAlert()">
                     Start Quiz
                 </button>
             </div>

@@ -1,5 +1,5 @@
 //Alert Function
-
+let quiz  = '';
 
 function Alert(){
   Swal.fire({
@@ -21,6 +21,12 @@ function Alert(){
 }
 
 function quizStartAlert(){
+
+  
+  
+  quiz = document.querySelector('.start-quiz').parentElement.classList[0];
+  console.warn(quiz);
+
   Swal.fire({
     title: "25 Questions | 15 Minutes",
     //showDenyButton: true,
@@ -30,7 +36,9 @@ function quizStartAlert(){
   }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
-      displayDetails();
+       displayDetails();
+      
+      
     } 
   });
 }
@@ -108,54 +116,376 @@ const mcqs = {
 //Version 1.0********************************************
 
 //Array of Questions
-const questions = [
-  'HTML Stands for?',
-  'Who is making the Web standards?',
-  'Choose the correct HTML element for the largest heading:',
-  'What is the correct HTML element for inserting a line break?',
-  'Choose the correct HTML element to define important text?'
+const htmlQuestions = [
+  'What does HTML stand for?',
+  'Who sets the Web standards?',
+  'Which element represents the largest heading?',
+  'Which element inserts a line break?',
+  'Which element defines important text?',
+  'What does CSS stand for?',
+  'What language is used to style web pages?',
+  'Which tag is used to create a hyperlink?',
+  'Which tag defines a paragraph?',
+  'What tag is used for unordered lists?',
+  'What tag is used for ordered lists?',
+  'What tag is used for table cells?',
+  'Which tag defines a division or section?',
+  'What tag defines an image?',
+  'What is the correct HTML for inserting an image?',
+  'Which HTML attribute specifies an image\'s alternative text?',
+  'Which tag defines a clickable button?',
+  'Which attribute specifies the URL of the page the link goes to?',
+  'Which attribute is used to provide an alternative text for an image?',
+  'What is the correct HTML for making a checkbox?',
+  'What is the correct HTML for making a radio button?',
+  'What does the <a> tag do?',
+  'What does the <br> tag do?',
+  'What is the correct HTML for adding a background color?',
+];
 
-]
+const htmlOptions = [
+  {
+    optionA: 'HyperText Markup Language',
+    optionB: 'HyperText MakeUp Language',
+    optionC: 'HyperTextLink Markup Language',
+    optionD: 'HyperText Website Markup Language',
+  },
+  {
+    optionA: 'Google',
+    optionB: 'Mozilla',
+    optionC: 'W3C',
+    optionD: 'Microsoft',
+  },
+  {
+    optionA: '<h1>',
+    optionB: '<h>',
+    optionC: '<header>',
+    optionD: '<heading>',
+  },
+  {
+    optionA: '<br>',
+    optionB: '<lb>',
+    optionC: '<line>',
+    optionD: '<break>',
+  },
+  {
+    optionA: '<strong>',
+    optionB: '<bold>',
+    optionC: '<em>',
+    optionD: '<important>',
+  },
+  {
+    optionA: 'Cascading Style Sheets',
+    optionB: 'Creative Style Sheets',
+    optionC: 'Cascading Simple Style',
+    optionD: 'Cascading Style Simplified',
+  },
+  {
+    optionA: 'CSS',
+    optionB: 'JavaScript',
+    optionC: 'HTML',
+    optionD: 'Python',
+  },
+  {
+    optionA: '<a>',
+    optionB: '<link>',
+    optionC: '<href>',
+    optionD: '<url>',
+  },
+  {
+    optionA: '<para>',
+    optionB: '<p>',
+    optionC: '<paragraph>',
+    optionD: '<text>',
+  },
+  {
+    optionA: '<ul>',
+    optionB: '<ol>',
+    optionC: '<li>',
+    optionD: '<ul>',
+  },
+  {
+    optionA: '<ol>',
+    optionB: '<ul>',
+    optionC: '<li>',
+    optionD: '<order>',
+  },
+  {
+    optionA: '<td>',
+    optionB: '<th>',
+    optionC: '<table-cell>',
+    optionD: '<tr>',
+  },
+  {
+    optionA: '<div>',
+    optionB: '<section>',
+    optionC: '<divsion>',
+    optionD: '<divison>',
+  },
+  {
+    optionA: '<img>',
+    optionB: '<src>',
+    optionC: '<image>',
+    optionD: '<picture>',
+  },
+  {
+    optionA: '<img src="image.jpg" alt="Description">',
+    optionB: '<image src="image.jpg" alt="Description">',
+    optionC: '<a src="image.jpg" alt="Description">',
+    optionD: '<img href="image.jpg" alt="Description">',
+  },
+  {
+    optionA: 'href',
+    optionB: 'src',
+    optionC: 'url',
+    optionD: 'link',
+  },
+  {
+    optionA: '<button>',
+    optionB: '<click>',
+    optionC: '<btn>',
+    optionD: '<input>',
+  },
+  {
+    optionA: 'href',
+    optionB: 'url',
+    optionC: 'src',
+    optionD: 'link',
+  },
+  {
+    optionA: 'alt',
+    optionB: 'title',
+    optionC: 'src',
+    optionD: 'href',
+  },
+  {
+    optionA: '<input type="checkbox">',
+    optionB: '<input type="check">',
+    optionC: '<checkbox>',
+    optionD: '<check>',
+  },
+  {
+    optionA: '<input type="radio">',
+    optionB: '<radio>',
+    optionC: '<input type="option">',
+    optionD: '<input type="circle">',
+  },
+  {
+    optionA: 'Defines a hyperlink',
+    optionB: 'Defines an image',
+    optionC: 'Defines a button',
+    optionD: 'Defines a line break',
+  },
+  {
+    optionA: 'Creates a line break',
+    optionB: 'Creates a paragraph',
+    optionC: 'Creates a hyperlink',
+    optionD: 'Creates a division',
+  },
+  {
+    optionA: '<body bgcolor="yellow">',
+    optionB: '<body style="background-color: yellow;">',
+    optionC: '<bg-color="yellow">',
+    optionD: '<background-color="yellow">',
+  },
+];
 
-//Array of Objects for Options
-const options = [{
-  optionA: 'HyperText MakeUp Language',
-  optionB: 'HyperText MarkUp Language',
-  optionC: 'HyperTextLink MakeUp Language',
-  optionD: 'HyperText Website MakeUp Language',
-},
-{
-  optionA: 'Google',
-  optionB: 'Mozilla',
-  optionC: 'Safari',
-  optionD: 'World Wide Web Consortium',
-},
-{
-  optionA: '<h1>',
-  optionB: '<head>',
-  optionC: '<header>',
-  optionD: '<h6>',
-},
-{
-  optionA: '<lineBreak>',
-  optionB: '</br>',
-  optionC: '<break>',
-  optionD: '<lb>',
-},
-{
-  optionA: '<b>',
-  optionB: '<strong>',
-  optionC: '<important>',
-  optionD: '!important',
-},
-
-]
-
-//Array for Correct options
 const correctOptions = [
-  'HyperText MarkUp Language', 'World Wide Web Consortium',
-  '<h1>', '</br>', '<strong>'
-]
+  'HyperText Markup Language', 'W3C', '<h1>', '<br>', '<strong>',
+  'Cascading Style Sheets', 'CSS', '<a>', '<p>', '<ul>',
+  '<ol>', '<td>', '<div>', '<img>', '<img src="image.jpg" alt="Description">',
+  'alt', '<button>', 'href', 'alt', '<input type="checkbox">',
+  '<input type="radio">', 'Defines a hyperlink', 'Creates a line break',
+  '<body bgcolor="yellow">',
+];
+
+
+//js mcqs
+
+const jsQuestions = [
+  'What does DOM stand for?',
+  'Which keyword declares variables?',
+  'What is the output of typeof null?',
+  'What does the "use strict" directive do?',
+  'What does the isNaN() function do?',
+  'What is the output of 3 + "3"?',
+  'What is a closure in JavaScript?',
+  'What is the output of typeof NaN?',
+  'What is the difference between == and === operators?',
+  'Which method adds elements to the end of an array?',
+  'What is the purpose of the push() method?',
+  'What is the output of typeof []?',
+  'What is a callback function?',
+  'What is the purpose of the setTimeout() function?',
+  'What is the output of typeof undefined?',
+  'What is a JavaScript promise?',
+  'What does the parseFloat() function do?',
+  'What is the output of 5 == "5"?',
+  'What does the split() method do?',
+  'What does the pop() method do?',
+  'What is the output of typeof {}?',
+  'What is the purpose of the map() method?',
+  'What is the output of 0.1 + 0.2?',
+  'What is a higher-order function?',
+  'What is the purpose of the filter() method?'
+];
+
+const jsOptions = [
+  {
+    optionA: 'Document Object Model',
+    optionB: 'Data Object Model',
+    optionC: 'Dynamic Object Model',
+    optionD: 'Document Oriented Model'
+  },
+  {
+    optionA: 'var',
+    optionB: 'let',
+    optionC: 'const',
+    optionD: 'variable'
+  },
+  {
+    optionA: 'object',
+    optionB: 'number',
+    optionC: 'undefined',
+    optionD: 'string'
+  },
+  {
+    optionA: 'Enables strict mode',
+    optionB: 'Declares variable',
+    optionC: 'Prevents errors',
+    optionD: 'None'
+  },
+  {
+    optionA: 'Checks if value is not a number',
+    optionB: 'Converts value to a number',
+    optionC: 'Returns true if value is a number',
+    optionD: 'None'
+  },
+  {
+    optionA: '33',
+    optionB: '6',
+    optionC: 'NaN',
+    optionD: 'Error'
+  },
+  {
+    optionA: 'Function inside another function',
+    optionB: 'Function that returns another function',
+    optionC: 'Function with no return statement',
+    optionD: 'None'
+  },
+  {
+    optionA: 'object',
+    optionB: 'number',
+    optionC: 'undefined',
+    optionD: 'string'
+  },
+  {
+    optionA: 'Type coercion',
+    optionB: 'Value comparison',
+    optionC: 'Type and value comparison',
+    optionD: 'None'
+  },
+  {
+    optionA: 'push()',
+    optionB: 'insert()',
+    optionC: 'append()',
+    optionD: 'addToEnd()'
+  },
+  {
+    optionA: 'Adds one or more elements to the end of an array',
+    optionB: 'Removes the last element from an array',
+    optionC: 'Adds one or more elements to the beginning of an array',
+    optionD: 'None'
+  },
+  {
+    optionA: 'object',
+    optionB: 'array',
+    optionC: 'undefined',
+    optionD: 'string'
+  },
+  {
+    optionA: 'Function passed as an argument to another function',
+    optionB: 'Function that executes after a certain period of time',
+    optionC: 'Function that returns a promise',
+    optionD: 'None'
+  },
+  {
+    optionA: 'Object representing completion or failure of an asynchronous operation',
+    optionB: 'Function that executes after a certain period of time',
+    optionC: 'Function that returns a promise',
+    optionD: 'None'
+  },
+  {
+    optionA: 'Parses a string and returns a floating point number',
+    optionB: 'Parses a string and returns an integer',
+    optionC: 'Parses a string and returns a boolean',
+    optionD: 'None'
+  },
+  {
+    optionA: 'true',
+    optionB: 'false',
+    optionC: 'undefined',
+    optionD: 'Error'
+  },
+  {
+    optionA: 'Splits a string into an array of substrings',
+    optionB: 'Joins the elements of an array into a string',
+    optionC: 'Removes the last element from an array',
+    optionD: 'None'
+  },
+  {
+    optionA: 'Removes the last element from an array',
+    optionB: 'Adds one or more elements to the end of an array',
+    optionC: 'Removes the first element from an array',
+    optionD: 'None'
+  },
+  {
+    optionA: 'object',
+    optionB: 'number',
+    optionC: 'undefined',
+    optionD: 'string'
+  },
+  {
+    optionA: 'Creates a new array with the results of calling a provided function on every element in the calling array',
+    optionB: 'Filters the elements of an array based on a provided function',
+    optionC: 'Sorts the elements of an array in place and returns the sorted array',
+    optionD: 'None'
+  },
+  {
+    optionA: '0.3',
+    optionB: '0.30000000000000004',
+    optionC: '0.31',
+    optionD: '0.2'
+  },
+  {
+    optionA: 'Function that takes another function as an argument or returns a function',
+    optionB: 'Function that operates on other functions',
+    optionC: 'Function that executes after a certain period of time',
+    optionD: 'None'
+  },
+  {
+    optionA: 'Filters the elements of an array based on a provided function',
+    optionB: 'Creates a new array with the results of calling a provided function on every element in the calling array',
+    optionC: 'Sorts the elements of an array in place and returns the sorted array',
+    optionD: 'None'
+  }
+];
+
+const jsCorrectOptions = [
+  'Document Object Model', 'var', 'object', 'Enables strict mode',
+  'Checks if value is not a number', '33', 'Function inside another function',
+  'object', 'Type and value comparison', 'push()',
+  'Adds one or more elements to the end of an array', 'object',
+  'Function passed as an argument to another function',
+  'Object representing completion or failure of an asynchronous operation',
+  'undefined', 'Object representing completion or failure of an asynchronous operation',
+  'Parses a string and returns a floating point number', 'true',
+  'Splits a string into an array of substrings', 'Removes the last element from an array',
+  'object', 'Creates a new array with the results of calling a provided function on every element in the calling array',
+  '0.30000000000000004', 'Function that takes another function as an argument or returns a function',
+  'Filters the elements of an array based on a provided function'
+];
+
 
 
 //Version 1.0********************************************
@@ -182,29 +512,47 @@ function timerSec() {
 
 }
 
+
+
+
+var Quizsection = document.querySelector('.quiz-section');
+var QuizQuestionNum = document.querySelector('.question-num');
+var QuizQuestion = document.querySelector('.question');
+var A = document.querySelector('.A');
+var B = document.querySelector('.B');
+var C = document.querySelector('.C');
+var D = document.querySelector('.D');
+//var timerMins = document.querySelector('.timer-mins');
+//var timerSec = document.querySelector('.timer-sec');
 //function for html questions
 function htmlQuizStart() {
   flag = 0;
   intervalID = setInterval(timerSec, 1000);
 
+  QuizQuestionNum.innerHTML = index + 1;
+  QuizQuestion.innerHTML = htmlQuestions[index];
+  A.innerText = htmlOptions[index].optionA;
+  B.innerText = htmlOptions[index].optionB;
+  C.innerText = htmlOptions[index].optionC;
+  D.innerText = htmlOptions[index].optionD;
 
-  var Quizsection = document.querySelector('.quiz-section');
-  var QuizQuestionNum = document.querySelector('.question-num');
-  var QuizQuestion = document.querySelector('.question');
-  var A = document.querySelector('.A');
-  var B = document.querySelector('.B');
-  var C = document.querySelector('.C');
-  var D = document.querySelector('.D');
-  //var timerMins = document.querySelector('.timer-mins');
-  //var timerSec = document.querySelector('.timer-sec');
+
+}
+
+
+
+//function for html questions
+function jsQuizStart() {
+  flag = 0;
+  intervalID = setInterval(timerSec, 1000);
 
 
   QuizQuestionNum.innerHTML = index + 1;
-  QuizQuestion.innerHTML = questions[index];
-  A.innerText = options[index].optionA;
-  B.innerText = options[index].optionB;
-  C.innerText = options[index].optionC;
-  D.innerText = options[index].optionD;
+  QuizQuestion.innerHTML = jsQuestions[index];
+  A.innerText = jsOptions[index].optionA;
+  B.innerText = jsOptions[index].optionB;
+  C.innerText = jsOptions[index].optionC;
+  D.innerText = jsOptions[index].optionD;
 
 
 }
@@ -239,7 +587,7 @@ function clearSelectedOptions(){
 //htmlQuizStart();
 let p;
 function nextButton() {
-  if (index < questions.length - 1) {
+  if (index < htmlQuestions.length - 1) {
 
     clearSelectedOptions();
 
@@ -313,7 +661,14 @@ function previousButton() {
 //function to show quiz-section
 function displayDetails() {
 
-  htmlQuizStart();
+  if(quiz='html'){
+    htmlQuizStart();
+  }
+
+  else if(quiz='js'){
+    jsQuizStart();
+  }
+
   var section = document.querySelector('.quiz-section');
 
   // Display the quiz section
@@ -474,11 +829,6 @@ let b = 0;
 let c = 0;
 let d = 0;
 
-
-let A = document.querySelector('.A');
-let B = document.querySelector('.B');
-let C = document.querySelector('.C');
-let D = document.querySelector('.D');
 
 var idx = index;
 
