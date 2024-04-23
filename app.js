@@ -141,6 +141,8 @@ const htmlQuestions = [
   'What does the <a> tag do?',
   'What does the <br> tag do?',
   'What is the correct HTML for adding a background color?',
+  'What does HTML stand for?',
+
 ];
 
 const htmlOptions = [
@@ -288,6 +290,12 @@ const htmlOptions = [
     optionC: '<bg-color="yellow">',
     optionD: '<background-color="yellow">',
   },
+  {
+    optionA: 'HyperText Markup Language',
+    optionB: 'HyperText MakeUp Language',
+    optionC: 'HyperTextLink Markup Language',
+    optionD: 'HyperText Website Markup Language',
+  }
 ];
 
 const correctOptions = [
@@ -535,7 +543,7 @@ function htmlQuizStart() {
   flag = 0;
   intervalID = setInterval(timerSec, 1000);
 
-  QuizQuestionNum.innerHTML = index;
+  QuizQuestionNum.innerHTML = index + 1;
   QuizQuestion.innerHTML = htmlQuestions[index];
   A.innerText = htmlOptions[index].optionA;
   B.innerText = htmlOptions[index].optionB;
@@ -553,7 +561,7 @@ function jsQuizStart() {
   intervalID = setInterval(timerSec, 1000);
 
 
-  QuizQuestionNum.innerHTML = index;
+  QuizQuestionNum.innerHTML = index + 1;
   QuizQuestion.innerHTML = jsQuestions[index];
   A.innerText = jsOptions[index].optionA;
   B.innerText = jsOptions[index].optionB;
@@ -593,7 +601,7 @@ function clearSelectedOptions(){
 //htmlQuizStart();
 let p;
 function nextButton() {
-  if (index < htmlQuestions.length ) {
+  if (index < htmlQuestions.length-1 ) {
 
     clearSelectedOptions();
 
