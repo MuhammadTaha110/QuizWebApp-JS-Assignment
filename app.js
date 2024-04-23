@@ -1050,6 +1050,181 @@ const pythonOptions = [
 ];
 
 //DataBase
+const dbQuestions = [
+  'What is a database?',
+  'Which type of database stores data in tables?',
+  'What does SQL stand for?',
+  'Which keyword is used to retrieve data from a database in SQL?',
+  'Which statement is used to insert data into a database table in SQL?',
+  'Which statement is used to update data in a database table in SQL?',
+  'Which statement is used to delete data from a database table in SQL?',
+  'Which operator is used to filter data based on multiple conditions in SQL?',
+  'Which keyword is used to filter data based on a specific condition in SQL?',
+  'Which function is used to count the number of rows in a table in SQL?',
+  'Which function is used to find the maximum value in a column in SQL?',
+  'Which function is used to find the minimum value in a column in SQL?',
+  'Which function is used to calculate the average value of a column in SQL?',
+  'Which function is used to concatenate two or more strings in SQL?',
+  'Which function is used to retrieve a portion of a string in SQL?',
+  'What is a primary key in a database table?',
+  'What is a foreign key in a database table?',
+  'What is a relational database?',
+  'What is normalization in database design?',
+  'What is denormalization in database design?',
+  'What is a database index?',
+  'What is the purpose of a database view?',
+  'What is a stored procedure in a database?',
+  'What is a database trigger?',
+  'What is a transaction in a database?',
+];
+
+const dbOptions = [
+  {
+    optionA: 'A collection of data',
+    optionB: 'A programming language',
+    optionC: 'A web server',
+    optionD: 'A data structure'
+  },
+  {
+    optionA: 'Relational database',
+    optionB: 'NoSQL database',
+    optionC: 'Graph database',
+    optionD: 'Document database'
+  },
+  {
+    optionA: 'Structured Query Language',
+    optionB: 'Standard Query Language',
+    optionC: 'System Query Language',
+    optionD: 'Simple Query Language'
+  },
+  {
+    optionA: 'SELECT',
+    optionB: 'INSERT',
+    optionC: 'UPDATE',
+    optionD: 'DELETE'
+  },
+  {
+    optionA: 'INSERT INTO',
+    optionB: 'ADD',
+    optionC: 'UPDATE',
+    optionD: 'CREATE'
+  },
+  {
+    optionA: 'UPDATE',
+    optionB: 'INSERT INTO',
+    optionC: 'DELETE FROM',
+    optionD: 'MODIFY'
+  },
+  {
+    optionA: 'DELETE FROM',
+    optionB: 'REMOVE',
+    optionC: 'ERASE',
+    optionD: 'DROP'
+  },
+  {
+    optionA: 'AND',
+    optionB: 'OR',
+    optionC: 'NOT',
+    optionD: 'BETWEEN'
+  },
+  {
+    optionA: 'WHERE',
+    optionB: 'FILTER',
+    optionC: 'SELECT',
+    optionD: 'CONDITION'
+  },
+  {
+    optionA: 'COUNT',
+    optionB: 'SUM',
+    optionC: 'MAX',
+    optionD: 'MIN'
+  },
+  {
+    optionA: 'MAX',
+    optionB: 'SUM',
+    optionC: 'COUNT',
+    optionD: 'AVG'
+  },
+  {
+    optionA: 'MIN',
+    optionB: 'SUM',
+    optionC: 'AVG',
+    optionD: 'COUNT'
+  },
+  {
+    optionA: 'CONCAT',
+    optionB: 'MERGE',
+    optionC: 'COMBINE',
+    optionD: 'JOIN'
+  },
+  {
+    optionA: 'SUBSTRING',
+    optionB: 'CONCAT',
+    optionC: 'TRIM',
+    optionD: 'REPLACE'
+  },
+  {
+    optionA: 'A unique identifier for a record',
+    optionB: 'A value that must be unique in a column',
+    optionC: 'A table that contains primary keys',
+    optionD: 'A key that references another table'
+  },
+  {
+    optionA: 'A key that references another table',
+    optionB: 'A value that must be unique in a column',
+    optionC: 'A table that contains primary keys',
+    optionD: 'A unique identifier for a record'
+  },
+  {
+    optionA: 'A database that stores data in multiple tables',
+    optionB: 'A database that stores data in a single table',
+    optionC: 'A database that stores data in a key-value format',
+    optionD: 'A database that stores data in documents'
+  },
+  {
+    optionA: 'The process of organizing data to reduce redundancy and improve efficiency',
+    optionB: 'The process of adding redundancy to data to improve performance',
+    optionC: 'The process of encrypting data to improve security',
+    optionD: 'The process of adding indexes to data to improve retrieval'
+  },
+  {
+    optionA: 'The process of adding redundancy to data to improve performance',
+    optionB: 'The process of organizing data to reduce redundancy and improve efficiency',
+    optionC: 'The process of encrypting data to improve security',
+    optionD: 'The process of adding indexes to data to improve retrieval'
+  },
+  {
+    optionA: 'A data structure that improves the speed of data retrieval',
+    optionB: 'A key that uniquely identifies a record in a table',
+    optionC: 'A table that contains foreign keys',
+    optionD: 'A table that contains indexes'
+  },
+  {
+    optionA: 'To provide an alternative way to access data in a database',
+    optionB: 'To improve the security of data in a database',
+    optionC: 'To enforce data integrity in a database',
+    optionD: 'To create a snapshot of data in a database'
+  },
+  {
+    optionA: 'A set of SQL statements that perform a specific task',
+    optionB: 'A table that contains stored data',
+    optionC: 'A function that performs calculations on data',
+    optionD: 'A view that displays data from multiple tables'
+  },
+  {
+    optionA: 'A database event that automatically executes a set of SQL statements',
+    optionB: 'A constraint that enforces data integrity in a database',
+    optionC: 'A trigger that fires when data is modified in a table',
+    optionD: 'A key that uniquely identifies a record in a table'
+  },
+  {
+    optionA: 'A group of SQL statements that are executed as a single unit of work',
+    optionB: 'A constraint that enforces data integrity in a database',
+    optionC: 'A trigger that fires when data is modified in a table',
+    optionD: 'A key that uniquely identifies a record in a table'
+  }
+];
+
 
 
 
@@ -1112,101 +1287,45 @@ function generateUniqueRandomNumbers(min, max, count) {
   return generatedNumbers;
 }
 
-const uniqueNumbers = generateUniqueRandomNumbers(1, 25, 15); // Generate 5 unique numbers
-console.log(uniqueNumbers);
+const uniqueNumbers = generateUniqueRandomNumbers(1, 22, 15); // Generate 5 unique numbers
 //function for html questions
 const functionObj = {
-
-  html: function htmlQuizStart() {
-    flag = 0;
-    intervalID = setInterval(timerSec, 1000);
-
-    let Tetindex= Math.floor(Math.random()*25)+1;
-
-    QuizQuestionNum.innerHTML = index + 1;
-    
-    QuizQuestion.innerHTML = htmlQuestions[Tetindex];
-    A.innerText = htmlOptions[Tetindex].optionA;
-    B.innerText = htmlOptions[Tetindex].optionB;
-    C.innerText = htmlOptions[Tetindex].optionC;
-    D.innerText = htmlOptions[Tetindex].optionD;
-
-
+  html: function() {
+    quizStart(htmlQuestions, htmlOptions);
   },
 
-  css: function htmlQuizStart() {
-    flag = 0;
-    intervalID = setInterval(timerSec, 1000);
-
-    QuizQuestionNum.innerHTML = index + 1;
-    QuizQuestion.innerHTML = cssQuestions[index];
-    A.innerText = cssOptions[index].optionA;
-    B.innerText = cssOptions[index].optionB;
-    C.innerText = cssOptions[index].optionC;
-    D.innerText = cssOptions[index].optionD;
-
-
+  css: function() {
+    quizStart(cssQuestions, cssOptions);
   },
 
-
-
-//function for html questions
-js: function jsQuizStart() {
-    flag = 0;
-    intervalID = setInterval(timerSec, 1000);
-
-
-    QuizQuestionNum.innerHTML = index + 1;
-    QuizQuestion.innerHTML = jsQuestions[index];
-    A.innerText = jsOptions[index].optionA;
-    B.innerText = jsOptions[index].optionB;
-    C.innerText = jsOptions[index].optionC;
-    D.innerText = jsOptions[index].optionD;
-
+  js: function() {
+    quizStart(jsQuestions, jsOptions);
   },
 
-  java: function htmlQuizStart() {
-    flag = 0;
-    intervalID = setInterval(timerSec, 1000);
-
-    QuizQuestionNum.innerHTML = index + 1;
-    QuizQuestion.innerHTML = javaQuestions[index];
-    A.innerText = javaOptions[index].optionA;
-    B.innerText = javaOptions[index].optionB;
-    C.innerText = javaOptions[index].optionC;
-    D.innerText = javaOptions[index].optionD;
-
-
+  java: function() {
+    quizStart(javaQuestions, javaOptions);
   },
 
-  python: function htmlQuizStart() {
-    flag = 0;
-    intervalID = setInterval(timerSec, 1000);
-
-    QuizQuestionNum.innerHTML = index + 1;
-    QuizQuestion.innerHTML = pythonQuestions[index];
-    A.innerText = pythonOptions[index].optionA;
-    B.innerText = pythonOptions[index].optionB;
-    C.innerText = pythonOptions[index].optionC;
-    D.innerText = pythonOptions[index].optionD;
-
-
+  python: function() {
+    quizStart(pythonQuestions, pythonOptions);
   },
 
-  database: function htmlQuizStart() {
-    flag = 0;
-    intervalID = setInterval(timerSec, 1000);
+  database: function() {
+    quizStart(dbQuestions, dbOptions);
+  }
+};
 
-    QuizQuestionNum.innerHTML = index + 1;
-    QuizQuestion.innerHTML = databaseQuestions[index];
-    A.innerText = databaseOptions[index].optionA;
-    B.innerText = databaseOptions[index].optionB;
-    C.innerText = databaseOptions[index].optionC;
-    D.innerText = databaseOptions[index].optionD;
+function quizStart(questions, options) {
+  flag = 0;
+  intervalID = setInterval(timerSec, 1000);
 
-
-  },
-
+  QuizQuestionNum.innerHTML = index + 1;
+  var questionIndex = uniqueNumbers[index];
+  QuizQuestion.innerHTML = questions[questionIndex];
+  A.innerText = options[questionIndex].optionA;
+  B.innerText = options[questionIndex].optionB;
+  C.innerText = options[questionIndex].optionC;
+  D.innerText = options[questionIndex].optionD;
 }
 
 
