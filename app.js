@@ -1096,7 +1096,10 @@ const functionObj = {
     flag = 0;
     intervalID = setInterval(timerSec, 1000);
 
+    index= Math.random()*25;
+
     QuizQuestionNum.innerHTML = index + 1;
+    
     QuizQuestion.innerHTML = htmlQuestions[index];
     A.innerText = htmlOptions[index].optionA;
     B.innerText = htmlOptions[index].optionB;
