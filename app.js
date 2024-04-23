@@ -2350,10 +2350,35 @@ function resultAlert() {
     willClose: () => {
       clearInterval(timerInterval);
       showResult();
+
+//calculateScore(correctOptions, userChosenOption);
+
     }
   })
 
 }
+
+function calculateScore(correctOpt, userChosenOption) {
+  let score = 0;
+  let correct = 0;
+
+  for (let i = 0; i < userChosenOption.length; i++) {
+    // Check if the user-selected option matches the correct option
+    if (userChosenOption[i] === correctOpt[i]) {
+      score += 10;
+      correct++;
+    }
+
+    console.warn("Question", i + 1);
+    console.warn("You Choose:", userChosenOption[i]);
+    console.warn("Correct Answer:", correctOpt[i]);
+  }
+
+  console.warn("Total Score:", score);
+  console.warn("Correct Answers:", correct);
+}
+
+
 
 
 function showResult() {
