@@ -683,6 +683,373 @@ const jsCorrectOptions = [
   'Filters the elements of an array based on a provided function', 'Document Object Model'
 ];
 
+//java
+
+const javaQuestions = [
+  'What is Java?',
+  'Who developed Java programming language?',
+  'What year was Java first released?',
+  'Which keyword is used to declare a class in Java?',
+  'Which data type is used to store integer values in Java?',
+  'Which operator is used for conditional statements in Java?',
+  'Which loop is used for iterating a block of code in Java?',
+  'Which keyword is used to define a method in Java?',
+  'What is the superclass of all classes in Java?',
+  'Which keyword is used to refer to the current instance of the class in Java?',
+  'What is the default value of int variable in Java?',
+  'Which method is called when an object is created in Java?',
+  'Which package contains the Scanner class in Java?',
+  'Which method is used to read input from the console in Java?',
+  'What does JVM stand for?',
+  'Which keyword is used to create a new object in Java?',
+  'Which data type is used to store characters in Java?',
+  'What is the entry point for a Java application?',
+  'What is the output of 5 + 3 * 2 in Java?',
+  'What is the output of "Hello" + "World" in Java?',
+  'Which method is used to convert a string to uppercase in Java?',
+  'What does the static keyword mean in Java?',
+  'What is the purpose of the final keyword in Java?',
+  'What is the purpose of the break statement in Java?',
+  'What does inheritance mean in Java?',
+];
+
+const javaOptions = [
+  {
+    optionA: 'Programming language',
+    optionB: 'Operating system',
+    optionC: 'Web browser',
+    optionD: 'Database management system'
+  },
+  {
+    optionA: 'Microsoft',
+    optionB: 'Apple',
+    optionC: 'Sun Microsystems',
+    optionD: 'Google'
+  },
+  {
+    optionA: '1990',
+    optionB: '1995',
+    optionC: '2000',
+    optionD: '2005'
+  },
+  {
+    optionA: 'class',
+    optionB: 'void',
+    optionC: 'int',
+    optionD: 'new'
+  },
+  {
+    optionA: 'int',
+    optionB: 'float',
+    optionC: 'boolean',
+    optionD: 'String'
+  },
+  {
+    optionA: 'if',
+    optionB: 'switch',
+    optionC: 'for',
+    optionD: 'do-while'
+  },
+  {
+    optionA: 'for',
+    optionB: 'while',
+    optionC: 'do-while',
+    optionD: 'if'
+  },
+  {
+    optionA: 'method',
+    optionB: 'void',
+    optionC: 'function',
+    optionD: 'class'
+  },
+  {
+    optionA: 'Object',
+    optionB: 'Main',
+    optionC: 'Super',
+    optionD: 'Class'
+  },
+  {
+    optionA: 'this',
+    optionB: 'super',
+    optionC: 'self',
+    optionD: 'instance'
+  },
+  {
+    optionA: '0',
+    optionB: '1',
+    optionC: '-1',
+    optionD: 'null'
+  },
+  {
+    optionA: 'init',
+    optionB: 'main',
+    optionC: 'start',
+    optionD: 'run'
+  },
+  {
+    optionA: 'java.lang',
+    optionB: 'java.io',
+    optionC: 'java.util',
+    optionD: 'java.lang.reflect'
+  },
+  {
+    optionA: 'read',
+    optionB: 'input',
+    optionC: 'console',
+    optionD: 'Scanner'
+  },
+  {
+    optionA: 'Java Virtual Machine',
+    optionB: 'Java Visual Machine',
+    optionC: 'Java Variable Machine',
+    optionD: 'Java Validation Machine'
+  },
+  {
+    optionA: 'new',
+    optionB: 'create',
+    optionC: 'instance',
+    optionD: 'object'
+  },
+  {
+    optionA: 'char',
+    optionB: 'int',
+    optionC: 'String',
+    optionD: 'boolean'
+  },
+  {
+    optionA: 'main',
+    optionB: 'start',
+    optionC: 'run',
+    optionD: 'execute'
+  },
+  {
+    optionA: '11',
+    optionB: '16',
+    optionC: '10',
+    optionD: '13'
+  },
+  {
+    optionA: 'HelloWorld',
+    optionB: 'Hello World',
+    optionC: 'HelloWorld',
+    optionD: 'Hello, World'
+  },
+  {
+    optionA: 'toUpperCase',
+    optionB: 'toLowerCase',
+    optionC: 'capitalize',
+    optionD: 'trim'
+  },
+  {
+    optionA: 'It can be accessed without creating an instance of the class',
+    optionB: 'It can be accessed only by the class that defines it',
+    optionC: 'It can be modified after it is initialized',
+    optionD: 'It can be accessed from any method in the class'
+  },
+  {
+    optionA: 'It indicates that a variable cannot be changed',
+    optionB: 'It indicates that a method cannot be overridden',
+    optionC: 'It indicates that a class cannot be extended',
+    optionD: 'It indicates that a method cannot be accessed'
+  },
+  {
+    optionA: 'It terminates the current loop',
+    optionB: 'It terminates the entire program',
+    optionC: 'It skips the next iteration of the loop',
+    optionD: 'It skips the entire loop'
+  },
+  {
+    optionA: 'It allows a class to inherit properties and methods of another class',
+    optionB: 'It allows a class to have multiple constructors',
+    optionC: 'It allows a class to implement multiple interfaces',
+    optionD: 'It allows a class to override methods of another class'
+  }
+];
+
+//python
+
+const pythonQuestions = [
+  'What is Python?',
+  'Who developed Python programming language?',
+  'What year was Python first released?',
+  'Which keyword is used to define a function in Python?',
+  'Which data type is used to store a sequence of characters in Python?',
+  'Which operator is used for exponentiation in Python?',
+  'Which loop is used for iterating a block of code a specific number of times in Python?',
+  'Which keyword is used to declare a variable in Python?',
+  'What is the output of 5 / 2 in Python?',
+  'Which method is used to print output in Python?',
+  'Which module is used for mathematical operations in Python?',
+  'Which method is used to convert a string to uppercase in Python?',
+  'Which method is used to remove whitespace from the beginning and end of a string in Python?',
+  'What is the purpose of the if statement in Python?',
+  'What does the range() function do in Python?',
+  'What is the purpose of the break statement in Python?',
+  'Which keyword is used to define a class in Python?',
+  'Which data type is used to store a collection of items in Python?',
+  'What does the append() method do in Python?',
+  'Which method is used to get the length of a list in Python?',
+  'What does the pop() method do in Python?',
+  'What is the purpose of the return statement in Python?',
+  'What is the output of 3 * "abc" in Python?',
+  'Which module is used for working with dates and times in Python?',
+  'What is the purpose of the pass statement in Python?',
+];
+
+const pythonOptions = [
+  {
+    optionA: 'Programming language',
+    optionB: 'Operating system',
+    optionC: 'Web browser',
+    optionD: 'Database management system'
+  },
+  {
+    optionA: 'Microsoft',
+    optionB: 'Apple',
+    optionC: 'Guido van Rossum',
+    optionD: 'Google'
+  },
+  {
+    optionA: '1990',
+    optionB: '1995',
+    optionC: '2000',
+    optionD: '2005'
+  },
+  {
+    optionA: 'def',
+    optionB: 'function',
+    optionC: 'define',
+    optionD: 'method'
+  },
+  {
+    optionA: 'str',
+    optionB: 'int',
+    optionC: 'list',
+    optionD: 'tuple'
+  },
+  {
+    optionA: '**',
+    optionB: '^',
+    optionC: '*',
+    optionD: '//'
+  },
+  {
+    optionA: 'for',
+    optionB: 'while',
+    optionC: 'do-while',
+    optionD: 'if'
+  },
+  {
+    optionA: 'var',
+    optionB: 'let',
+    optionC: 'const',
+    optionD: 'int'
+  },
+  {
+    optionA: '2.5',
+    optionB: '2.0',
+    optionC: '2',
+    optionD: '2.5'
+  },
+  {
+    optionA: 'print()',
+    optionB: 'echo()',
+    optionC: 'display()',
+    optionD: 'show()'
+  },
+  {
+    optionA: 'math',
+    optionB: 'cmath',
+    optionC: 'random',
+    optionD: 'statistics'
+  },
+  {
+    optionA: 'upper()',
+    optionB: 'lower()',
+    optionC: 'capitalize()',
+    optionD: 'trim()'
+  },
+  {
+    optionA: 'trim()',
+    optionB: 'strip()',
+    optionC: 'clean()',
+    optionD: 'remove()'
+  },
+  {
+    optionA: 'To execute code conditionally',
+    optionB: 'To define a function',
+    optionC: 'To iterate over a sequence',
+    optionD: 'To declare a variable'
+  },
+  {
+    optionA: 'Generates a sequence of numbers',
+    optionB: 'Generates a random number',
+    optionC: 'Generates a list of elements',
+    optionD: 'Generates a range of values'
+  },
+  {
+    optionA: 'Terminates the current loop',
+    optionB: 'Terminates the program',
+    optionC: 'Skips the next iteration of the loop',
+    optionD: 'Skips the entire loop'
+  },
+  {
+    optionA: 'class',
+    optionB: 'def',
+    optionC: 'function',
+    optionD: 'method'
+  },
+  {
+    optionA: 'list',
+    optionB: 'tuple',
+    optionC: 'set',
+    optionD: 'dictionary'
+  },
+  {
+    optionA: 'Adds an element to the end of a list',
+    optionB: 'Removes an element from a list',
+    optionC: 'Returns the length of a list',
+    optionD: 'Returns the first element of a list'
+  },
+  {
+    optionA: 'len()',
+    optionB: 'size()',
+    optionC: 'count()',
+    optionD: 'length()'
+  },
+  {
+    optionA: 'Removes the last element from a list',
+    optionB: 'Removes the first element from a list',
+    optionC: 'Returns the last element of a list',
+    optionD: 'Returns the first element of a list'
+  },
+  {
+    optionA: 'To end the execution of a function',
+    optionB: 'To terminate the program',
+    optionC: 'To return a value from a function',
+    optionD: 'To print output to the console'
+  },
+  {
+    optionA: 'abcabcabc',
+    optionB: 'abcabc',
+    optionC: 'abcabcabcabc',
+    optionD: 'Error'
+  },
+  {
+    optionA: 'datetime',
+    optionB: 'time',
+    optionC: 'date',
+    optionD: 'calendar'
+  },
+  {
+    optionA: 'To define a placeholder function',
+    optionB: 'To execute code conditionally',
+    optionC: 'To iterate over a sequence',
+    optionD: 'To terminate the program'
+  },
+];
+
+
 
 
 
