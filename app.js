@@ -327,7 +327,8 @@ const jsQuestions = [
   'What is the purpose of the map() method?',
   'What is the output of 0.1 + 0.2?',
   'What is a higher-order function?',
-  'What is the purpose of the filter() method?'
+  'What is the purpose of the filter() method?',
+  'What does DOM stand for?',
 ];
 
 const jsOptions = [
@@ -468,6 +469,11 @@ const jsOptions = [
     optionB: 'Creates a new array with the results of calling a provided function on every element in the calling array',
     optionC: 'Sorts the elements of an array in place and returns the sorted array',
     optionD: 'None'
+  },
+  { optionA: 'Document Object Model',
+    optionB: 'Data Object Model',
+    optionC: 'Dynamic Object Model',
+    optionD: 'Document Oriented Model',
   }
 ];
 
@@ -483,7 +489,7 @@ const jsCorrectOptions = [
   'Splits a string into an array of substrings', 'Removes the last element from an array',
   'object', 'Creates a new array with the results of calling a provided function on every element in the calling array',
   '0.30000000000000004', 'Function that takes another function as an argument or returns a function',
-  'Filters the elements of an array based on a provided function'
+  'Filters the elements of an array based on a provided function','Document Object Model'
 ];
 
 
@@ -529,7 +535,7 @@ function htmlQuizStart() {
   flag = 0;
   intervalID = setInterval(timerSec, 1000);
 
-  QuizQuestionNum.innerHTML = index + 1;
+  QuizQuestionNum.innerHTML = index;
   QuizQuestion.innerHTML = htmlQuestions[index];
   A.innerText = htmlOptions[index].optionA;
   B.innerText = htmlOptions[index].optionB;
@@ -547,7 +553,7 @@ function jsQuizStart() {
   intervalID = setInterval(timerSec, 1000);
 
 
-  QuizQuestionNum.innerHTML = index + 1;
+  QuizQuestionNum.innerHTML = index;
   QuizQuestion.innerHTML = jsQuestions[index];
   A.innerText = jsOptions[index].optionA;
   B.innerText = jsOptions[index].optionB;
@@ -587,7 +593,7 @@ function clearSelectedOptions(){
 //htmlQuizStart();
 let p;
 function nextButton() {
-  if (index < htmlQuestions.length - 1) {
+  if (index < htmlQuestions.length ) {
 
     clearSelectedOptions();
 
