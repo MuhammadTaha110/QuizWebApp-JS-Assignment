@@ -399,9 +399,9 @@ const jsOptions = [
     optionD: 'addToEnd()'
   },
   {
-    optionA: 'Adds one or more elements to the end of an array',
-    optionB: 'Removes the last element from an array',
-    optionC: 'Adds one or more elements to the beginning of an array',
+    optionA: 'Adds elements to end of an array',
+    optionB: 'Removes last element from  array',
+    optionC: 'Adds elements to the beg of an array',
     optionD: 'None'
   },
   {
@@ -411,21 +411,21 @@ const jsOptions = [
     optionD: 'string'
   },
   {
-    optionA: 'Function passed as an argument to another function',
-    optionB: 'Function that executes after a certain period of time',
+    optionA: 'Function passed to another function',
+    optionB: 'Function executes after a certain time',
     optionC: 'Function that returns a promise',
     optionD: 'None'
   },
   {
-    optionA: 'Object representing completion or failure of an asynchronous operation',
-    optionB: 'Function that executes after a certain period of time',
+    optionA: 'failure of an asynchronous operation',
+    optionB: 'Function executes after a certain time',
     optionC: 'Function that returns a promise',
     optionD: 'None'
   },
   {
-    optionA: 'Parses a string and returns a floating point number',
-    optionB: 'Parses a string and returns an integer',
-    optionC: 'Parses a string and returns a boolean',
+    optionA: 'returns a floating point number',
+    optionB: 'Parses a string, returns an integer',
+    optionC: 'Parses a string, returns a boolean',
     optionD: 'None'
   },
   {
@@ -435,14 +435,14 @@ const jsOptions = [
     optionD: 'Error'
   },
   {
-    optionA: 'Splits a string into an array of substrings',
-    optionB: 'Joins the elements of an array into a string',
+    optionA: 'Splits string into array of substrings',
+    optionB: 'Joins elements of array into string',
     optionC: 'Removes the last element from an array',
     optionD: 'None'
   },
   {
     optionA: 'Removes the last element from an array',
-    optionB: 'Adds one or more elements to the end of an array',
+    optionB: 'Add elements to the end of an array',
     optionC: 'Removes the first element from an array',
     optionD: 'None'
   },
@@ -453,27 +453,27 @@ const jsOptions = [
     optionD: 'string'
   },
   {
-    optionA: 'Creates a new array with the results of calling a provided function on every element in the calling array',
-    optionB: 'Filters the elements of an array based on a provided function',
-    optionC: 'Sorts the elements of an array in place and returns the sorted array',
+    optionA: 'Creates a new array',
+    optionB: 'Filters the elements of an array',
+    optionC: 'Sorts the elements of an array ',
     optionD: 'None'
   },
   {
     optionA: '0.3',
-    optionB: '0.30000000000000004',
+    optionB: '0.300000000004',
     optionC: '0.31',
     optionD: '0.2'
   },
   {
-    optionA: 'Function that takes another function as an argument or returns a function',
-    optionB: 'Function that operates on other functions',
-    optionC: 'Function that executes after a certain period of time',
+    optionA: 'Function takes functas arg',
+    optionB: 'Function operates on other funct',
+    optionC: 'Function that run after certain time',
     optionD: 'None'
   },
   {
-    optionA: 'Filters the elements of an array based on a provided function',
-    optionB: 'Creates a new array with the results of calling a provided function on every element in the calling array',
-    optionC: 'Sorts the elements of an array in place and returns the sorted array',
+    optionA: 'Filters the elements',
+    optionB: 'Creates a new array',
+    optionC: 'Sorts the elements of an array',
     optionD: 'None'
   },
   {
