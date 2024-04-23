@@ -1,7 +1,7 @@
 //Alert Function
-let quiz  = '';
+let quiz = '';
 
-function Alert(){
+function Alert() {
   Swal.fire({
     title: "Are you sure you want to quit?",
     text: "You won't be able to revert this!",
@@ -20,9 +20,9 @@ function Alert(){
 
 }
 
-function quizStartAlert(quizParameter){
+function quizStartAlert(quizParameter) {
 
-   quiz=quizParameter;
+  quiz = quizParameter;
 
 
   Swal.fire({
@@ -34,25 +34,25 @@ function quizStartAlert(quizParameter){
   }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
-       displayDetails(quizParameter);
-    } 
+      displayDetails(quizParameter);
+    }
   });
 }
 
 
 
-function loginForm(){
-  document.querySelector('.login-form').style.display='block';
-  document.querySelector('.signup-form').style.display='none';
+function loginForm() {
+  document.querySelector('.login-form').style.display = 'block';
+  document.querySelector('.signup-form').style.display = 'none';
   document.querySelector('.quiz-section').style.display = 'none';
   document.querySelector('.quiz-cards').style.display = 'none';
   document.querySelector('.custom-quiz').style.display = 'none';
   document.querySelector('.result').style.display = 'none';
 }
 
-function signupForm(){
-  document.querySelector('.signup-form').style.display='block';
-  document.querySelector('.login-form').style.display='none';
+function signupForm() {
+  document.querySelector('.signup-form').style.display = 'block';
+  document.querySelector('.login-form').style.display = 'none';
   document.querySelector('.quiz-section').style.display = 'none';
   document.querySelector('.quiz-cards').style.display = 'none';
   document.querySelector('.custom-quiz').style.display = 'none';
@@ -65,13 +65,13 @@ let navbar = document.querySelector('.navbar-toggler');
 let displayStyle = window.getComputedStyle(navbar).display;
 
 
-if(displayStyle=='none'){
+if (displayStyle == 'none') {
   document.querySelector('.login-btn').style.position = 'absolute';
   document.querySelector('.login-btn').style.left = '85vw';
 
 }
 
-else{
+else {
   document.querySelector('.login-btn').style.position = 'static';
 
 }
@@ -476,7 +476,8 @@ const jsOptions = [
     optionC: 'Sorts the elements of an array in place and returns the sorted array',
     optionD: 'None'
   },
-  { optionA: 'Document Object Model',
+  {
+    optionA: 'Document Object Model',
     optionB: 'Data Object Model',
     optionC: 'Dynamic Object Model',
     optionD: 'Document Oriented Model',
@@ -495,7 +496,7 @@ const jsCorrectOptions = [
   'Splits a string into an array of substrings', 'Removes the last element from an array',
   'object', 'Creates a new array with the results of calling a provided function on every element in the calling array',
   '0.30000000000000004', 'Function that takes another function as an argument or returns a function',
-  'Filters the elements of an array based on a provided function','Document Object Model'
+  'Filters the elements of an array based on a provided function', 'Document Object Model'
 ];
 
 
@@ -537,40 +538,43 @@ var D = document.querySelector('.D');
 //var timerMins = document.querySelector('.timer-mins');
 //var timerSec = document.querySelector('.timer-sec');
 //function for html questions
-function htmlQuizStart() {
-  flag = 0;
-  intervalID = setInterval(timerSec, 1000);
+const functionObj = {
 
-  QuizQuestionNum.innerHTML = index + 1;
-  QuizQuestion.innerHTML = htmlQuestions[index];
-  A.innerText = htmlOptions[index].optionA;
-  B.innerText = htmlOptions[index].optionB;
-  C.innerText = htmlOptions[index].optionC;
-  D.innerText = htmlOptions[index].optionD;
+  html: function htmlQuizStart() {
+    flag = 0;
+    intervalID = setInterval(timerSec, 1000);
+
+    QuizQuestionNum.innerHTML = index + 1;
+    QuizQuestion.innerHTML = htmlQuestions[index];
+    A.innerText = htmlOptions[index].optionA;
+    B.innerText = htmlOptions[index].optionB;
+    C.innerText = htmlOptions[index].optionC;
+    D.innerText = htmlOptions[index].optionD;
 
 
-}
+  },
 
 
 
 //function for html questions
-function jsQuizStart() {
-  flag = 0;
-  intervalID = setInterval(timerSec, 1000);
+js: function jsQuizStart() {
+    flag = 0;
+    intervalID = setInterval(timerSec, 1000);
 
 
-  QuizQuestionNum.innerHTML = index + 1;
-  QuizQuestion.innerHTML = jsQuestions[index];
-  A.innerText = jsOptions[index].optionA;
-  B.innerText = jsOptions[index].optionB;
-  C.innerText = jsOptions[index].optionC;
-  D.innerText = jsOptions[index].optionD;
+    QuizQuestionNum.innerHTML = index + 1;
+    QuizQuestion.innerHTML = jsQuestions[index];
+    A.innerText = jsOptions[index].optionA;
+    B.innerText = jsOptions[index].optionB;
+    C.innerText = jsOptions[index].optionC;
+    D.innerText = jsOptions[index].optionD;
 
+  }
 
 }
 
 
-function clearSelectedOptions(){
+function clearSelectedOptions() {
   document.querySelector('.A').style.backgroundColor = '#ffffff';
   document.querySelector('.A').style.borderColor = ' #22a247';
   document.querySelector('.A').style.color = '#000000';
@@ -587,10 +591,10 @@ function clearSelectedOptions(){
   document.querySelector('.D').style.borderColor = ' #22a247';
   document.querySelector('.D').style.color = '#000000';
 
-  a=0;
-  b=0;
-  c=0;
-  d=0;
+  a = 0;
+  b = 0;
+  c = 0;
+  d = 0;
 
 
 }
@@ -599,7 +603,7 @@ function clearSelectedOptions(){
 //htmlQuizStart();
 let p;
 function nextButton() {
-  if (index < htmlQuestions.length-1 ) {
+  if (index < htmlQuestions.length - 1) {
 
     clearSelectedOptions();
 
@@ -618,15 +622,7 @@ function nextButton() {
     c = 0;
     d = 0;
 
-    if(quiz=='html'){
-      htmlQuizStart();
-
-    }
-
-    else if(quiz=='js'){
-    jsQuizStart();
-      
-    }
+     functionObj[quiz]();
 
 
 
@@ -683,13 +679,8 @@ function previousButton() {
 //function to show quiz-section
 function displayDetails(quiztest) {
 
-  if(quiztest=='html'){
-    htmlQuizStart();
-  }
+       functionObj[quiztest]();
 
-  else if(quiztest=='js'){
-    jsQuizStart();
-  }
 
   var section = document.querySelector('.quiz-section');
 
@@ -712,19 +703,19 @@ function displayDetails(quiztest) {
 function hideDetails() {
 
 
-  
+
   clearSelectedOptions();
 
-  index=0;
+  index = 0;
 
   // Display the quiz section
   document.querySelector('.quiz-section').style.display = 'none';
 
   document.querySelector('.quiz-cards').style.display = 'flex';
   document.querySelector('.custom-quiz').style.display = 'block';
-  
 
- 
+
+
 }
 
 //function to hold user-choice
@@ -1561,61 +1552,61 @@ D.addEventListener('click', function () {
 */
 
 //function to hide result
-function hideResult(){
+function hideResult() {
   window.location.reload();
 
- /*
-  document.querySelector('.result').style.display='none';
-  document.querySelector('.quiz-cards').style.display = 'flex';
-  document.querySelector('.custom-quiz').style.display = 'block';
-  userChosenOption,length =0;
-  userSelected.length =0;
-
-  clearSelectedOptions();
-   
-  myStopFunction();
-    index=0;
-
-
-*/
-
-
-
-
-  
-
-}
-
-
-function resultAlert(){
-  let timerInterval;
-Swal.fire({
-  title: "Submiting!",
-  html: "Calculating the results",
-  timer: 500,
-  timerProgressBar: true,
-  didOpen: () => {
-    Swal.showLoading();
-    const timer = Swal.getPopup().querySelector("b");
-    timerInterval = setInterval(() => {
-      timer.textContent = `${Swal.getTimerLeft()}`;
-    }, 100);
-  },
-  willClose: () => {
-    clearInterval(timerInterval);
-    showResult();
-  }
-})
-
-}
-
-
-function showResult(){
+  /*
+   document.querySelector('.result').style.display='none';
+   document.querySelector('.quiz-cards').style.display = 'flex';
+   document.querySelector('.custom-quiz').style.display = 'block';
+   userChosenOption,length =0;
+   userSelected.length =0;
  
+   clearSelectedOptions();
+    
+   myStopFunction();
+     index=0;
+ 
+ 
+ */
+
+
+
+
+
+
+}
+
+
+function resultAlert() {
+  let timerInterval;
+  Swal.fire({
+    title: "Submiting!",
+    html: "Calculating the results",
+    timer: 500,
+    timerProgressBar: true,
+    didOpen: () => {
+      Swal.showLoading();
+      const timer = Swal.getPopup().querySelector("b");
+      timerInterval = setInterval(() => {
+        timer.textContent = `${Swal.getTimerLeft()}`;
+      }, 100);
+    },
+    willClose: () => {
+      clearInterval(timerInterval);
+      showResult();
+    }
+  })
+
+}
+
+
+function showResult() {
+
 
 
   let score = 0;
-  let correct=0;
+  let correct = 0;
 
   for (i = 0; i < userChosenOption.length; i++) {
     if (userChosenOption[i] === correctOptions[i]) {
@@ -1633,7 +1624,7 @@ function showResult(){
   //*******
 
   document.querySelector('.quiz-section').style.display = 'none';
-  document.querySelector('.result').style.display='flex';
+  document.querySelector('.result').style.display = 'flex';
 
   let msg = document.querySelector('.msg');
   let percentage = document.querySelector('.module');
@@ -1641,59 +1632,59 @@ function showResult(){
   let correctAns = document.querySelector('.correct-answers');
   percentage.innerText = ((Number(totalQuestions) / Number(correctAns)) * 100).toFixed(2) + '%';
 
-  percentage.innerText = (score*2) + '%';
+  percentage.innerText = (score * 2) + '%';
 
 
 
-  
-  switch(score){
+
+  switch (score) {
     case 0:
-      msg.innerText='Revise The Lectures!'
-      totalQuestions.innerText=questions.length;
-      correctAns.innerText=correct;
-      msg.style.color=('red');
-     percentage.style.background=('linear-gradient(to right,  red, red)');
-    break;
+      msg.innerText = 'Revise The Lectures!'
+      totalQuestions.innerText = questions.length;
+      correctAns.innerText = correct;
+      msg.style.color = ('red');
+      percentage.style.background = ('linear-gradient(to right,  red, red)');
+      break;
 
     case 10:
-      msg.innerText='Revise The Lectures!'
-      totalQuestions.innerText=questions.length;
-      correctAns.innerText=correct;
-      msg.style.color=('red');
-     percentage.style.background=('linear-gradient(to right,  red, white, white)');
-    break;
+      msg.innerText = 'Revise The Lectures!'
+      totalQuestions.innerText = questions.length;
+      correctAns.innerText = correct;
+      msg.style.color = ('red');
+      percentage.style.background = ('linear-gradient(to right,  red, white, white)');
+      break;
 
     case 20:
-      msg.innerText='Not too Good!'
-      totalQuestions.innerText=questions.length;
-      correctAns.innerText=correct;
-    break;
+      msg.innerText = 'Not too Good!'
+      totalQuestions.innerText = questions.length;
+      correctAns.innerText = correct;
+      break;
 
     case 30:
-      msg.innerText='Nice Efforts!'
-      totalQuestions.innerText=questions.length;
-      correctAns.innerText=correct;
-      msg.style.color=('green');
-      percentage.style.background=('linear-gradient(to right,  green, white, white)');
-    break;
+      msg.innerText = 'Nice Efforts!'
+      totalQuestions.innerText = questions.length;
+      correctAns.innerText = correct;
+      msg.style.color = ('green');
+      percentage.style.background = ('linear-gradient(to right,  green, white, white)');
+      break;
 
     case 40:
-      msg.innerText='Congratulations!'
-      totalQuestions.innerText=questions.length;
-      correctAns.innerText=correct;
-      msg.style.color=('green');
-      percentage.style.background=('linear-gradient(to right,  green, white)');
-    break;
+      msg.innerText = 'Congratulations!'
+      totalQuestions.innerText = questions.length;
+      correctAns.innerText = correct;
+      msg.style.color = ('green');
+      percentage.style.background = ('linear-gradient(to right,  green, white)');
+      break;
 
     case 50:
-      msg.innerText='Well Done, Genuius!'
-      totalQuestions.innerText=questions.length;
-      correctAns.innerText=correct;
-      msg.style.color=('green');
-      percentage.style.background=('linear-gradient(to right,  green, green)');
-    break;
+      msg.innerText = 'Well Done, Genuius!'
+      totalQuestions.innerText = questions.length;
+      correctAns.innerText = correct;
+      msg.style.color = ('green');
+      percentage.style.background = ('linear-gradient(to right,  green, green)');
+      break;
   }
 }
 
 //temporory hide previous button
-document.querySelector('.prev-btn').style.display='none';
+document.querySelector('.prev-btn').style.display = 'none';
