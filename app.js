@@ -20,12 +20,9 @@ function Alert(){
 
 }
 
-function quizStartAlert(){
+function quizStartAlert(quiz){
 
   
-  
-  
-  quiz = document.querySelector('.start-quiz').parentElement.classList[0];
   console.warn(quiz);
 
   Swal.fire({
@@ -43,6 +40,8 @@ function quizStartAlert(){
     } 
   });
 }
+
+
 
 function loginForm(){
   document.querySelector('.login-form').style.display='block';
