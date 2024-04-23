@@ -1089,6 +1089,29 @@ var C = document.querySelector('.C');
 var D = document.querySelector('.D');
 //var timerMins = document.querySelector('.timer-mins');
 //var timerSec = document.querySelector('.timer-sec');
+
+function generateUniqueRandomNumbers(min, max, count) {
+  // Create an array to store generated numbers
+  const generatedNumbers = [];
+  
+  // Loop until we have the desired number of unique values
+  while (generatedNumbers.length < count) {
+    let randomNumber;
+    do {
+      // Generate a random number within the range
+      randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    } while (generatedNumbers.includes(randomNumber)); // Check for duplicates
+
+    // Add the unique random number to the array
+    generatedNumbers.push(randomNumber);
+  }
+
+  // Return the array of unique random numbers
+  return generatedNumbers;
+}
+
+const uniqueNumbers = generateUniqueRandomNumbers(1, 25, 15); // Generate 5 unique numbers
+console.log(uniqueNumbers);
 //function for html questions
 const functionObj = {
 
@@ -1096,15 +1119,15 @@ const functionObj = {
     flag = 0;
     intervalID = setInterval(timerSec, 1000);
 
-    index= Math.random()*25;
+    let Tetindex= Math.floor(Math.random()*25)+1;
 
     QuizQuestionNum.innerHTML = index + 1;
     
-    QuizQuestion.innerHTML = htmlQuestions[index];
-    A.innerText = htmlOptions[index].optionA;
-    B.innerText = htmlOptions[index].optionB;
-    C.innerText = htmlOptions[index].optionC;
-    D.innerText = htmlOptions[index].optionD;
+    QuizQuestion.innerHTML = htmlQuestions[Tetindex];
+    A.innerText = htmlOptions[Tetindex].optionA;
+    B.innerText = htmlOptions[Tetindex].optionB;
+    C.innerText = htmlOptions[Tetindex].optionC;
+    D.innerText = htmlOptions[Tetindex].optionD;
 
 
   },
@@ -1214,7 +1237,7 @@ function clearSelectedOptions() {
 //htmlQuizStart();
 let p;
 function nextButton() {
-  if (index < htmlQuestions.length - 1) {
+  if (index < 14) {
 
     clearSelectedOptions();
 
@@ -2251,7 +2274,7 @@ function showResult() {
   switch (score) {
     case 0:
       msg.innerText = 'Revise The Lectures!'
-      totalQuestions.innerText = questions.length;
+      totalQuestions.innerText = 15;
       correctAns.innerText = correct;
       msg.style.color = ('red');
       percentage.style.background = ('linear-gradient(to right,  red, red)');
