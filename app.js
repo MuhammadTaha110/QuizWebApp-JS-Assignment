@@ -305,6 +305,190 @@ const correctOptions = [
   '<body bgcolor="yellow">',
 ];
 
+//css mcqs
+
+const cssQuestions = [
+  'What does CSS stand for?',
+  'Which property changes text color?',
+  'Which property sets font size?',
+  'Which property controls element spacing?',
+  'Which property hides an element?',
+  'What is the default display value of div?',
+  'What property aligns text horizontally?',
+  'Which property sets element width?',
+  'Which property sets element height?',
+  'What does CSS specificity determine?',
+  'Which property creates rounded corners?',
+  'Which property sets background color?',
+  'Which property controls element position?',
+  'Which property removes default list styles?',
+  'Which property adds shadow to text?',
+  'What does CSS box-sizing property do?',
+  'What property hides element overflow?',
+  'Which property animates elements?',
+  'Which property changes cursor style?',
+  'What property sets element border?',
+  'Which property sets element opacity?',
+  'What does CSS z-index control?',
+  'What does CSS transition do?',
+  'What property controls element rotation?',
+  'What is the default value of position property?',
+];
+
+const cssOptions = [
+  {
+    optionA: 'Cascading Style Sheets',
+    optionB: 'Creative Style Sheets',
+    optionC: 'Colorful Style Sheets',
+    optionD: 'Cute Style Sheets'
+  },
+  {
+    optionA: 'color',
+    optionB: 'font-color',
+    optionC: 'text-color',
+    optionD: 'font-style'
+  },
+  {
+    optionA: 'font-size',
+    optionB: 'text-size',
+    optionC: 'size',
+    optionD: 'font'
+  },
+  {
+    optionA: 'margin',
+    optionB: 'padding',
+    optionC: 'spacing',
+    optionD: 'border'
+  },
+  {
+    optionA: 'display',
+    optionB: 'visible',
+    optionC: 'hidden',
+    optionD: 'opacity'
+  },
+  {
+    optionA: 'block',
+    optionB: 'inline',
+    optionC: 'flex',
+    optionD: 'grid'
+  },
+  {
+    optionA: 'text-align',
+    optionB: 'align',
+    optionC: 'horizontal-align',
+    optionD: 'align-text'
+  },
+  {
+    optionA: 'width',
+    optionB: 'size',
+    optionC: 'length',
+    optionD: 'dimension'
+  },
+  {
+    optionA: 'height',
+    optionB: 'length',
+    optionC: 'size',
+    optionD: 'dimension'
+  },
+  {
+    optionA: 'Specificity of styles',
+    optionB: 'Number of elements',
+    optionC: 'Importance of styles',
+    optionD: 'Priority of styles'
+  },
+  {
+    optionA: 'border-radius',
+    optionB: 'round-corner',
+    optionC: 'corner-radius',
+    optionD: 'curve'
+  },
+  {
+    optionA: 'background-color',
+    optionB: 'color',
+    optionC: 'background',
+    optionD: 'bg-color'
+  },
+  {
+    optionA: 'position',
+    optionB: 'placement',
+    optionC: 'align',
+    optionD: 'spacing'
+  },
+  {
+    optionA: 'list-style',
+    optionB: 'style-list',
+    optionC: 'list',
+    optionD: 'list-style-type'
+  },
+  {
+    optionA: 'text-shadow',
+    optionB: 'shadow-text',
+    optionC: 'text-effect',
+    optionD: 'shadow-effect'
+  },
+  {
+    optionA: 'Defines how an element should be sized',
+    optionB: 'Determines text size',
+    optionC: 'Adjusts element spacing',
+    optionD: 'Controls text alignment'
+  },
+  {
+    optionA: 'overflow',
+    optionB: 'hide-overflow',
+    optionC: 'hide',
+    optionD: 'overflow-hidden'
+  },
+  {
+    optionA: 'animation',
+    optionB: 'animate',
+    optionC: 'transition',
+    optionD: 'transform'
+  },
+  {
+    optionA: 'cursor',
+    optionB: 'pointer',
+    optionC: 'hover',
+    optionD: 'click'
+  },
+  {
+    optionA: 'border',
+    optionB: 'border-style',
+    optionC: 'line',
+    optionD: 'outline'
+  },
+  {
+    optionA: 'opacity',
+    optionB: 'transparent',
+    optionC: 'visibility',
+    optionD: 'alpha'
+  },
+  {
+    optionA: 'Stacking order of elements',
+    optionB: 'Text shadow effect',
+    optionC: 'List styles',
+    optionD: 'Element opacity'
+  },
+  {
+    optionA: 'Creates smooth transitions',
+    optionB: 'Applies animation effects',
+    optionC: 'Defines element positioning',
+    optionD: 'Controls element rotation'
+  },
+  {
+    optionA: 'transform',
+    optionB: 'rotate',
+    optionC: 'rotation',
+    optionD: 'rotate-element'
+  },
+  {
+    optionA: 'static',
+    optionB: 'fixed',
+    optionC: 'relative',
+    optionD: 'absolute'
+  }
+];
+
+
 
 //js mcqs
 
@@ -501,6 +685,7 @@ const jsCorrectOptions = [
 
 
 
+
 //Version 1.0********************************************
 
 
@@ -554,6 +739,20 @@ const functionObj = {
 
   },
 
+  css: function htmlQuizStart() {
+    flag = 0;
+    intervalID = setInterval(timerSec, 1000);
+
+    QuizQuestionNum.innerHTML = index + 1;
+    QuizQuestion.innerHTML = cssQuestions[index];
+    A.innerText = cssOptions[index].optionA;
+    B.innerText = cssOptions[index].optionB;
+    C.innerText = cssOptions[index].optionC;
+    D.innerText = cssOptions[index].optionD;
+
+
+  },
+
 
 
 //function for html questions
@@ -569,7 +768,49 @@ js: function jsQuizStart() {
     C.innerText = jsOptions[index].optionC;
     D.innerText = jsOptions[index].optionD;
 
-  }
+  },
+
+  java: function htmlQuizStart() {
+    flag = 0;
+    intervalID = setInterval(timerSec, 1000);
+
+    QuizQuestionNum.innerHTML = index + 1;
+    QuizQuestion.innerHTML = javaQuestions[index];
+    A.innerText = javaOptions[index].optionA;
+    B.innerText = javaOptions[index].optionB;
+    C.innerText = javaOptions[index].optionC;
+    D.innerText = javaOptions[index].optionD;
+
+
+  },
+
+  python: function htmlQuizStart() {
+    flag = 0;
+    intervalID = setInterval(timerSec, 1000);
+
+    QuizQuestionNum.innerHTML = index + 1;
+    QuizQuestion.innerHTML = pythonQuestions[index];
+    A.innerText = pythonOptions[index].optionA;
+    B.innerText = pythonOptions[index].optionB;
+    C.innerText = pythonOptions[index].optionC;
+    D.innerText = pythonOptions[index].optionD;
+
+
+  },
+
+  database: function htmlQuizStart() {
+    flag = 0;
+    intervalID = setInterval(timerSec, 1000);
+
+    QuizQuestionNum.innerHTML = index + 1;
+    QuizQuestion.innerHTML = databaseQuestions[index];
+    A.innerText = databaseOptions[index].optionA;
+    B.innerText = databaseOptions[index].optionB;
+    C.innerText = databaseOptions[index].optionC;
+    D.innerText = databaseOptions[index].optionD;
+
+
+  },
 
 }
 
