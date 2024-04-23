@@ -2362,16 +2362,31 @@ function showResult() {
 
   let score = 0;
   let correct = 0;
+  
+// Define an object containing all the correct options arrays for each quiz
+const correctOptionsObj = {
+  html:  correctOptions,
+  css: correctOptions,
+  js: jsCorrectOptions,
+  java:  correctOptions,
+  python: correctOptions,
+  database: correctOptions
+};
 
-  for (i = 0; i < userChosenOption.length; i++) {
-    if (userChosenOption[i] === correctOptions[i]) {
-      score += 10;
-      correct++;
-    }
+// Assuming 'quiz' variable contains the name of the current quiz
+let correctOpt = correctOptionsObj[quiz];
 
-    console.warn("You Choose", userChosenOption[i]);
-    console.warn("Correct Answer", correctOptions[i]);
+// Loop through user chosen options and compare with correct options
+for (let i = 0; i < userChosenOption.length; i++) {
+  if (userChosenOption[i] === correctOpt[i]) {
+    score += 10;
+    correct++;
   }
+
+  console.warn("You Choose", userChosenOption[i]);
+  console.warn("Correct Answer", correctOpt[i]);
+}
+
 
   console.warn("Your Score is:", score);
 
