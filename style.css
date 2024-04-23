@@ -88,9 +88,7 @@
 
     }
 
-    .links:hover{
-        color: var(--main-color);
-    }
+    
 
     .links a{
         color: var(--main-color);
