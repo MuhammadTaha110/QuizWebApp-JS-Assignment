@@ -20,10 +20,10 @@ function Alert(){
 
 }
 
-function quizStartAlert(quiz){
+function quizStartAlert(quizParameter){
 
-  
-  console.warn(quiz);
+   quiz=quizParameter;
+
 
   Swal.fire({
     title: "25 Questions | 15 Minutes",
@@ -34,9 +34,7 @@ function quizStartAlert(quiz){
   }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
-       displayDetails();
-      
-      
+       displayDetails(quizParameter);
     } 
   });
 }
@@ -620,7 +618,17 @@ function nextButton() {
     c = 0;
     d = 0;
 
-    htmlQuizStart();
+    if(quiz=='html'){
+      htmlQuizStart();
+
+    }
+
+    else if(quiz=='js'){
+    jsQuizStart();
+      
+    }
+
+
 
   }
 
@@ -673,13 +681,13 @@ function previousButton() {
 //
 
 //function to show quiz-section
-function displayDetails() {
+function displayDetails(quiztest) {
 
-  if(quiz='html'){
+  if(quiztest=='html'){
     htmlQuizStart();
   }
 
-  else if(quiz='js'){
+  else if(quiztest=='js'){
     jsQuizStart();
   }
 
