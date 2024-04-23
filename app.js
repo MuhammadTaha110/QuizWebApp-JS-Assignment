@@ -24,6 +24,7 @@ function quizStartAlert(){
 
   
   
+  
   quiz = document.querySelector('.start-quiz').parentElement.classList[0];
   console.warn(quiz);
 
