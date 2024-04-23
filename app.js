@@ -284,7 +284,7 @@ const htmlOptions = [
   },
   {
     optionA: '<body bgcolor="yellow">',
-    optionB: '<body style="background-color: yellow;">',
+    optionB: 'style="background-color: yellow;"',
     optionC: '<bg-color="yellow">',
     optionD: '<background-color="yellow">',
   },
