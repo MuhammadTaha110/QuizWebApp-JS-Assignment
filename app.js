@@ -2391,6 +2391,17 @@ function calculateScore(correctOpt, userChosenOption ) {
   percentage.innerText = ((Number(totalQuestions) / Number(correctAns)) * 100).toFixed(2) + '%';
 
   percentage.innerText = (score * 2) + '%';
+  const correctOptionsObj = {
+    html:  correctOptions,
+    css: correctOptions,
+    js: jsCorrectOptions,
+    java:  correctOptions,
+    python: correctOptions,
+    database: correctOptions
+  };
+
+   let question = correctOptionsObj[quiz];
+
 
   switch (score) {
     case 0:
