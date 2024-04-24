@@ -2384,14 +2384,15 @@ function calculateScore(correctOpt, userChosenOption ) {
   document.querySelector('.quiz-section').style.display = 'none';
   document.querySelector('.result').style.display = 'flex';
 
-  let questions = correctOptionsObj[quiz];
   let msg = document.querySelector('.msg');
   let percentage = document.querySelector('.module');
   let totalQuestions = document.querySelector('.total-questions');
   let correctAns = document.querySelector('.correct-answers');
   percentage.innerText = ((Number(totalQuestions) / Number(correctAns)) * 100).toFixed(2) + '%';
 
-  percentage.innerText = ((score/questions.length)*100) + '%';
+  let per = (correct/15);
+  percentage.innerHTML = (per*100).toFixed(2) + '%';
+  
   const correctOptionsObj = {
     html:  correctOptions,
     css: correctOptions,
@@ -2401,12 +2402,13 @@ function calculateScore(correctOpt, userChosenOption ) {
     database: correctOptions
   };
 
+   let questions = correctOptionsObj[quiz];
+   totalQuestions.innerText = 15;
 
 
   switch (score) {
     case 0:
       msg.innerText = 'Revise The Lectures!'
-      totalQuestions.innerText = 15;
       correctAns.innerText = correct;
       msg.style.color = ('red');
       percentage.style.background = ('linear-gradient(to right,  red, red)');
@@ -2414,7 +2416,6 @@ function calculateScore(correctOpt, userChosenOption ) {
 
     case 10:
       msg.innerText = 'Revise The Lectures!'
-      totalQuestions.innerText = questions.length;
       correctAns.innerText = correct;
       msg.style.color = ('red');
       percentage.style.background = ('linear-gradient(to right,  red, white, white)');
@@ -2422,13 +2423,11 @@ function calculateScore(correctOpt, userChosenOption ) {
 
     case 20:
       msg.innerText = 'Not too Good!'
-      totalQuestions.innerText = questions.length;
       correctAns.innerText = correct;
       break;
 
     case 30:
       msg.innerText = 'Nice Efforts!'
-      totalQuestions.innerText = questions.length;
       correctAns.innerText = correct;
       msg.style.color = ('green');
       percentage.style.background = ('linear-gradient(to right,  green, white, white)');
