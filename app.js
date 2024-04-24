@@ -2392,6 +2392,54 @@ function calculateScore(correctOpt, userChosenOption ) {
 
   percentage.innerText = (score * 2) + '%';
 
+  switch (score) {
+    case 0:
+      msg.innerText = 'Revise The Lectures!'
+      totalQuestions.innerText = 15;
+      correctAns.innerText = correct;
+      msg.style.color = ('red');
+      percentage.style.background = ('linear-gradient(to right,  red, red)');
+      break;
+
+    case 10:
+      msg.innerText = 'Revise The Lectures!'
+      totalQuestions.innerText = questions.length;
+      correctAns.innerText = correct;
+      msg.style.color = ('red');
+      percentage.style.background = ('linear-gradient(to right,  red, white, white)');
+      break;
+
+    case 20:
+      msg.innerText = 'Not too Good!'
+      totalQuestions.innerText = questions.length;
+      correctAns.innerText = correct;
+      break;
+
+    case 30:
+      msg.innerText = 'Nice Efforts!'
+      totalQuestions.innerText = questions.length;
+      correctAns.innerText = correct;
+      msg.style.color = ('green');
+      percentage.style.background = ('linear-gradient(to right,  green, white, white)');
+      break;
+
+    case 40:
+      msg.innerText = 'Congratulations!'
+      totalQuestions.innerText = questions.length;
+      correctAns.innerText = correct;
+      msg.style.color = ('green');
+      percentage.style.background = ('linear-gradient(to right,  green, white)');
+      break;
+
+    case 50:
+      msg.innerText = 'Well Done, Genuius!'
+      totalQuestions.innerText = questions.length;
+      correctAns.innerText = correct;
+      msg.style.color = ('green');
+      percentage.style.background = ('linear-gradient(to right,  green, green)');
+      break;
+  }
+
 }
 
 
@@ -2448,53 +2496,7 @@ for (let i = 0; i < userChosenOption.length; i++) {
 
 
 
-  switch (score) {
-    case 0:
-      msg.innerText = 'Revise The Lectures!'
-      totalQuestions.innerText = 15;
-      correctAns.innerText = correct;
-      msg.style.color = ('red');
-      percentage.style.background = ('linear-gradient(to right,  red, red)');
-      break;
-
-    case 10:
-      msg.innerText = 'Revise The Lectures!'
-      totalQuestions.innerText = questions.length;
-      correctAns.innerText = correct;
-      msg.style.color = ('red');
-      percentage.style.background = ('linear-gradient(to right,  red, white, white)');
-      break;
-
-    case 20:
-      msg.innerText = 'Not too Good!'
-      totalQuestions.innerText = questions.length;
-      correctAns.innerText = correct;
-      break;
-
-    case 30:
-      msg.innerText = 'Nice Efforts!'
-      totalQuestions.innerText = questions.length;
-      correctAns.innerText = correct;
-      msg.style.color = ('green');
-      percentage.style.background = ('linear-gradient(to right,  green, white, white)');
-      break;
-
-    case 40:
-      msg.innerText = 'Congratulations!'
-      totalQuestions.innerText = questions.length;
-      correctAns.innerText = correct;
-      msg.style.color = ('green');
-      percentage.style.background = ('linear-gradient(to right,  green, white)');
-      break;
-
-    case 50:
-      msg.innerText = 'Well Done, Genuius!'
-      totalQuestions.innerText = questions.length;
-      correctAns.innerText = correct;
-      msg.style.color = ('green');
-      percentage.style.background = ('linear-gradient(to right,  green, green)');
-      break;
-  }
+ 
 }
 
 //temporory hide previous button
