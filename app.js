@@ -2349,33 +2349,49 @@ function resultAlert() {
     },
     willClose: () => {
       clearInterval(timerInterval);
-      showResult();
+      //showResult();
 
-//calculateScore(correctOptions, userChosenOption);
+calculateScore(correctOptions, userChosenOption);
 
     }
   })
 
 }
 
-function calculateScore(correctOpt, userChosenOption) {
+function calculateScore(correctOpt, userChosenOption ) {
   let score = 0;
   let correct = 0;
 
-  for (let i = 0; i < userChosenOption.length; i++) {
+
+
+  for (let i = 0; i < 15; i++) {
+    
     // Check if the user-selected option matches the correct option
-    if (userChosenOption[i] === correctOpt[i]) {
+    if (userChosenOption[i] === correctOpt[uniqueNumbers[i]]) {
       score += 10;
       correct++;
+      console.warn(score)
     }
 
     console.warn("Question", i + 1);
     console.warn("You Choose:", userChosenOption[i]);
-    console.warn("Correct Answer:", correctOpt[i]);
+    console.warn("Correct Answer:", correctOpt[uniqueNumbers[i]]);
   }
 
   console.warn("Total Score:", score);
   console.warn("Correct Answers:", correct);
+
+  document.querySelector('.quiz-section').style.display = 'none';
+  document.querySelector('.result').style.display = 'flex';
+
+  let msg = document.querySelector('.msg');
+  let percentage = document.querySelector('.module');
+  let totalQuestions = document.querySelector('.total-questions');
+  let correctAns = document.querySelector('.correct-answers');
+  percentage.innerText = ((Number(totalQuestions) / Number(correctAns)) * 100).toFixed(2) + '%';
+
+  percentage.innerText = (score * 2) + '%';
+
 }
 
 
