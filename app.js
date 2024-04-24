@@ -2384,13 +2384,14 @@ function calculateScore(correctOpt, userChosenOption ) {
   document.querySelector('.quiz-section').style.display = 'none';
   document.querySelector('.result').style.display = 'flex';
 
+  let questions = correctOptionsObj[quiz];
   let msg = document.querySelector('.msg');
   let percentage = document.querySelector('.module');
   let totalQuestions = document.querySelector('.total-questions');
   let correctAns = document.querySelector('.correct-answers');
   percentage.innerText = ((Number(totalQuestions) / Number(correctAns)) * 100).toFixed(2) + '%';
 
-  percentage.innerText = (score * 2) + '%';
+  percentage.innerText = ((score/questions.length)*100) + '%';
   const correctOptionsObj = {
     html:  correctOptions,
     css: correctOptions,
@@ -2400,7 +2401,6 @@ function calculateScore(correctOpt, userChosenOption ) {
     database: correctOptions
   };
 
-   let questions = correctOptionsObj[quiz];
 
 
   switch (score) {
