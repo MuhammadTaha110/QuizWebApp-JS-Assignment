@@ -2400,7 +2400,7 @@ function calculateScore(correctOpt, userChosenOption ) {
     database: correctOptions
   };
 
-   let question = correctOptionsObj[quiz];
+   let questions = correctOptionsObj[quiz];
 
 
   switch (score) {
@@ -2451,6 +2451,8 @@ function calculateScore(correctOpt, userChosenOption ) {
       break;
   }
 
+  
+
 }
 
 
@@ -2464,7 +2466,7 @@ function showResult() {
   let correct = 0;
   
 // Define an object containing all the correct options arrays for each quiz
-const correctOptionsObj = {
+  const correctOptionsObj = {
   html:  correctOptions,
   css: correctOptions,
   js: jsCorrectOptions,
