@@ -2420,19 +2420,15 @@ function calculateScore(correctOpt, userChosenOption ) {
   let correct = 0;
 
 
-
   for (let i = 0; i < 15; i++) {
     
     // Check if the user-selected option matches the correct option
     if (userChosenOption[i] === correctOpt[uniqueNumbers[i]]) {
       score += 10;
-      correct++;
-      console.warn(score)
+      correct++
     }
 
-    console.warn("Question", i + 1);
-    console.warn("You Choose:", userChosenOption[i]);
-    console.warn("Correct Answer:", correctOpt[uniqueNumbers[i]]);
+    
   }
 
   console.warn("Total Score:", score);
@@ -2500,10 +2496,8 @@ function calculateScore(correctOpt, userChosenOption ) {
       break;
   }
 
-  
 
 }
-
 
 //temporory hide previous button
 document.querySelector('.prev-btn').style.display = 'none';
