@@ -1,11 +1,13 @@
 let flag = 0;
 function headerFlag() {
-  flag++;
-  console.warn(flag % 2 != 0)
+  flag=1;
 }
 function checkFlag() {
-  if (flag % 2 != 0) {
+  if (flag==1) {
     document.querySelector('.navbar-toggler.toggler-icon').click();
+    flag = 0;
+    console.warn(flag)
+
   }
 }
 
@@ -2381,7 +2383,10 @@ function Alert() {
 
 function quizStartAlert(quizParameter, flag) {
   // Trigger click on the navbar-toggler button
-  document.querySelector('.navbar-toggler.toggler-icon').click();
+  if(flag==1){
+    document.querySelector('.navbar-toggler.toggler-icon').click();
+
+  }
 
   quiz = quizParameter;
 
