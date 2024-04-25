@@ -1340,7 +1340,6 @@ function clearSelectedOptions() {
 }
 
 
-//htmlQuizStart();
 let p;
 function nextButton() {
   if (index < 14) {
