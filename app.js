@@ -15,6 +15,11 @@ function checkFlag() {
 
 
 
+//variables for timer
+var timerSeconds;
+var timerMinutes;
+
+
 //making login button to left
 
 let navbar = document.querySelector('.navbar-toggler');
@@ -1233,9 +1238,6 @@ const databaseCorrectOptions = [
 //Version 1.0********************************************
 
 
-//variables for timer
-var timerSeconds = 60;
-var timerMinutes = 14;
 
 
 //function for timer
@@ -1433,7 +1435,7 @@ function displayDetails(quiztest) {
 
   functionObj[quiztest]();
 
-  intervalID = setInterval(timerSec, 1000);
+
 
   var section = document.querySelector('.quiz-section');
 
@@ -2054,6 +2056,9 @@ function quizStartAlert(quizParameter, flag) {
   }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
+      timerMinutes=4;
+      timerSeconds=60;
+      intervalID = setInterval(timerSec, 1000);
       displayDetails(quizParameter);
     }
   });
