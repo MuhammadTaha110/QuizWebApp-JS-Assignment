@@ -296,7 +296,7 @@ const htmlOptions = [
   }
 ];
 
-const correctOptions = [
+const htmlCorrectOptions = [
   'HyperText Markup Language', 'W3C', '<h1>', '<br>', '<strong>',
   'Cascading Style Sheets', 'CSS', '<a>', '<p>', '<ul>',
   '<ol>', '<td>', '<div>', '<img>', '<img src="image.jpg" alt="Description">',
@@ -1228,6 +1228,50 @@ const dbOptions = [
 
 
 
+// CSS
+const cssCorrectOptions = [
+  'Cascading Style Sheets', 'color', 'font-size', 'margin', 'hidden',
+  'block', 'text-align', 'width', 'height', 'Specificity of styles',
+  'border-radius', 'background-color', 'position', 'list-style', 'text-shadow',
+  'Defines how an element should be sized', 'overflow', 'animation', 'cursor',
+  'border', 'opacity', 'Stacking order of elements', 'Creates smooth transitions',
+  'rotate', 'static'
+];
+
+
+
+// Java
+const javaCorrectOptions = [
+  'Programming language', 'Guido van Rossum', '1995', 'class',
+  'int', 'if', 'for', 'method', 'Object', 'this',
+  '0', 'init', 'java.util', 'Scanner', 'Java Virtual Machine',
+  'new', 'char', 'main', '16', 'HelloWorld',
+  'toUpperCase', 'It can be accessed without creating an instance of the class',
+  'It indicates that a variable cannot be changed', 'It terminates the current loop',
+  'class'
+];
+
+// Python
+const pythonCorrectOptions = [
+  'Programming language', 'Guido van Rossum', '1990', 'def',
+  'str', '**', 'for', 'var', '2.5', 'print()',
+  'math', 'upper()', 'strip()', 'To execute code conditionally', 'Generates a sequence of numbers',
+  'Terminates the current loop', 'class', 'list', 'Adds an element to the end of a list',
+  'len()', 'Removes the last element from a list', 'To end the execution of a function',
+  'abcabcabc', 'datetime', 'To define a placeholder function'
+];
+
+// Database
+const databaseCorrectOptions = [
+  'A collection of data', 'Relational database', 'Structured Query Language',
+  'SELECT', 'INSERT INTO', 'UPDATE', 'DELETE FROM', 'AND',
+  'WHERE', 'COUNT', 'MAX', 'MIN', 'AVG', 'CONCAT',
+  'SUBSTRING', 'A unique identifier for a record', 'A key that references another table',
+  'A database that stores data in multiple tables', 'The process of organizing data to reduce redundancy and improve efficiency',
+  'The process of adding redundancy to data to improve performance', 'A data structure that improves the speed of data retrieval',
+  'To provide an alternative way to access data in a database', 'A set of SQL statements that perform a specific task',
+  'A database event that automatically executes a set of SQL statements', 'A group of SQL statements that are executed as a single unit of work'
+];
 
 
 //Version 1.0********************************************
@@ -2351,7 +2395,19 @@ function resultAlert() {
       clearInterval(timerInterval);
       //showResult();
 
-calculateScore(correctOptions, userChosenOption);
+      const correctOptions = {
+        html: htmlCorrectOptions,
+        css: cssCorrectOptions,
+        js: jsCorrectOptions,
+        java: javaCorrectOptions,
+        python: pythonCorrectOptions,
+        db: databaseCorrectOptions
+      };
+      
+      // Assuming `quiz` contains the name of the current quiz, e.g., "html", "css", etc.
+      let correctOpts = correctOptions[quiz];
+      console.log(correctOpts);
+calculateScore(correctOpts, userChosenOption);
 
     }
   })
@@ -2394,12 +2450,12 @@ function calculateScore(correctOpt, userChosenOption ) {
   percentage.innerHTML = (per*100).toFixed(2) + '%';
   
   const correctOptionsObj = {
-    html:  correctOptions,
-    css: correctOptions,
+    html:  htmlCorrectOptions,
+    css: cssCorrectOptions,
     js: jsCorrectOptions,
-    java:  correctOptions,
-    python: correctOptions,
-    database: correctOptions
+    java:  javaCorrectOptions,
+    python: pythonCorrectOptions,
+    database: databaseCorrectOptions
   };
 
    let questions = correctOptionsObj[quiz];
