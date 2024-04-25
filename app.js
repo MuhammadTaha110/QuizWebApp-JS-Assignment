@@ -39,7 +39,6 @@ $(window).resize(function() {
 });
 
 // Initial call
-centerPage();
 
 //********************************************* */
 
@@ -1280,6 +1279,8 @@ const uniqueNumbers = generateUniqueRandomNumbers(1, 22, 15); // Generate 5 uniq
 const functionObj = {
   html: function() {
     quizStart(htmlQuestions, htmlOptions);
+centerPage();
+
   },
 
   css: function() {
