@@ -1,4 +1,13 @@
-
+let flag = 0;
+function headerFlag() {
+  flag++;
+  console.warn(flag % 2 != 0)
+}
+function checkFlag() {
+  if (flag % 2 != 0) {
+    document.querySelector('.navbar-toggler.toggler-icon').click();
+  }
+}
 
 //making login button to left
 
@@ -1255,7 +1264,7 @@ var D = document.querySelector('.D');
 function generateUniqueRandomNumbers(min, max, count) {
   // Create an array to store generated numbers
   const generatedNumbers = [];
-  
+
   // Loop until we have the desired number of unique values
   while (generatedNumbers.length < count) {
     let randomNumber;
@@ -1275,27 +1284,27 @@ function generateUniqueRandomNumbers(min, max, count) {
 const uniqueNumbers = generateUniqueRandomNumbers(1, 22, 15); // Generate 5 unique numbers
 //function for html questions
 const functionObj = {
-  html: function() {
+  html: function () {
     quizStart(htmlQuestions, htmlOptions);
   },
 
-  css: function() {
+  css: function () {
     quizStart(cssQuestions, cssOptions);
   },
 
-  js: function() {
+  js: function () {
     quizStart(jsQuestions, jsOptions);
   },
 
-  java: function() {
+  java: function () {
     quizStart(javaQuestions, javaOptions);
   },
 
-  python: function() {
+  python: function () {
     quizStart(pythonQuestions, pythonOptions);
   },
 
-  database: function() {
+  database: function () {
     quizStart(dbQuestions, dbOptions);
   }
 };
@@ -1361,7 +1370,7 @@ function nextButton() {
     c = 0;
     d = 0;
 
-     functionObj[quiz]();
+    functionObj[quiz]();
 
 
 
@@ -1417,7 +1426,7 @@ function nextButton() {
 //function to show quiz-section
 function displayDetails(quiztest) {
 
-       functionObj[quiztest]();
+  functionObj[quiztest]();
 
 
   var section = document.querySelector('.quiz-section');
@@ -2211,10 +2220,10 @@ function hideResult() {
 }
 
 const correctOptionsObj = {
-  html:  htmlCorrectOptions,
+  html: htmlCorrectOptions,
   css: cssCorrectOptions,
   js: jsCorrectOptions,
-  java:  javaCorrectOptions,
+  java: javaCorrectOptions,
   python: pythonCorrectOptions,
   database: databaseCorrectOptions
 };
@@ -2237,32 +2246,32 @@ function resultAlert() {
       clearInterval(timerInterval);
       //showResult();
 
-  
-      
+
+
       // Assuming `quiz` contains the name of the current quiz, e.g., "html", "css", etc.
       let correctOpts = correctOptionsObj[quiz];
       console.log(correctOpts);
-calculateScore(correctOpts, userChosenOption);
+      calculateScore(correctOpts, userChosenOption);
 
     }
   })
 
 }
 
-function calculateScore(correctOpt, userChosenOption ) {
+function calculateScore(correctOpt, userChosenOption) {
   let score = 0;
   let correct = 0;
 
 
   for (let i = 0; i < 15; i++) {
-    
+
     // Check if the user-selected option matches the correct option
     if (userChosenOption[i] === correctOpt[uniqueNumbers[i]]) {
       score += 10;
       correct++
     }
 
-    
+
   }
 
   console.warn("Total Score:", score);
@@ -2277,13 +2286,13 @@ function calculateScore(correctOpt, userChosenOption ) {
   let correctAns = document.querySelector('.correct-answers');
   percentage.innerText = ((Number(totalQuestions) / Number(correctAns)) * 100).toFixed(2) + '%';
 
-  let per = (correct/15);
-  percentage.innerHTML = (per*100).toFixed(2) + '%';
-  
- 
+  let per = (correct / 15);
+  percentage.innerHTML = (per * 100).toFixed(2) + '%';
 
-   let questions = correctOptionsObj[quiz];
-   totalQuestions.innerText = 15;
+
+
+  let questions = correctOptionsObj[quiz];
+  totalQuestions.innerText = 15;
 
 
   switch (score) {
@@ -2334,7 +2343,7 @@ function calculateScore(correctOpt, userChosenOption ) {
 
 }
 
-function showHistory(){
+function showHistory() {
 
 }
 
@@ -2342,7 +2351,7 @@ function showHistory(){
 document.querySelector('.prev-btn').style.display = 'none';
 
 
-function alertCreateQuiz(){
+function alertCreateQuiz() {
   Swal.fire("Coming Soon! </br> I am working on it!");
 }
 
@@ -2407,3 +2416,4 @@ function signupForm() {
   document.querySelector('.custom-quiz').style.display = 'none';
   document.querySelector('.result').style.display = 'none';
 }
+
