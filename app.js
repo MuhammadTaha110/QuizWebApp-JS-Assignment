@@ -1317,7 +1317,6 @@ const functionObj = {
 
 function quizStart(questions, options) {
   flag = 0;
-  intervalID = setInterval(timerSec, 1000);
 
   QuizQuestionNum.innerHTML = index + 1;
   var questionIndex = uniqueNumbers[index];
@@ -1434,6 +1433,7 @@ function displayDetails(quiztest) {
 
   functionObj[quiztest]();
 
+  intervalID = setInterval(timerSec, 1000);
 
   var section = document.querySelector('.quiz-section');
 
@@ -1455,7 +1455,8 @@ function displayDetails(quiztest) {
 //function to hide quiz-section
 function hideDetails() {
 
-
+  timerSeconds = 59;
+  timerMinutes = 4;
 
   clearSelectedOptions();
 
@@ -1466,9 +1467,6 @@ function hideDetails() {
 
   document.querySelector('.quiz-cards').style.display = 'flex';
   document.querySelector('.custom-quiz').style.display = 'block';
-
-
-
 }
 
 //function to hold user-choice
@@ -1854,351 +1852,6 @@ D.addEventListener('click', function () {
 
 
 
-/*
-A.addEventListener('click', function () {
-  //alert(a)
-  let userChoose = A.innerText;
-  index++;
-  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
-    A.style.borderColor = ' #000000';
-    A.style.color = '#000000';
-    A.style.backgroundColor = '#22a247';
-    a++;
-    //userChosenOption.push(userChoose);
-
-    userChosenOption.splice(index, 0, userChoose);
-    userSelected.splice(index, 0, '.A');
-    //userSelected.push('.A');
-    //console.log(userChosenOption);
-  }
-
-
-  else if (a % 2 != 0) {
-    A.style.borderColor = ' #22a247';
-    A.style.color = '#000000';
-    A.style.backgroundColor = '#ffffff';
-    a--;
-    userChosenOption.splice(index, 1);
-    userSelected.splice(index, 1);
-  }
-
-  else {
-    if (b % 2 != 0) {
-      B.style.borderColor = ' #22a247';
-      B.style.color = '#000000';
-      B.style.backgroundColor = '#ffffff';
-      b--;
-      userChosenOption.splice(index, 1);
-      userSelected.splice(index, 1);
-
-
-      A.style.borderColor = ' #000000';
-      A.style.color = '#000000';
-      A.style.backgroundColor = '#22a247';
-      a++;
-
-      userChosenOption.splice(index, 0, userChoose);
-      userSelected.splice(index, 0, '.A');
-      //console.log(userChosenOption);
-    }
-
-    if (c % 2 != 0) {
-      C.style.borderColor = ' #22a247';
-      C.style.color = '#000000';
-      C.style.backgroundColor = '#ffffff';
-      c--;
-      userChosenOption.splice(index, 1);
-      userSelected.splice(index, 1);
-
-      A.style.borderColor = ' #000000';
-      A.style.color = '#000000';
-      A.style.backgroundColor = '#22a247';
-      a++;
-
-      userChosenOption.push(userChoose);
-      userSelected.push('.A');
-      //console.log(userChosenOption);
-    }
-
-    if (d % 2 != 0) {
-      D.style.borderColor = ' #22a247';
-      D.style.color = '#000000';
-      D.style.backgroundColor = '#ffffff';
-      d--;
-      userChosenOption.pop();
-      userSelected.pop()
-
-      A.style.borderColor = ' #000000';
-      A.style.color = '#000000';
-      A.style.backgroundColor = '#22a247';
-      a++;
-
-      userChosenOption.push(userChoose);
-      userSelected.push('.A')
-      console.log(userChosenOption);
-    }
-  }
-})
-
-B.addEventListener('click', function () {
-  //alert(a)
-  let userChoose = B.innerText;
-
-  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
-    B.style.borderColor = ' #000000';
-    B.style.color = '#000000';
-    B.style.backgroundColor = '#22a247';
-    b++;
-    userChosenOption.push(userChoose);
-    userSelected.push('.B');
-
-    //console.log(userChosenOption);
-  }
-
-  else if (b % 2 != 0) {
-    B.style.borderColor = ' #22a247';
-    B.style.color = '#000000';
-    B.style.backgroundColor = '#ffffff';
-    b--;
-    userChosenOption.pop();
-    userSelected.pop();
-  }
-
-  else {
-    if (a % 2 != 0) {
-      A.style.borderColor = ' #22a247';
-      A.style.color = '#000000';
-      A.style.backgroundColor = '#ffffff';
-      a--;
-      userChosenOption.pop();
-      userSelected.pop()
-
-      B.style.borderColor = ' #000000';
-      B.style.color = '#000000';
-      B.style.backgroundColor = '#22a247';
-      b++;
-
-      userChosenOption.push(userChoose);
-      userSelected.push('.B');
-
-      console.log(userChosenOption);
-    }
-
-    if (c % 2 != 0) {
-      C.style.borderColor = ' #22a247';
-      C.style.color = '#000000';
-      C.style.backgroundColor = '#ffffff';
-      c--;
-      userChosenOption.pop();
-      userSelected.pop()
-
-      B.style.borderColor = ' #000000';
-      B.style.color = '#000000';
-      B.style.backgroundColor = '#22a247';
-      b++;
-
-      userChosenOption.push(userChoose);
-      userSelected.push('.B');
-
-      console.log(userChosenOption);
-    }
-
-    if (d % 2 != 0) {
-      D.style.borderColor = ' #22a247';
-      D.style.color = '#000000';
-      D.style.backgroundColor = '#ffffff';
-      d--;
-      userChosenOption.pop();
-      userSelected.pop()
-
-      B.style.borderColor = ' #000000';
-      B.style.color = '#000000';
-      B.style.backgroundColor = '#22a247';
-      b++;
-
-      userChosenOption.push(userChoose);
-      userSelected.push('.B');
-
-      console.log(userChosenOption);
-    }
-  }
-})
-
-C.addEventListener('click', function () {
-  let userChoose = C.innerText;
-
-
-  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
-    C.style.borderColor = ' #000000';
-    C.style.color = '#000000';
-    C.style.backgroundColor = '#22a247';
-    c++;
-    userChosenOption.push(userChoose);
-    userSelected.push('.C');
-
-    //console.log(userChosenOption)
-
-
-  }
-
-  else if (c % 2 != 0) {
-    C.style.borderColor = ' #22a247';
-    C.style.color = '#000000';
-    C.style.backgroundColor = '#ffffff';
-    c--;
-    userChosenOption.pop();
-    //console.log(userChosenOption);
-    userSelected.pop();
-
-  }
-
-  else {
-    if (a % 2 != 0) {
-      A.style.borderColor = ' #22a247';
-      A.style.color = '#000000';
-      A.style.backgroundColor = '#ffffff';
-      a--;
-      userSelected.pop();
-      userChosenOption.pop();
-
-      C.style.borderColor = ' #000000';
-      C.style.color = '#000000';
-      C.style.backgroundColor = '#22a247';
-      c++;
-
-      userChosenOption.push(userChoose);
-      userSelected.push('.C');
-
-
-    }
-
-    if (b % 2 != 0) {
-      B.style.borderColor = ' #22a247';
-      B.style.color = '#000000';
-      B.style.backgroundColor = '#ffffff';
-      b--;
-      userChosenOption.pop();
-      userSelected.pop()
-
-      C.style.borderColor = ' #000000';
-      C.style.color = '#000000';
-      C.style.backgroundColor = '#22a247';
-      c++;
-
-      userChosenOption.push(userChoose);
-      userSelected.push('.C');
-
-
-    }
-
-    if (d % 2 != 0) {
-      D.style.borderColor = ' #22a247';
-      D.style.color = '#000000';
-      D.style.backgroundColor = '#ffffff';
-      d--;
-      userChosenOption.pop();
-      userSelected.pop()
-
-      C.style.borderColor = ' #000000';
-      C.style.color = '#000000';
-      C.style.backgroundColor = '#22a247';
-      c++;
-
-      userChosenOption.push(userChoose);
-      userSelected.push('.C');
-
-    }
-  }
-})
-
-D.addEventListener('click', function () {
-
-  let userChoose = D.innerText;
-  if ((b % 2 == 0) && (a % 2 == 0) && (c % 2 == 0) && (d % 2 == 0)) {
-    D.style.borderColor = ' #000000';
-    D.style.color = '#000000';
-    D.style.backgroundColor = '#22a247';
-    d++;
-    userChosenOption.push(userChoose);
-    //console.log(userChosenOption);
-    userSelected.push('.D');
-
-
-
-  }
-
-  else if (d % 2 != 0) {
-    D.style.borderColor = ' #22a247';
-    D.style.color = '#000000';
-    D.style.backgroundColor = '#ffffff';
-    d--;
-    userChosenOption.pop();
-    userSelected.pop();
-    //console.log(userChosenOption)
-
-  }
-
-  else {
-    if (a % 2 != 0) {
-      A.style.borderColor = ' #22a247';
-      A.style.color = '#000000';
-      A.style.backgroundColor = '#ffffff';
-      a--;
-      userChosenOption.pop();
-      userSelected.pop()
-
-      D.style.borderColor = ' #000000';
-      D.style.color = '#000000';
-      D.style.backgroundColor = '#22a247';
-      d++;
-
-      userChosenOption.push(userChoose);
-      userSelected.push('.D');
-
-
-    }
-
-    if (b % 2 != 0) {
-      B.style.borderColor = ' #22a247';
-      B.style.color = '#000000';
-      B.style.backgroundColor = '#ffffff';
-      b--;
-      userChosenOption.pop();
-      userSelected.pop()
-
-      D.style.borderColor = ' #000000';
-      D.style.color = '#000000';
-      D.style.backgroundColor = '#22a247';
-      d++;
-
-      userChosenOption.push(userChoose);
-      userSelected.push('.D');
-
-
-    }
-
-    if (c % 2 != 0) {
-      C.style.borderColor = ' #22a247';
-      C.style.color = '#000000';
-      C.style.backgroundColor = '#ffffff';
-      c--;
-      userChosenOption.pop();
-      userSelected.pop()
-
-      D.style.borderColor = ' #000000';
-      D.style.color = '#000000';
-      D.style.backgroundColor = '#22a247';
-      d++;
-
-      userChosenOption.push(userChoose);
-      userSelected.push('.D');
-
-    }
-  }
-})
-
-*/
-
 //function to hide result
 function hideResult() {
   window.location.reload();
@@ -2393,7 +2046,7 @@ function quizStartAlert(quizParameter, flag) {
   quiz = quizParameter;
 
   Swal.fire({
-    title: "15 Questions | 15 Minutes",
+    title: "15 Questions | 5 Minutes",
     //showDenyButton: true,
     showCancelButton: true,
     confirmButtonText: "Start Quiz",
