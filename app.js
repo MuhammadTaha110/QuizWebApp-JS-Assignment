@@ -2501,9 +2501,6 @@ function calculateScore(correctOpt, userChosenOption ) {
   }
 
 
-  console.warn("Question", i + 1);
-    console.warn("You Choose:", userChosenOption[i]);
-    console.warn("Correct Answer:", correctOpt[uniqueNumbers[i]]);
 
 }
 
