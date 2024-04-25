@@ -1,6 +1,8 @@
 let flag = 0;
 function headerFlag() {
   flag=1;
+  console.warn(flag)
+
 }
 function checkFlag() {
   if (flag==1) {
