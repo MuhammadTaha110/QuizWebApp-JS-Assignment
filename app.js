@@ -9,6 +9,8 @@ function checkFlag() {
   }
 }
 
+
+
 //making login button to left
 
 let navbar = document.querySelector('.navbar-toggler');
