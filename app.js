@@ -1434,7 +1434,7 @@ function nextButton() {
 
 }
 
-function previousButton() {
+/*function previousButton() {
   if (index > 0) {
     index--;
     idx--;
@@ -1468,14 +1468,13 @@ function previousButton() {
     //alert((userSelected[index+1]));
     //document.querySelector(userSelected[index+1])
     p = 1;
-    htmlQuizStart();
 
 
   }
 
 
 
-}
+}*/
 
 //
 
