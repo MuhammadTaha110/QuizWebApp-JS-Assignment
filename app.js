@@ -2376,6 +2376,14 @@ function hideResult() {
 
 }
 
+const correctOptionsObj = {
+  html:  htmlCorrectOptions,
+  css: cssCorrectOptions,
+  js: jsCorrectOptions,
+  java:  javaCorrectOptions,
+  python: pythonCorrectOptions,
+  database: databaseCorrectOptions
+};
 
 function resultAlert() {
   let timerInterval;
