@@ -2395,17 +2395,10 @@ function resultAlert() {
       clearInterval(timerInterval);
       //showResult();
 
-      const correctOptions = {
-        html: htmlCorrectOptions,
-        css: cssCorrectOptions,
-        js: jsCorrectOptions,
-        java: javaCorrectOptions,
-        python: pythonCorrectOptions,
-        db: databaseCorrectOptions
-      };
+  
       
       // Assuming `quiz` contains the name of the current quiz, e.g., "html", "css", etc.
-      let correctOpts = correctOptions[quiz];
+      let correctOpts = correctOptionsObj[quiz];
       console.log(correctOpts);
 calculateScore(correctOpts, userChosenOption);
 
@@ -2449,14 +2442,7 @@ function calculateScore(correctOpt, userChosenOption ) {
   let per = (correct/15);
   percentage.innerHTML = (per*100).toFixed(2) + '%';
   
-  const correctOptionsObj = {
-    html:  htmlCorrectOptions,
-    css: cssCorrectOptions,
-    js: jsCorrectOptions,
-    java:  javaCorrectOptions,
-    python: pythonCorrectOptions,
-    database: databaseCorrectOptions
-  };
+ 
 
    let questions = correctOptionsObj[quiz];
    totalQuestions.innerText = 15;
