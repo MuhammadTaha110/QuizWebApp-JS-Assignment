@@ -26,19 +26,17 @@ var index = 0;
 
 //Function to get and set window position
 
-function centerPage() {
-  var windowHeight = $(window).height();
-  var containerHeight = $('.container').height();
-  var marginTop = (windowHeight - containerHeight) / 2;
-  $('.container').css('margin-top', marginTop);
-}
-
-// Call the function on window resize
-$(window).resize(function() {
-  centerPage();
+$(window).scroll(function () {
+  let scrollTop = $(this).scrollTop();
+  if (scrollTop > lastScrollTop) {
+    // Downscroll code
+    $('header').addClass('hide');
+  } else {
+    // Upscroll code
+    $('header').removeClass('hide');
+  }
+  lastScrollTop = scrollTop;
 });
-
-// Initial call
 
 //********************************************* */
 
@@ -1279,8 +1277,6 @@ const uniqueNumbers = generateUniqueRandomNumbers(1, 22, 15); // Generate 5 uniq
 const functionObj = {
   html: function() {
     quizStart(htmlQuestions, htmlOptions);
-centerPage();
-
   },
 
   css: function() {
