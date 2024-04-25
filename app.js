@@ -1,67 +1,4 @@
-function alertCreateQuiz(){
-  Swal.fire("Coming Soon! </br> I am working on it!");
-}
 
-//Alert Function
-let quiz = '';
-
-function Alert() {
-  Swal.fire({
-    title: "Are you sure you want to quit?",
-    text: "You won't be able to revert this!",
-    icon: "question",
-    showCancelButton: true,
-    confirmButtonColor: "#22a247",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Yes, Quit it!"
-  }).then((result) => {
-    if (result.isConfirmed) {
-      clearInterval(intervalID);
-      hideDetails();
-    }
-  });
-
-
-}
-
-function quizStartAlert(quizParameter) {
-
-  quiz = quizParameter;
-
-
-  Swal.fire({
-    title: "15 Questions | 15 Minutes",
-    //showDenyButton: true,
-    showCancelButton: true,
-    confirmButtonText: "Start Quiz",
-    confirmButtonColor: "#22a247",
-  }).then((result) => {
-    /* Read more about isConfirmed, isDenied below */
-    if (result.isConfirmed) {
-      displayDetails(quizParameter);
-    }
-  });
-}
-
-
-
-function loginForm() {
-  document.querySelector('.login-form').style.display = 'block';
-  document.querySelector('.signup-form').style.display = 'none';
-  document.querySelector('.quiz-section').style.display = 'none';
-  document.querySelector('.quiz-cards').style.display = 'none';
-  document.querySelector('.custom-quiz').style.display = 'none';
-  document.querySelector('.result').style.display = 'none';
-}
-
-function signupForm() {
-  document.querySelector('.signup-form').style.display = 'block';
-  document.querySelector('.login-form').style.display = 'none';
-  document.querySelector('.quiz-section').style.display = 'none';
-  document.querySelector('.quiz-cards').style.display = 'none';
-  document.querySelector('.custom-quiz').style.display = 'none';
-  document.querySelector('.result').style.display = 'none';
-}
 
 //making login button to left
 
@@ -2404,3 +2341,69 @@ function showHistory(){
 
 //temporory hide previous button
 document.querySelector('.prev-btn').style.display = 'none';
+
+
+function alertCreateQuiz(){
+  Swal.fire("Coming Soon! </br> I am working on it!");
+}
+
+//Alert Function
+let quiz = '';
+
+function Alert() {
+  Swal.fire({
+    title: "Are you sure you want to quit?",
+    text: "You won't be able to revert this!",
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonColor: "#22a247",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, Quit it!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      clearInterval(intervalID);
+      hideDetails();
+    }
+  });
+
+
+}
+
+function quizStartAlert(quizParameter) {
+
+  quiz = quizParameter;
+
+
+  Swal.fire({
+    title: "15 Questions | 15 Minutes",
+    //showDenyButton: true,
+    showCancelButton: true,
+    confirmButtonText: "Start Quiz",
+    confirmButtonColor: "#22a247",
+  }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+      displayDetails(quizParameter);
+    }
+  });
+}
+
+
+
+function loginForm() {
+  document.querySelector('.login-form').style.display = 'block';
+  document.querySelector('.signup-form').style.display = 'none';
+  document.querySelector('.quiz-section').style.display = 'none';
+  document.querySelector('.quiz-cards').style.display = 'none';
+  document.querySelector('.custom-quiz').style.display = 'none';
+  document.querySelector('.result').style.display = 'none';
+}
+
+function signupForm() {
+  document.querySelector('.signup-form').style.display = 'block';
+  document.querySelector('.login-form').style.display = 'none';
+  document.querySelector('.quiz-section').style.display = 'none';
+  document.querySelector('.quiz-cards').style.display = 'none';
+  document.querySelector('.custom-quiz').style.display = 'none';
+  document.querySelector('.result').style.display = 'none';
+}
