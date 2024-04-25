@@ -1,11 +1,11 @@
 let flag = 0;
 function headerFlag() {
-  flag=1;
+  flag = 1;
   console.warn(flag)
 
 }
 function checkFlag() {
-  if (flag==1) {
+  if (flag == 1) {
     document.querySelector('.navbar-toggler.toggler-icon').click();
     flag = 0;
     console.warn(flag)
@@ -16,8 +16,8 @@ function checkFlag() {
 
 
 //variables for timer
-var timerSeconds;
-var timerMinutes;
+var timerSeconds = 59;
+var timerMinutes = 4;
 
 
 //making login button to left
@@ -1242,13 +1242,19 @@ const databaseCorrectOptions = [
 
 //function for timer
 function timerSec() {
-  if (timerSeconds > 0) {
-    timerSeconds--;
+  if (timerMinutes>= 0) {
+    if (timerSeconds > 0) {
+      timerSeconds--;
+    }
+
+    else {
+      timerMinutes--;
+      timerSeconds = 59;
+    }
   }
 
-  else {
-    timerMinutes--;
-    timerSeconds = 59;
+  else{
+    resultAlert();
   }
 
   document.querySelector('.timer-sec').innerHTML = timerSeconds;
@@ -2040,7 +2046,7 @@ function Alert() {
 
 function quizStartAlert(quizParameter, flag) {
   // Trigger click on the navbar-toggler button
-  if(flag==1){
+  if (flag == 1) {
     document.querySelector('.navbar-toggler.toggler-icon').click();
 
   }
@@ -2056,8 +2062,8 @@ function quizStartAlert(quizParameter, flag) {
   }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
-      timerMinutes=4;
-      timerSeconds=60;
+      timerMinutes = 4;
+      timerSeconds = 60;
       intervalID = setInterval(timerSec, 1000);
       displayDetails(quizParameter);
     }
