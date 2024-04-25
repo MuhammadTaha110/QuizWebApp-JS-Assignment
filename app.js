@@ -16,8 +16,8 @@ function checkFlag() {
 
 
 //variables for timer
-var timerSeconds = 59;
-var timerMinutes = 4;
+var timerSeconds = 4;
+var timerMinutes = 0;
 
 
 //making login button to left
@@ -1237,29 +1237,49 @@ const databaseCorrectOptions = [
 
 //Version 1.0********************************************
 
+let timerIS;
+
 
 
 
 //function for timer
 function timerSec() {
-  if (timerMinutes>= 0) {
+  if (timerMinutes >= 0) {
+    timerIS = 1;
+
     if (timerSeconds > 0) {
       timerSeconds--;
     }
 
     else {
       timerMinutes--;
-      timerSeconds = 59;
+      if(timerMinutes>0){
+        timerSeconds = 4;
+      }
+      else{
+        timerMinutes=0;
+        
+      }
     }
   }
 
-  else{
-    
+  else {
+    timerIS = 0;
+    clearInterval(intervalID)
+    console.warn(timerIS)
+    resultAlert();
   }
 
   document.querySelector('.timer-sec').innerHTML = timerSeconds;
   document.querySelector('.timer-mins').innerHTML = timerMinutes;
 
+}
+
+function checkTimer() {
+  console.log(timerIS)
+  if (timerIS == 0) {
+    resultAlert();
+  }
 }
 
 
@@ -1463,8 +1483,8 @@ function displayDetails(quiztest) {
 //function to hide quiz-section
 function hideDetails() {
 
-  timerSeconds = 59;
-  timerMinutes = 4;
+  timerSeconds = 9;
+  timerMinutes = 0;
 
   clearSelectedOptions();
 
@@ -2062,13 +2082,16 @@ function quizStartAlert(quizParameter, flag) {
   }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
-      timerMinutes = 4;
-      timerSeconds = 60;
+      timerMinutes = 0;
+      timerSeconds = 4;
       intervalID = setInterval(timerSec, 1000);
       displayDetails(quizParameter);
+      checkTimer();
+
     }
   });
 }
+
 
 
 
