@@ -30,7 +30,7 @@ function quizStartAlert(quizParameter) {
 
 
   Swal.fire({
-    title: "25 Questions | 15 Minutes",
+    title: "15 Questions | 15 Minutes",
     //showDenyButton: true,
     showCancelButton: true,
     confirmButtonText: "Start Quiz",
