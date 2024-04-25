@@ -1254,7 +1254,7 @@ function timerSec() {
   }
 
   else{
-    resultAlert();
+    
   }
 
   document.querySelector('.timer-sec').innerHTML = timerSeconds;
