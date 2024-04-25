@@ -2368,10 +2368,11 @@ function Alert() {
 
 }
 
-function quizStartAlert(quizParameter) {
+function quizStartAlert(quizParameter, flag) {
+  // Trigger click on the navbar-toggler button
+  document.querySelector('.navbar-toggler.toggler-icon').click();
 
   quiz = quizParameter;
-
 
   Swal.fire({
     title: "15 Questions | 15 Minutes",
