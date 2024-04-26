@@ -16,8 +16,8 @@ function checkFlag() {
 
 
 //variables for timer
-var timerSeconds = 4;
-var timerMinutes = 0;
+var timerSeconds = 59;
+var timerMinutes = 4;
 
 
 //making login button to left
@@ -1235,6 +1235,1235 @@ const databaseCorrectOptions = [
 ];
 
 
+const mongodbQuestions = [
+  'What is MongoDB?',
+  'What is a document-based database?',
+  'What is a collection in MongoDB?',
+  'What is BSON?',
+  'What is a document in MongoDB?',
+  'What is a primary key in MongoDB?',
+  'What is the purpose of indexing in MongoDB?',
+  'What is sharding in MongoDB?',
+  'What is aggregation in MongoDB?',
+  'What is a replica set in MongoDB?',
+  'What is the difference between MongoDB and SQL databases?',
+  'What is GridFS in MongoDB?',
+  'What is the default port number for MongoDB?',
+  'What is the role of mongod in MongoDB?',
+  'What is the purpose of db.collection.insert() in MongoDB?',
+  'What is the role of mongos in MongoDB?',
+  'What is the syntax for finding documents in MongoDB?',
+  'What is the purpose of $set in MongoDB update operations?',
+  'What is a capped collection in MongoDB?',
+  'What is the purpose of MongoDB Compass?',
+  'What is the role of the _id field in MongoDB documents?',
+  'What is the purpose of the $addToSet operator in MongoDB?',
+  'What is the role of the WiredTiger storage engine in MongoDB?',
+  'What is a covered query in MongoDB?',
+  'What is the purpose of the $unwind operator in MongoDB aggregation?',
+];
+
+const mongodbOptions = [
+  {
+    optionA: 'A document-oriented NoSQL database',
+    optionB: 'A relational database management system',
+    optionC: 'A cloud-based database service',
+    optionD: 'A key-value store',
+  },
+  {
+    optionA: 'A database that stores data in the form of tables',
+    optionB: 'A database that stores data in the form of documents',
+    optionC: 'A database that stores data in the form of key-value pairs',
+    optionD: 'A database that stores data in the form of graphs',
+  },
+  {
+    optionA: 'A group of related documents',
+    optionB: 'A data structure for storing documents',
+    optionC: 'A group of related tables',
+    optionD: 'A data structure for storing tables',
+  },
+  {
+    optionA: 'Binary JSON',
+    optionB: 'Binary Secure Object Notation',
+    optionC: 'Binary Serialized Object Notation',
+    optionD: 'Binary Structured Object Notation',
+  },
+  {
+    optionA: 'A JSON-like data structure',
+    optionB: 'A JSON object',
+    optionC: 'A JSON array',
+    optionD: 'A binary data structure',
+  },
+  {
+    optionA: 'A unique identifier for a document',
+    optionB: 'A field that stores foreign keys',
+    optionC: 'A field that indexes the document',
+    optionD: 'A field that stores binary data',
+  },
+  {
+    optionA: 'To improve query performance',
+    optionB: 'To enforce data integrity',
+    optionC: 'To organize data into groups',
+    optionD: 'To compress data for storage',
+  },
+  {
+    optionA: 'A method for distributing data across multiple servers',
+    optionB: 'A method for organizing data within a single server',
+    optionC: 'A method for encrypting data in transit',
+    optionD: 'A method for compressing data for storage',
+  },
+  {
+    optionA: 'The process of grouping and processing data',
+    optionB: 'The process of replicating data across multiple servers',
+    optionC: 'The process of organizing data into collections',
+    optionD: 'The process of indexing data for faster retrieval',
+  },
+  {
+    optionA: 'A set of MongoDB instances that maintain the same data',
+    optionB: 'A set of MongoDB collections that store related data',
+    optionC: 'A set of MongoDB databases that share data',
+    optionD: 'A set of MongoDB documents that form a cluster',
+  },
+  {
+    optionA: 'MongoDB is a document-oriented NoSQL database, while SQL databases are relational databases.',
+    optionB: 'MongoDB uses a flexible schema, while SQL databases use a fixed schema.',
+    optionC: 'MongoDB supports horizontal scaling, while SQL databases do not.',
+    optionD: 'MongoDB stores data in JSON-like documents, while SQL databases store data in tables.',
+  },
+  {
+    optionA: 'A file storage system for storing large files in MongoDB',
+    optionB: 'A data modeling technique for organizing documents in MongoDB',
+    optionC: 'A query language for performing complex queries in MongoDB',
+    optionD: 'A caching mechanism for improving query performance in MongoDB',
+  },
+  {
+    optionA: '27017',
+    optionB: '3306',
+    optionC: '5432',
+    optionD: '1521',
+  },
+  {
+    optionA: 'The primary daemon process for the MongoDB server',
+    optionB: 'The primary client interface for interacting with MongoDB',
+    optionC: 'The primary administrative tool for managing MongoDB',
+    optionD: 'The primary database engine for storing data in MongoDB',
+  },
+  {
+    optionA: 'To insert documents into a collection',
+    optionB: 'To update documents in a collection',
+    optionC: 'To delete documents from a collection',
+    optionD: 'To query documents from a collection',
+  },
+  {
+    optionA: 'The primary query router for MongoDB sharded clusters',
+    optionB: 'The primary storage engine for MongoDB collections',
+    optionC: 'The primary indexing mechanism for MongoDB collections',
+    optionD: 'The primary replication mechanism for MongoDB replica sets',
+  },
+  {
+    optionA: 'db.collection.find()',
+    optionB: 'db.collection.insert()',
+    optionC: 'db.collection.update()',
+    optionD: 'db.collection.remove()',
+  },
+  {
+    optionA: 'To set the value of a field in a document',
+    optionB: 'To add a new field to a document',
+    optionC: 'To increment the value of a field in a document',
+    optionD: 'To unset a field in a document',
+  },
+  {
+    optionA: 'A fixed-size collection that automatically discards older documents as new ones are added',
+    optionB: 'A collection with a maximum size limit that prevents documents from exceeding a certain size',
+    optionC: 'A collection with a fixed schema that enforces data integrity constraints',
+    optionD: 'A collection that stores documents in a circular buffer',
+  },
+  {
+    optionA: 'To visualize and interact with MongoDB data',
+    optionB: 'To manage MongoDB server instances',
+    optionC: 'To create and manage MongoDB databases and collections',
+    optionD: 'To monitor MongoDB performance and health',
+  },
+  {
+    optionA: 'A unique identifier for a document',
+    optionB: 'A reserved field for internal use by MongoDB',
+    optionC: 'A primary key field that uniquely identifies a document',
+    optionD: 'A secondary index field for optimizing query performance',
+  },
+  {
+    optionA: 'To add elements to an array field in a document',
+    optionB: 'To remove duplicate elements from an array field in a document',
+    optionC: 'To add a new array field to a document',
+    optionD: 'To remove elements from an array field in a document',
+  },
+  {
+    optionA: 'The default storage engine used by MongoDB',
+    optionB: 'The primary indexing mechanism used by MongoDB',
+    optionC: 'The primary query optimization technique used by MongoDB',
+    optionD: 'The primary replication mechanism used by MongoDB',
+  },
+  {
+    optionA: 'A query that retrieves all fields of a document without scanning the entire document',
+    optionB: 'A query that retrieves only selected fields of a document',
+    optionC: 'A query that retrieves documents using only index keys',
+    optionD: 'A query that retrieves documents using a covered index',
+  },
+  {
+    optionA: 'To deconstruct arrays in documents and output one document for each element of the array',
+    optionB: 'To perform a left outer join between two collections',
+    optionC: 'To group documents by a specified field and calculate aggregate values for each group',
+    optionD: 'To filter documents based on specified criteria',
+  },
+];
+
+const mongodbCorrectOptions = [
+  'A document-oriented NoSQL database',
+  'A database that stores data in the form of documents',
+  'A group of related documents',
+  'Binary JSON',
+  'A JSON-like data structure',
+  'A unique identifier for a document',
+  'To improve query performance',
+  'A method for distributing data across multiple servers',
+  'The process of grouping and processing data',
+  'A set of MongoDB instances that maintain the same data',
+  'MongoDB stores data in JSON-like documents, while SQL databases store data in tables.',
+  'A file storage system for storing large files in MongoDB',
+  '27017',
+  'The primary daemon process for the MongoDB server',
+  'To insert documents into a collection',
+  'The primary query router for MongoDB sharded clusters',
+  'db.collection.find()',
+  'To set the value of a field in a document',
+  'A fixed-size collection that automatically discards older documents as new ones are added',
+  'To visualize and interact with MongoDB data',
+  'A unique identifier for a document',
+  'To add elements to an array field in a document',
+  'The default storage engine used by MongoDB',
+  'A query that retrieves documents using a covered index',
+  'To deconstruct arrays in documents and output one document for each element of the array',
+];
+
+const reactQuestions = [
+  'What is React?',
+  'What does JSX stand for?',
+  'What is the purpose of Redux in React applications?',
+  'Which of the following is a component lifecycle method in React?',
+  'What is the virtual DOM in React?',
+  'What is a React hook?',
+  'What is the purpose of props in React?',
+  'What is state in React?',
+  'What is the purpose of setState() in React?',
+  'What is React Router used for?',
+  'What is the purpose of ReactDOM.render() in React?',
+  'What is the role of componentDidMount() method in React?',
+  'What is the difference between state and props in React?',
+  'What is the purpose of keys in React lists?',
+  'What is a higher-order component (HOC) in React?',
+  'What is the purpose of React.Fragment?',
+  'What is a controlled component in React?',
+  'What is the significance of the render method in React components?',
+  'What is the purpose of shouldComponentUpdate() method in React?',
+  'What is JSX syntax?',
+  'What is the purpose of React Native?',
+  'What is the role of the constructor() method in React components?',
+  'What is the purpose of the dangerouslySetInnerHTML attribute in React?',
+  'What is a functional component in React?',
+  'What is the purpose of keys in React lists?',
+];
+
+const reactOptions = [
+  {
+    optionA: 'A JavaScript library for building user interfaces',
+    optionB: 'A programming language',
+    optionC: 'A database management system',
+    optionD: 'A networking protocol',
+  },
+  {
+    optionA: 'JavaScript XML',
+    optionB: 'JavaScript Extension',
+    optionC: 'JavaScript XHTML',
+    optionD: 'JavaScript Syntax Extension',
+  },
+  {
+    optionA: 'To manage application state',
+    optionB: 'To handle routing',
+    optionC: 'To perform server-side rendering',
+    optionD: 'To handle database queries',
+  },
+  {
+    optionA: 'componentDidMount',
+    optionB: 'render',
+    optionC: 'constructor',
+    optionD: 'setState',
+  },
+  {
+    optionA: 'A virtual representation of the DOM tree',
+    optionB: 'A real-time database',
+    optionC: 'A database management system',
+    optionD: 'A server-side rendering engine',
+  },
+  {
+    optionA: 'A JavaScript function that lets you use state and other React features without writing a class',
+    optionB: 'A graphical user interface component',
+    optionC: 'A function that converts JSX into JavaScript',
+    optionD: 'A method for updating component state',
+  },
+  {
+    optionA: 'To pass data from parent to child components',
+    optionB: 'To manage application state',
+    optionC: 'To define the structure of a component',
+    optionD: 'To render HTML elements',
+  },
+  {
+    optionA: 'The current status of a component',
+    optionB: 'The initial configuration of a component',
+    optionC: 'A method for updating component state',
+    optionD: 'A collection of immutable values',
+  },
+  {
+    optionA: 'To update the component state and re-render the component',
+    optionB: 'To handle user interactions',
+    optionC: 'To define the structure of a component',
+    optionD: 'To initialize component state',
+  },
+  {
+    optionA: 'For client-side navigation in a single-page application',
+    optionB: 'To render React components on the server',
+    optionC: 'To manage application state',
+    optionD: 'To handle database queries',
+  },
+  {
+    optionA: 'To render a React component into the DOM',
+    optionB: 'To handle asynchronous operations',
+    optionC: 'To manage application state',
+    optionD: 'To define the structure of a component',
+  },
+  {
+    optionA: 'To initialize component state',
+    optionB: 'To perform cleanup tasks when a component is unmounted',
+    optionC: 'To fetch data from an external API',
+    optionD: 'To update component state after rendering',
+  },
+  {
+    optionA: 'State is mutable and controlled by the component itself, whereas props are immutable and controlled by the parent component.',
+    optionB: 'Props are mutable and controlled by the component itself, whereas state is immutable and controlled by the parent component.',
+    optionC: 'State and props are the same thing in React.',
+    optionD: 'State and props are both immutable and controlled by the parent component.',
+  },
+  {
+    optionA: 'To uniquely identify elements in a list and optimize rendering performance',
+    optionB: 'To provide additional information about each element in a list',
+    optionC: 'To define the structure of a list',
+    optionD: 'To specify the order of elements in a list',
+  },
+  {
+    optionA: 'A component that takes another component as an argument and returns a new component',
+    optionB: 'A component with a high level of complexity',
+    optionC: 'A component that renders other components',
+    optionD: 'A component that can be reused across different parts of an application',
+  },
+  {
+    optionA: 'To group multiple elements without adding extra nodes to the DOM',
+    optionB: 'To define the structure of a component',
+    optionC: 'To specify the layout of a web page',
+    optionD: 'To provide additional information about each element in a list',
+  },
+  {
+    optionA: 'A component whose value is controlled by React, not by the DOM',
+    optionB: 'A component with internal state management',
+    optionC: 'A component with no internal state',
+    optionD: 'A component that renders HTML elements directly',
+  },
+  {
+    optionA: 'To define the structure of a component',
+    optionB: 'To handle user interactions',
+    optionC: 'To manage application state',
+    optionD: 'To provide additional information about each element in a list',
+  },
+  {
+    optionA: 'To determine whether a component should re-render after receiving new props or state',
+    optionB: 'To initialize component state',
+    optionC: 'To update the component state and re-render the component',
+    optionD: 'To perform cleanup tasks when a component is unmounted',
+  },
+  {
+    optionA: 'A syntax extension for JavaScript that allows XML-like syntax to be used in React components',
+    optionB: 'A JavaScript framework for building user interfaces',
+    optionC: 'A server-side rendering engine',
+    optionD: 'A version control system for web development',
+  },
+  {
+    optionA: 'A framework for building native mobile apps using JavaScript and React',
+    optionB: 'A server-side rendering engine',
+    optionC: 'A cloud-based platform for building web applications',
+    optionD: 'A JavaScript library for building user interfaces',
+  },
+  {
+    optionA: 'To initialize component state',
+    optionB: 'To perform cleanup tasks when a component is unmounted',
+    optionC: 'To define the initial configuration of a component',
+    optionD: 'To render HTML elements',
+  },
+  {
+    optionA: 'To set HTML directly from React',
+    optionB: 'To handle user input in forms',
+    optionC: 'To define the structure of a component',
+    optionD: 'To specify the order of elements in a list',
+  },
+  {
+    optionA: 'A function component is a JavaScript function that accepts props and returns React elements, while a class component is a JavaScript class that extends React.Component and has its own state.',
+    optionB: 'A function component is a component that renders functional elements, while a class component is a component that renders class-based elements.',
+    optionC: 'A function component is a component with internal state management, while a class component is a component with no internal state.',
+    optionD: 'A function component is a component that renders HTML elements directly, while a class component is a component that renders other components.',
+  },
+  {
+    optionA: 'To uniquely identify elements in a list and optimize rendering performance',
+    optionB: 'To specify the layout of a web page',
+    optionC: 'To provide additional information about each element in a list',
+    optionD: 'To define the structure of a component',
+  },
+];
+
+const reactCorrectOptions = [
+  'A JavaScript library for building user interfaces',
+  'JavaScript XML',
+  'To manage application state',
+  'componentDidMount',
+  'A virtual representation of the DOM tree',
+  'A JavaScript function that lets you use state and other React features without writing a class',
+  'To pass data from parent to child components',
+  'The current status of a component',
+  'To update the component state and re-render the component',
+  'For client-side navigation in a single-page application',
+  'To render a React component into the DOM',
+  'To perform cleanup tasks when a component is unmounted',
+  'State is mutable and controlled by the component itself, whereas props are immutable and controlled by the parent component.',
+  'To uniquely identify elements in a list and optimize rendering performance',
+  'A component that takes another component as an argument and returns a new component',
+  'To group multiple elements without adding extra nodes to the DOM',
+  'A component whose value is controlled by React, not by the DOM',
+  'To define the structure of a component',
+  'To determine whether a component should re-render after receiving new props or state',
+  'A syntax extension for JavaScript that allows XML-like syntax to be used in React components',
+  'A framework for building native mobile apps using JavaScript and React',
+  'To initialize component state',
+  'To set HTML directly from React',
+  'A function component is a JavaScript function that accepts props and returns React elements, while a class component is a JavaScript class that extends React.Component and has its own state.',
+  'To uniquely identify elements in a list and optimize rendering performance',
+];
+
+const firebaseQuestions = [
+  'What is Firebase?',
+  'What is Firestore in Firebase?',
+  'What is Realtime Database in Firebase?',
+  'What is Firebase Authentication?',
+  'What is Firebase Cloud Messaging?',
+  'What is Firebase Hosting?',
+  'What is Firebase Functions?',
+  'What is Firebase Storage?',
+  'What is Firebase Crashlytics?',
+  'What is Firebase Analytics?',
+  'What is Firebase Performance Monitoring?',
+  'What is Firebase Remote Config?',
+  'What is Firebase Test Lab?',
+  'What is Firebase App Distribution?',
+  'What is Firebase Machine Learning?',
+  'What is Firebase Predictions?',
+  'What is Firebase A/B Testing?',
+  'What is Firebase Dynamic Links?',
+  'What is Firebase AdMob?',
+  'What is Firebase Cloud Firestore Security Rules?',
+  'What is Firebase Cloud Functions?',
+  'What is Firebase Cloud Storage?',
+  'What is Firebase Hosting?',
+  'What is Firebase Test Lab?',
+  'What is Firebase App Distribution?',
+];
+
+const firebaseOptions = [
+  {
+    optionA: 'A cloud-based platform for building mobile and web applications',
+    optionB: 'A serverless computing platform',
+    optionC: 'A database management system',
+    optionD: 'A version control system',
+  },
+  {
+    optionA: 'A NoSQL document database',
+    optionB: 'A real-time database',
+    optionC: 'A cloud storage service',
+    optionD: 'A user authentication service',
+  },
+  {
+    optionA: 'A NoSQL database',
+    optionB: 'A SQL database',
+    optionC: 'A real-time database',
+    optionD: 'A cloud storage service',
+  },
+  {
+    optionA: 'A service for authenticating users',
+    optionB: 'A service for sending push notifications',
+    optionC: 'A service for hosting web applications',
+    optionD: 'A service for testing mobile apps',
+  },
+  {
+    optionA: 'A service for sending push notifications',
+    optionB: 'A service for authenticating users',
+    optionC: 'A service for hosting web applications',
+    optionD: 'A service for testing mobile apps',
+  },
+  {
+    optionA: 'A service for hosting web applications',
+    optionB: 'A service for sending push notifications',
+    optionC: 'A service for authenticating users',
+    optionD: 'A service for testing mobile apps',
+  },
+  {
+    optionA: 'A service for testing mobile apps',
+    optionB: 'A service for hosting web applications',
+    optionC: 'A service for authenticating users',
+    optionD: 'A service for sending push notifications',
+  },
+  {
+    optionA: 'A cloud storage service',
+    optionB: 'A service for hosting web applications',
+    optionC: 'A service for testing mobile apps',
+    optionD: 'A service for authenticating users',
+  },
+  {
+    optionA: 'A service for hosting web applications',
+    optionB: 'A service for testing mobile apps',
+    optionC: 'A service for authenticating users',
+    optionD: 'A service for sending crash reports',
+  },
+  {
+    optionA: 'A service for tracking user behavior',
+    optionB: 'A service for hosting web applications',
+    optionC: 'A service for sending push notifications',
+    optionD: 'A service for testing mobile apps',
+  },
+  {
+    optionA: 'A service for tracking app performance',
+    optionB: 'A service for hosting web applications',
+    optionC: 'A service for authenticating users',
+    optionD: 'A service for testing mobile apps',
+  },
+  {
+    optionA: 'A service for managing app configuration',
+    optionB: 'A service for hosting web applications',
+    optionC: 'A service for authenticating users',
+    optionD: 'A service for testing mobile apps',
+  },
+  {
+    optionA: 'A service for testing mobile apps',
+    optionB: 'A service for hosting web applications',
+    optionC: 'A service for authenticating users',
+    optionD: 'A service for sending crash reports',
+  },
+  {
+    optionA: 'A service for distributing pre-trained machine learning models',
+    optionB: 'A service for managing app configuration',
+    optionC: 'A service for hosting web applications',
+    optionD: 'A service for authenticating users',
+  },
+  {
+    optionA: 'A service for predicting user behavior',
+    optionB: 'A service for managing app configuration',
+    optionC: 'A service for hosting web applications',
+    optionD: 'A service for authenticating users',
+  },
+  {
+    optionA: 'A service for conducting experiments on app features',
+    optionB: 'A service for managing app configuration',
+    optionC: 'A service for hosting web applications',
+    optionD: 'A service for authenticating users',
+  },
+  {
+    optionA: 'A service for creating links that dynamically change behavior based on user context',
+    optionB: 'A service for managing app configuration',
+    optionC: 'A service for hosting web applications',
+    optionD: 'A service for authenticating users',
+  },
+  {
+    optionA: 'A service for managing advertisements in mobile apps',
+    optionB: 'A service for managing app configuration',
+    optionC: 'A service for hosting web applications',
+    optionD: 'A service for authenticating users',
+  },
+  {
+    optionA: 'A set of rules that control access to Firestore data',
+    optionB: 'A service for sending cloud functions',
+    optionC: 'A service for storing files in the cloud',
+    optionD: 'A service for hosting web applications',
+  },
+  {
+    optionA: 'A service for sending cloud functions',
+    optionB: 'A set of rules that control access to Firestore data',
+    optionC: 'A service for storing files in the cloud',
+    optionD: 'A service for hosting web applications',
+  },
+  {
+    optionA: 'A service for storing files in the cloud',
+    optionB: 'A set of rules that control access to Firestore data',
+    optionC: 'A service for sending cloud functions',
+    optionD: 'A service for hosting web applications',
+  },
+  {
+    optionA: 'A service for hosting web applications',
+    optionB: 'A set of rules that control access to Firestore data',
+    optionC: 'A service for sending cloud functions',
+    optionD: 'A service for storing files in the cloud',
+  },
+  {
+    optionA: 'A service for sending cloud functions',
+    optionB: 'A service for storing files in the cloud',
+    optionC: 'A service for distributing pre-trained machine learning models',
+    optionD: 'A service for testing mobile apps',
+  },
+  {
+    optionA: 'A service for distributing pre-trained machine learning models',
+    optionB: 'A service for sending cloud functions',
+    optionC: 'A service for storing files in the cloud',
+    optionD: 'A service for testing mobile apps',
+  },
+];
+
+const firebaseCorrectOptions = [
+  'A cloud-based platform for building mobile and web applications',
+  'A NoSQL document database',
+  'A real-time database',
+  'A service for authenticating users',
+  'A service for sending push notifications',
+  'A service for hosting web applications',
+  'A service for testing mobile apps',
+  'A cloud storage service',
+  'A service for sending crash reports',
+  'A service for tracking user behavior',
+  'A service for tracking app performance',
+  'A service for managing app configuration',
+  'A service for testing mobile apps',
+  'A service for distributing pre-trained machine learning models',
+  'A service for predicting user behavior',
+  'A service for conducting experiments on app features',
+  'A service for creating links that dynamically change behavior based on user context',
+  'A service for managing advertisements in mobile apps',
+  'A set of rules that control access to Firestore data',
+  'A service for sending cloud functions',
+  'A service for storing files in the cloud',
+  'A service for hosting web applications',
+  'A service for sending cloud functions',
+  'A service for distributing pre-trained machine learning models',
+];
+
+
+const hackingQuestions = [
+  'What is hacking?',
+  'What is a hacker?',
+  'What is ethical hacking?',
+  'What is black hat hacking?',
+  'What is white hat hacking?',
+  'What is gray hat hacking?',
+  'What is penetration testing?',
+  'What is social engineering?',
+  'What is phishing?',
+  'What is malware?',
+  'What is a virus?',
+  'What is a worm?',
+  'What is a Trojan horse?',
+  'What is ransomware?',
+  'What is a DoS attack?',
+  'What is a DDoS attack?',
+  'What is brute-force attack?',
+  'What is SQL injection?',
+  'What is XSS?',
+  'What is network sniffing?',
+  'What is password cracking?',
+  'What is keylogging?',
+  'What is session hijacking?',
+  'What is DNS spoofing?',
+  'What is MITM attack?',
+];
+
+const hackingOptions = [
+  {
+    optionA: 'Accessing systems without permission',
+    optionB: 'Unauthorized system access',
+    optionC: 'Unauthorized computer entry',
+    optionD: 'System intrusion without consent',
+  },
+  {
+    optionA: 'Unauthorized system intruder',
+    optionB: 'Unauthorized system user',
+    optionC: 'Security expert',
+    optionD: 'Computer programmer',
+  },
+  {
+    optionA: 'Ethical system hacking',
+    optionB: 'Legal system intrusion',
+    optionC: 'White hat hacking',
+    optionD: 'Lawful system entry',
+  },
+  {
+    optionA: 'Malicious hacking activity',
+    optionB: 'Illegal hacking practice',
+    optionC: 'Unethical system access',
+    optionD: 'Harmful system intrusion',
+  },
+  {
+    optionA: 'Ethical system intrusion',
+    optionB: 'Legal system access',
+    optionC: 'White hat hacking',
+    optionD: 'Authorized system entry',
+  },
+  {
+    optionA: 'Neutral system hacking',
+    optionB: 'In-between system access',
+    optionC: 'Gray area system entry',
+    optionD: 'Partly legal system intrusion',
+  },
+  {
+    optionA: 'Security assessment',
+    optionB: 'Network evaluation',
+    optionC: 'System examination',
+    optionD: 'Vulnerability testing',
+  },
+  {
+    optionA: 'Psychological manipulation for access',
+    optionB: 'Social network intrusion',
+    optionC: 'Human hacking techniques',
+    optionD: 'Emotional engineering for access',
+  },
+  {
+    optionA: 'Deceptive online activity',
+    optionB: 'Data phishing scam',
+    optionC: 'Online identity theft',
+    optionD: 'Cyber deception strategy',
+  },
+  {
+    optionA: 'Malicious software',
+    optionB: 'Computer virus',
+    optionC: 'Harmful program',
+    optionD: 'Destructive application',
+  },
+  {
+    optionA: 'Harmful computer code',
+    optionB: 'Data corruption software',
+    optionC: 'Computer infection',
+    optionD: 'Malware threat',
+  },
+  {
+    optionA: 'Self-replicating malware',
+    optionB: 'Data worm',
+    optionC: 'Harmful software',
+    optionD: 'Computer parasite',
+  },
+  {
+    optionA: 'Deceptive software',
+    optionB: 'Harmful program',
+    optionC: 'Software Trojan',
+    optionD: 'Data manipulation tool',
+  },
+  {
+    optionA: 'Data encryption attack',
+    optionB: 'Data ransom attack',
+    optionC: 'Data kidnapping',
+    optionD: 'Ransom data encryption',
+  },
+  {
+    optionA: 'Service denial attack',
+    optionB: 'Network disruption attack',
+    optionC: 'System overload attack',
+    optionD: 'Online service disruption',
+  },
+  {
+    optionA: 'Distributed denial-of-service',
+    optionB: 'Network congestion attack',
+    optionC: 'Multiple service denial',
+    optionD: 'System overload distribution',
+  },
+  {
+    optionA: 'Brute-force password cracking',
+    optionB: 'Password guessing attack',
+    optionC: 'Password discovery technique',
+    optionD: 'Exhaustive password testing',
+  },
+  {
+    optionA: 'Database injection attack',
+    optionB: 'Data server breach',
+    optionC: 'Query injection assault',
+    optionD: 'Database corruption exploit',
+  },
+  {
+    optionA: 'Web code infiltration',
+    optionB: 'Script injection attack',
+    optionC: 'Website security breach',
+    optionD: 'Cross-site content hacking',
+  },
+  {
+    optionA: 'Data interception technique',
+    optionB: 'Network traffic capture',
+    optionC: 'Data eavesdropping method',
+    optionD: 'Packet analysis attack',
+  },
+  {
+    optionA: 'Password decoding method',
+    optionB: 'Credential guessing technique',
+    optionC: 'Access code decryption',
+    optionD: 'Authentication code breaking',
+  },
+  {
+    optionA: 'Keystroke recording software',
+    optionB: 'User activity monitoring tool',
+    optionC: 'Keyboard activity capture',
+    optionD: 'Input logging application',
+  },
+  {
+    optionA: 'Unauthorized session takeover',
+    optionB: 'Session manipulation attack',
+    optionC: 'Session identity theft',
+    optionD: 'Session control breach',
+  },
+  {
+    optionA: 'Domain name system manipulation',
+    optionB: 'Website address forging',
+    optionC: 'Domain identity theft',
+    optionD: 'DNS redirection attack',
+  },
+  {
+    optionA: 'Interception of communication',
+    optionB: 'Communication breach method',
+    optionC: 'Intermediary data breach',
+    optionD: 'Communication interception',
+  },
+];
+
+const hackingCorrectOptions = [
+  'Unauthorized access to computer systems or networks',
+  'A person who gains unauthorized access to computer systems or networks',
+  'The practice of using hacking techniques for ethical purposes',
+  'Hacking performed with malicious intent',
+  'Hacking performed to improve security',
+  'Hacking performed with the consent of the target organization',
+  'The process of testing a computer system, network, or application for security vulnerabilities',
+  'A type of cyber attack that manipulates individuals into divulging confidential information',
+  'A type of cyber attack that tricks people into revealing sensitive information',
+  'A malicious program that infects computer systems and disrupts their normal operation',
+  'A type of malware that spreads from one computer to another without human intervention',
+  'A type of malware that infects computer systems and disrupts their normal operation',
+  'A type of malware that encrypts files and demands payment for their release',
+  'A type of cyber attack that floods a network with traffic to overwhelm it',
+  'A type of cyber attack that floods a network with traffic to overwhelm it',
+  'A type of cyber attack that attempts to guess passwords or encryption keys',
+  'A type of cyber attack that exploits vulnerabilities in SQL databases',
+  'A type of cyber attack that injects malicious code into web pages'
+]
+
+const aiQuestions = [
+  'What is artificial intelligence (AI)?',
+  'What are the main categories of AI?',
+  'What is machine learning?',
+  'What is deep learning?',
+  'What is a neural network?',
+  'What is natural language processing (NLP)?',
+  'What is computer vision?',
+  'What is reinforcement learning?',
+  'What is supervised learning?',
+  'What is unsupervised learning?',
+  'What is transfer learning?',
+  'What is overfitting in ML?',
+  'What is underfitting in ML?',
+  'What is data preprocessing in ML?',
+  'What is feature engineering?',
+  'What is classification in ML?',
+  'What is regression in ML?',
+  'What is clustering in ML?',
+  'What is dimensionality reduction?',
+  'What is a recommendation system?',
+  'What is a GAN (Generative Adversarial Network)?',
+  'What is an ANN (Artificial Neural Network)?',
+  'What is a CNN (Convolutional Neural Network)?',
+  'What is an RNN (Recurrent Neural Network)?',
+];
+
+const aiOptions = [
+  {
+    optionA: 'Machine intelligence simulation',
+    optionB: 'Automated task execution',
+    optionC: 'Computer decision making',
+    optionD: 'Robotic process automation',
+  },
+  {
+    optionA: 'ML, DL, and NLP',
+    optionB: 'Supervised, unsupervised, reinforcement',
+    optionC: 'Vision, robotics, expert',
+    optionD: 'AI, ML, expert',
+  },
+  {
+    optionA: 'AI algorithmic learning',
+    optionB: 'Algorithmic reasoning',
+    optionC: 'Language understanding',
+    optionD: 'Human-like cognition',
+  },
+  {
+    optionA: 'Complex ML algorithms',
+    optionB: 'Deep ML networks',
+    optionC: 'Neural network model',
+    optionD: 'ML algorithmic layers',
+  },
+  {
+    optionA: 'Brain-inspired computational model',
+    optionB: 'Complex algorithmic network',
+    optionC: 'Machine-based learning model',
+    optionD: 'Neuron-based algorithmic model',
+  },
+  {
+    optionA: 'Computer language processing',
+    optionB: 'Language understanding model',
+    optionC: 'Text analysis algorithm',
+    optionD: 'Linguistic data interpretation',
+  },
+  {
+    optionA: 'Visual data interpretation',
+    optionB: 'Image recognition technique',
+    optionC: 'Optical data understanding',
+    optionD: 'Vision-based algorithmic processing',
+  },
+  {
+    optionA: 'Trial-and-error learning',
+    optionB: 'Feedback-driven learning',
+    optionC: 'Experience-based learning',
+    optionD: 'Error-correction learning',
+  },
+  {
+    optionA: 'Labeled data learning',
+    optionB: 'Data-driven learning',
+    optionC: 'Pattern recognition learning',
+    optionD: 'Supervised data analysis',
+  },
+  {
+    optionA: 'Unlabeled data learning',
+    optionB: 'Pattern extraction learning',
+    optionC: 'Insight discovery learning',
+    optionD: 'Self-organizing data analysis',
+  },
+  {
+    optionA: 'Knowledge transfer learning',
+    optionB: 'Experience sharing learning',
+    optionC: 'Skill transfer learning',
+    optionD: 'Data adaptation learning',
+  },
+  {
+    optionA: 'Training data overfitting',
+    optionB: 'Data model overuse',
+    optionC: 'Overly trained model',
+    optionD: 'Training error amplification',
+  },
+  {
+    optionA: 'Insufficient model fit',
+    optionB: 'Data model underuse',
+    optionC: 'Underly trained model',
+    optionD: 'Insufficient training error',
+  },
+  {
+    optionA: 'Data cleaning and transformation',
+    optionB: 'Data analysis and filtering',
+    optionC: 'Data normalization and scaling',
+    optionD: 'Data exploration and visualization',
+  },
+  {
+    optionA: 'Data feature selection',
+    optionB: 'Feature extraction and selection',
+    optionC: 'Feature generation and manipulation',
+    optionD: 'Data attribute identification',
+  },
+  {
+    optionA: 'Data categorization technique',
+    optionB: 'Data label classification',
+    optionC: 'Data pattern recognition',
+    optionD: 'Data grouping method',
+  },
+  {
+    optionA: 'Data value prediction',
+    optionB: 'Data trend identification',
+    optionC: 'Data value estimation',
+    optionD: 'Data pattern extrapolation',
+  },
+  {
+    optionA: 'Data clustering technique',
+    optionB: 'Data classification method',
+    optionC: 'Data segmentation approach',
+    optionD: 'Data grouping algorithm',
+  },
+  {
+    optionA: 'Data dimension reduction',
+    optionB: 'Data space compression',
+    optionC: 'Data feature reduction',
+    optionD: 'Data attribute reduction',
+  },
+  {
+    optionA: 'User preference prediction',
+    optionB: 'Personalized content recommendation',
+    optionC: 'Item suggestion system',
+    optionD: 'Content filtering method',
+  },
+  {
+    optionA: 'Adversarial network model',
+    optionB: 'Competitive learning network',
+    optionC: 'Data generation adversarial model',
+    optionD: 'Adversarial data generation model',
+  },
+  {
+    optionA: 'Computer-based neural network',
+    optionB: 'Virtual learning system',
+    optionC: 'Digital cognitive network',
+    optionD: 'Artificial brain emulation',
+  },
+  {
+    optionA: 'Visual data recognition model',
+    optionB: 'Image analysis neural network',
+    optionC: 'Visual data processing model',
+    optionD: 'Image understanding system',
+  },
+  {
+    optionA: 'Temporal data processing model',
+    optionB: 'Sequential data analysis model',
+    optionC: 'Time-series data prediction model',
+    optionD: 'Data memory processing model',
+  },
+];
+
+const aiCorrectOptions = [
+  'Computer-based intelligence simulation',
+  'ML, DL, and NLP',
+  'AI algorithmic learning',
+  'Deep ML networks',
+  'Brain-inspired computational model',
+  'Computer language processing',
+  'Visual data interpretation',
+  'Trial-and-error learning',
+  'Labeled data learning',
+  'Unlabeled data learning',
+  'Knowledge transfer learning',
+  'Training data overfitting',
+  'Insufficient model fit',
+  'Data cleaning and transformation',
+  'Data feature selection',
+  'Data categorization technique',
+  'Data value prediction',
+  'Data clustering technique',
+  'Data dimension reduction',
+  'User preference prediction',
+  'Adversarial network model',
+  'Computer-based neural network',
+  'Visual data recognition model',
+  'Temporal data processing model',
+];
+
+
+const cybersecurityQuestions = [
+  'What is cybersecurity?',
+  'What are the three pillars of cybersecurity?',
+  'What is a firewall?',
+  'What is antivirus software?',
+  'What is encryption?',
+  'What is a VPN?',
+  'What is a data breach?',
+  'What is a phishing attack?',
+  'What is malware?',
+  'What is a virus?',
+  'What is a worm?',
+  'What is a Trojan horse?',
+  'What is ransomware?',
+  'What is social engineering?',
+  'What is a DDoS attack?',
+  'What is a brute force attack?',
+  'What is SQL injection?',
+  'What is a vulnerability assessment?',
+  'What is penetration testing?',
+  'What is multi-factor authentication (MFA)?',
+  'What is end-to-end encryption?',
+  'What is a security policy?',
+  'What is incident response?',
+  'What is a security audit?',
+  'What is a security breach?',
+];
+
+const cybersecurityOptions = [
+  {
+    optionA: 'Digital security protection',
+    optionB: 'Network security management',
+    optionC: 'Information system protection',
+    optionD: 'Cyber threat prevention',
+  },
+  {
+    optionA: 'Prevention, detection, response',
+    optionB: 'Preparation, response, recovery',
+    optionC: 'Protection, mitigation, recovery',
+    optionD: 'Detection, prevention, recovery',
+  },
+  {
+    optionA: 'Network security device',
+    optionB: 'Security barrier software',
+    optionC: 'Access control system',
+    optionD: 'Data encryption method',
+  },
+  {
+    optionA: 'Virus protection software',
+    optionB: 'Malware detection tool',
+    optionC: 'Cyber threat blocker',
+    optionD: 'Security monitoring system',
+  },
+  {
+    optionA: 'Data scrambling technique',
+    optionB: 'Information hiding method',
+    optionC: 'Data protection mechanism',
+    optionD: 'Digital content locking',
+  },
+  {
+    optionA: 'Virtual private network',
+    optionB: 'Digital privacy network',
+    optionC: 'Secure connection system',
+    optionD: 'Internet anonymity tool',
+  },
+  {
+    optionA: 'Unauthorized data access',
+    optionB: 'Sensitive data exposure',
+    optionC: 'Information leakage',
+    optionD: 'Data loss incident',
+  },
+  {
+    optionA: 'Deceptive data collection',
+    optionB: 'Social media scamming',
+    optionC: 'Email spoofing',
+    optionD: 'Fraudulent website',
+  },
+  {
+    optionA: 'Harmful software',
+    optionB: 'Digital threat',
+    optionC: 'Computer virus',
+    optionD: 'Data manipulation tool',
+  },
+  {
+    optionA: 'Computer virus',
+    optionB: 'Malicious software',
+    optionC: 'Harmful program',
+    optionD: 'Data corruption tool',
+  },
+  {
+    optionA: 'Self-replicating malware',
+    optionB: 'Data worm',
+    optionC: 'Harmful software',
+    optionD: 'Computer parasite',
+  },
+  {
+    optionA: 'Deceptive software',
+    optionB: 'Harmful program',
+    optionC: 'Software Trojan',
+    optionD: 'Data manipulation tool',
+  },
+  {
+    optionA: 'Data encryption ransom',
+    optionB: 'Data security breach',
+    optionC: 'Data corruption malware',
+    optionD: 'Data extortion software',
+  },
+  {
+    optionA: 'Psychological manipulation',
+    optionB: 'Social media manipulation',
+    optionC: 'Email spoofing',
+    optionD: 'Internet scamming',
+  },
+  {
+    optionA: 'Distributed denial of service',
+    optionB: 'Data disruption attack',
+    optionC: 'Network congestion attack',
+    optionD: 'System overload attack',
+  },
+  {
+    optionA: 'Password guessing attack',
+    optionB: 'Brute-force password cracking',
+    optionC: 'Automated password attack',
+    optionD: 'Credential theft attack',
+  },
+  {
+    optionA: 'Data manipulation technique',
+    optionB: 'Database intrusion method',
+    optionC: 'Data corruption attack',
+    optionD: 'Data extraction technique',
+  },
+  {
+    optionA: 'Network security assessment',
+    optionB: 'System vulnerability scanning',
+    optionC: 'Data breach investigation',
+    optionD: 'Digital threat detection',
+  },
+  {
+    optionA: 'System security evaluation',
+    optionB: 'Network security testing',
+    optionC: 'Security threat simulation',
+    optionD: 'Vulnerability assessment',
+  },
+  {
+    optionA: 'Multi-step authentication',
+    optionB: 'Two-factor verification',
+    optionC: 'Password and token validation',
+    optionD: 'Dual-layer authentication',
+  },
+  {
+    optionA: 'Data transfer encryption',
+    optionB: 'Data communication security',
+    optionC: 'End-to-end security',
+    optionD: 'Data protection method',
+  },
+  {
+    optionA: 'Data protection protocol',
+    optionB: 'Security rules and guidelines',
+    optionC: 'Information security standard',
+    optionD: 'Digital protection policy',
+  },
+  {
+    optionA: 'Security incident handling',
+    optionB: 'Security breach management',
+    optionC: 'Cyber threat response',
+    optionD: 'Data breach resolution',
+  },
+  {
+    optionA: 'Security system evaluation',
+    optionB: 'Security control assessment',
+    optionC: 'Security policy review',
+    optionD: 'Cybersecurity assessment',
+  },
+];
+
+const cybersecurityCorrectOptions = [
+  'Digital security protection',
+  'Prevention, detection, response',
+  'Network security device',
+  'Malware detection tool',
+  'Data scrambling technique',
+  'Virtual private network',
+  'Unauthorized data access',
+  'Deceptive data collection',
+  'Harmful software',
+  'Computer virus',
+  'Self-replicating malware',
+  'Deceptive software',
+  'Data encryption ransom',
+  'Psychological manipulation',
+  'Distributed denial of service',
+  'Brute-force password cracking',
+  'Data manipulation technique',
+  'Network security assessment',
+  'System security evaluation',
+  'Multi-step authentication',
+  'End-to-end encryption',
+  'Security policy',
+  'Incident response',
+  'Security audit',
+  'Security breach',
+];
+
+
 //Version 1.0********************************************
 
 let timerIS;
@@ -1249,12 +2478,16 @@ function timerSec() {
 
     if (timerSeconds > 0) {
       timerSeconds--;
+
     }
 
     else {
       timerMinutes--;
+
       if(timerMinutes>0){
-        timerSeconds = 4;
+
+        timerSeconds = 59;
+
       }
       else{
         timerMinutes=0;
@@ -1263,15 +2496,16 @@ function timerSec() {
     }
   }
 
-  else {
-    timerIS = 0;
-    clearInterval(intervalID)
-    console.warn(timerIS)
-    resultAlert();
-  }
+  let sec =  document.querySelector('.timer-sec').innerHTML;
+  let min = document.querySelector('.timer-mins').innerHTML;
 
   document.querySelector('.timer-sec').innerHTML = timerSeconds;
   document.querySelector('.timer-mins').innerHTML = timerMinutes;
+
+  if(sec==0 && min==0){
+    resultAlert();
+    clearInterval(intervalID);
+  }
 
 }
 
@@ -1340,8 +2574,33 @@ const functionObj = {
 
   database: function () {
     quizStart(dbQuestions, dbOptions);
+  },
+
+  react: function () {
+    quizStart(reactQuestions, reactOptions);
+  },
+
+  mongoDB: function () {
+    quizStart(mongoDBQuestions, mongoDBOptions);
+  },
+
+  firebase: function () {
+    quizStart(firebaseQuestions, firebaseOptions);
+  },
+
+  cybersecurity: function () {
+    quizStart(cybersecurityQuestions, cybersecurityOptions);
+  },
+
+  hacking: function () {
+    quizStart(hackingQuestions, hackingOptions);
+  },
+
+  ai: function () {
+    quizStart(aiQuestions, aiOptions);
   }
 };
+
 
 function quizStart(questions, options) {
   flag = 0;
@@ -1483,8 +2742,8 @@ function displayDetails(quiztest) {
 //function to hide quiz-section
 function hideDetails() {
 
-  timerSeconds = 9;
-  timerMinutes = 0;
+  timerSeconds = 59;
+  timerMinutes = 4;
 
   clearSelectedOptions();
 
@@ -2064,7 +3323,7 @@ function Alert() {
 
 }
 
-function quizStartAlert(quizParameter, flag) {
+function quizStartAlert(quizParameter) {
   // Trigger click on the navbar-toggler button
   if (flag == 1) {
     document.querySelector('.navbar-toggler.toggler-icon').click();
@@ -2082,11 +3341,10 @@ function quizStartAlert(quizParameter, flag) {
   }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
-      timerMinutes = 0;
-      timerSeconds = 4;
+      timerMinutes = 4;
+      timerSeconds = 59;
       intervalID = setInterval(timerSec, 1000);
       displayDetails(quizParameter);
-      checkTimer();
 
     }
   });
