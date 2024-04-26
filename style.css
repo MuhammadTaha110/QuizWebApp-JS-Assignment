@@ -212,11 +212,12 @@ main {
 .quiz-cards .cards .quiz-icon {
     position: absolute;
     top: 12px;
-    font-size: 3em;
+    font-size: 2.5em;
     left: 78%;
     color: var(--main-color);
 }
 
+ 
 .quiz-cards .start-quiz {
     display: block;
     width: 90%;

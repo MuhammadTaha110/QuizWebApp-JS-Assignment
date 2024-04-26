@@ -3171,7 +3171,13 @@ const correctOptionsObj = {
   js: jsCorrectOptions,
   java: javaCorrectOptions,
   python: pythonCorrectOptions,
-  database: databaseCorrectOptions
+  database: databaseCorrectOptions,
+  mongoDB: mongodbCorrectOptions,
+  react: reactCorrectOptions,
+  firebase: firebaseCorrectOptions,
+  ai : aiCorrectOptions,
+  hacking: hackingCorrectOptions,
+  cybersecurity: cybersecurityCorrectOptions,
 };
 
 function resultAlert() {
